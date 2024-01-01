@@ -1,0 +1,15 @@
+<div style={{ width: 937, height: 64, position: 'relative', backdropFilter: 'blur(4px)' }}>
+    <div style={{ width: 937, height: 64, left: 0, top: 0, position: 'absolute', background: 'rgba(38, 39, 41, 0.80)', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', borderRadius: 9, border: '1px black solid' }}></div>
+    <div style={{ left: 24, top: 19, position: 'absolute', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex' }}>
+        <div style={{ flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex' }}>
+            <div style={{ color: 'white', fontSize: 20, fontFamily: 'Quicksand', fontWeight: '500', wordWrap: 'break-word' }}>Who we are</div>
+            <div style={{ width: 8, height: 8, background: '#DDB96E', borderRadius: 9999 }} />
+        </div>
+        <div style={{ color: '#C3C3C3', fontSize: 20, fontFamily: 'Quicksand', fontWeight: '400', wordWrap: 'break-word' }}>Financial Services</div>
+        <div style={{ color: '#B9BBBE', fontSize: 20, fontFamily: 'Quicksand', fontWeight: '400', wordWrap: 'break-word' }}>Sectors</div>
+        <div style={{ color: '#B9BBBE', fontSize: 20, fontFamily: 'Quicksand', fontWeight: '400', wordWrap: 'break-word' }}> Exporting & Trading</div>
+        <div style={{ color: '#B9BBBE', fontSize: 20, fontFamily: 'Quicksand', fontWeight: '400', wordWrap: 'break-word' }}>Products</div>
+        <div style={{ color: '#B9BBBE', fontSize: 20, fontFamily: 'Quicksand', fontWeight: '400', wordWrap: 'break-word' }}>Partners</div>
+        <div style={{ color: '#B9BBBE', fontSize: 20, fontFamily: 'Quicksand', fontWeight: '400', wordWrap: 'break-word' }}>FAQs</div>
+    </div>
+</div>

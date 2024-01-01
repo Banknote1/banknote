@@ -1,1 +1,13 @@
-body {}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #000000, #808080);
+  font-family: Arial, sans-serif;
+  /* Optional: Set a default font family */
+  color: #ffffff;
+  /* Optional: Set text color to white or any other suitable color */
+}

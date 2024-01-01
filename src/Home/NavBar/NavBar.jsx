@@ -1,52 +1,58 @@
-import React from 'react'
+import React from 'react';
+import styles from './NavBar.module.css'; // Correct import statement
 
 function NavBar() {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-info p-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">DBook Inc</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <>
+            <div className={`d-flex justify-content-around align-items-center ${styles.cont}`}>
+                <div>
+                    <a className="navbar-brand" href="#">
+                        <img src='/logo.png' width="89" height="82" alt="" />
+                    </a>
+                </div>
+                <nav className={`navbar navbar-expand-lg navbar-light p-3 d-flex justify-content-around align-items-center  ${styles.nav}`}>
+                    <div className={styles.backgroundOverlay}></div>
+                    <div className={styles.container}>
+                        <div className={styles.navbarContent}>
 
-                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item">
-                            <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Company
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Blog</a></li>
-                                <li><a class="dropdown-item" href="#">About Us</a></li>
-                                <li><a class="dropdown-item" href="#">Contact us</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-google-plus-square"></i></a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-facebook-square"></i></a>
-                        </li>
-                    </ul>
+                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div className={`collapse navbar-collapse ${styles.navbarContent}`} id="navbarNavDropdown">
+                                <ul className='navbar-nav ms-auto'>
+                                    <li className={`nav-item ${styles.navItem}`}>
+                                        <a className={`nav-link mx-2 active ${styles.navLink}`} aria-current="page" href="#">Who we are</a>
+                                    </li>
+                                    <li className={`nav-item ${styles.navItem}`}>
+                                        <a className={`nav-link mx-2 active ${styles.navLink}`} href="#">Financial Services</a>
+                                    </li>
+                                    <li className={`nav-item ${styles.navItem}`}>
+                                        <a className={`nav-link mx-2 active ${styles.navLink}`} href="#">Sectors</a>
+                                    </li>
+                                    <li className={`nav-item ${styles.navItem}`}>
+                                        <a className={`nav-link mx-2 active ${styles.navLink}`} href="#">Exporting & Trading</a>
+                                    </li> <li className={`nav-item ${styles.navItem}`}>
+                                        <a className={`nav-link mx-2 active ${styles.navLink}`} href="#">Products</a>
+                                    </li>
+                                    <li className={`nav-item ${styles.navItem}`}>
+                                        <a className={`nav-link mx-2 active ${styles.navLink}`} href="#">Partners</a>
+                                    </li>
+                                    <li className={`nav-item ${styles.navItem}`}>
+                                        <a className={`nav-link mx-2 active ${styles.navLink}`} href="#">FAQs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div    >
+                    <button className={styles.button} > Contact Us</button>
                 </div>
             </div>
-        </nav>
-
-    )
+        </>
+    );
 }
 
-export default NavBar
+export default NavBar;

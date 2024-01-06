@@ -1,0 +1,125 @@
+.cont {
+    height: 150px;
+}
+
+nav {
+
+    backdrop-filter: blur(4px);
+    --d: 15px;
+    --b: 4px;
+    --c: orange;
+    --gc: var(--c) calc(50% + var(--b)*0.707), #0000 0;
+    --gl: var(--c), #0000 40% 60%, var(--c);
+    height: 64px;
+    width: 937px;
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
+
+}
+
+.backgroundOverlay {
+    width: 937px;
+    height: 64px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: rgba(38, 39, 41, 0.80);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    border: 1px solid black;
+}
+
+.container {
+    position: relative;
+}
+
+.navbarContent {
+    left: 24px;
+    top: 19px;
+
+    gap: 24px;
+}
+
+
+.navLink {
+    color: white !important;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navDot {
+    width: 8px;
+    height: 8px;
+    background: #DDB96E;
+    border-radius: 9999px;
+}
+
+.navText {
+    color: #C3C3C3;
+    font-weight: 400;
+}
+.ButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.button {
+    background-color: #DDB96E;
+    color: #262729;
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;
+    font-family: Quicksand;
+    line-height: auto;
+    border-style: hidden;
+    outline: none;
+    width: 152px;
+    --d: 9px !important;
+    --b: 4px !important;
+    --c: orange !important;
+    --gc: var(--c) calc(50% + var(--b) * 0.707), #0000 0 !important;
+    --gl: var(--c), #0000 40% 60%, var(--c) !important;
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
+    border-radius: 12px     ;
+
+}
+
+.button:hover {
+    background-color: #DDB96E !important;
+    color: #DDB96E !important;
+    
+  }
+
+  .buttonContainer .button {
+    position: relative;
+    width: 166px!important;
+    height: 46px !important;
+    background-color: #DDB96E;
+    overflow: hidden; 
+  }
+  .buttonContainer .button:hover::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black; 
+     --d: 8.5px !important;
+    --b: 4px !important;
+    --c: orange !important;
+    --gc: var(--c) calc(50% + var(--b) * 0.707), #0000 0 !important;
+    --gl: var(--c), #0000 40% 60%, var(--c) !important;
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d)); 
+     border-radius: 12px;
+    transform: scale(0.98, 0.94); 
+    z-index: -1; 
+  }
+  .logoContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width:10%;
+  }
+  

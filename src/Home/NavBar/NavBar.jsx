@@ -47,7 +47,7 @@ function NavBar() {
                     </div>
                 </nav>
 
-                <div    >
+                <div className={styles.buttonContainer}  >
                     <button className={styles.button} > Contact Us</button>
                 </div>
             </div>

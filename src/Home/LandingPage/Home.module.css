@@ -1,6 +1,6 @@
 .bg {
 
-    height: 90vh;
+    height: 95vh;
     width: 100%;
 
     background-image: url('/public/sea.png');
@@ -26,7 +26,7 @@
 }
 
 .Coinbg {
-    width: 50%;
+    width: 55%;
     height: 100%;
 
 }
@@ -37,7 +37,7 @@
 }
 
 .finance {
-    width: 50%;
+    width: 45%;
     align-self: center;
 }
 
@@ -84,4 +84,30 @@ p {
     justify-content: flex-end;
     align-items: end;
     height: 100vh;
+}
+
+.subTitleYellow {
+    color: #EBD5A8;
+    font-family: Quicksand;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.subTitleWhite {
+    color: #ffffff;
+    font-family: Quicksand;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.subMainTitleWhite {
+    color: #ffffff;
+    font-family: Quicksand;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
 }

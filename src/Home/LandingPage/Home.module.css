@@ -1,14 +1,28 @@
 .bg {
 
-    height: 80vh;
+    height: 90vh;
     width: 100%;
-    display: flex;
-    justify-content: end;
-    /* background-image: url('/public/sea.png');
-    background-size: contain;
-    background-position: bottom;
-    background-repeat: no-repeat; */
 
+    background-image: url('/public/sea.png');
+    background-size: cover;
+    background-position: bottom bottom;
+    background-repeat: no-repeat;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    z-index: 1;
 }
 
 .Coinbg {
@@ -33,7 +47,7 @@
     font-size: 90px;
     font-style: normal;
     font-weight: 400;
-    line-height: 80%;
+    line-height: 70px;
     /* 115.2px */
 }
 
@@ -48,7 +62,7 @@ h1 {
     font-size: 90px;
     font-style: normal;
     font-weight: 400;
-    line-height: 80%;
+    line-height: 70px;
 
 
 }
@@ -60,7 +74,14 @@ p {
     font-style: normal;
     font-weight: 300;
     line-height: 30px;
-    margin-top: 25px;
+    margin-top: 50px !important;
     width: 90%;
     margin-left: 40px;
+}
+
+.homeContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    height: 100vh;
 }

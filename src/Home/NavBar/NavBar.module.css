@@ -1,5 +1,8 @@
 .cont {
     height: 120px;
+    z-index: 9999;
+    /* position: fixed; */
+
 }
 
 nav {
@@ -26,6 +29,7 @@ nav {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     border: 1px solid black;
+
 }
 
 .container {

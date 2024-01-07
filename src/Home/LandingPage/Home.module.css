@@ -1,6 +1,6 @@
 .bg {
 
-    height: 95vh;
+    height: 100vh;
     width: 100%;
 
     background-image: url('/public/sea.png');
@@ -10,7 +10,7 @@
 
 }
 
-.overlay {
+/* .overlay {
     position: absolute;
     top: 0px;
     left: 0;
@@ -23,7 +23,7 @@
     color: #fff;
 
     z-index: 1;
-}
+} */
 
 .Coinbg {
     width: 55%;

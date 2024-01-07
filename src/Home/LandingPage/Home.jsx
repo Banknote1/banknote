@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Home.module.css';
 import IconsSocial from '../Social-icons/IconsSocial';
-
+import '../../index.css'
 function Home() {
     return (
         <>
             <div className={styles.homeContainer}>
                 <div className={styles.bg}></div>
-                <div className={styles.overlay}>
+                <div className='overlay'>
                     <div className={styles.finance}>
                         <h1 className={styles.mainTitleWhite}>Connecting the Worlds,</h1>
                         <h1 className={styles.mainTitleYellow}> Exporting Success</h1>

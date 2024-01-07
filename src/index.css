@@ -10,6 +10,7 @@ body {
   color: #000000;
   /* Optional: Set text color to white or any other suitable color */
 }
+<<<<<<< HEAD
 .overlay {
   position: fixed;
   top: 0;
@@ -18,4 +19,19 @@ body {
   height: 100%;
   background: linear-gradient(to bottom, #000000, #808080);
   z-index: -1;
+=======
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 1;
+>>>>>>> 236c07eac71ccd4aae06a9d1ea3653d6dfaa7a47
 }

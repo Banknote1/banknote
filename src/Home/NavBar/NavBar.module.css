@@ -1,9 +1,10 @@
 .cont {
+    position: fixed;
     height: 150px;
 }
 
 nav {
-
+  
     backdrop-filter: blur(4px);
     --d: 15px;
     --b: 4px;
@@ -17,6 +18,7 @@ nav {
 }
 
 .backgroundOverlay {
+    
     width: 937px;
     height: 64px;
     left: 0;

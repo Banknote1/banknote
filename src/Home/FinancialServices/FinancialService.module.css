@@ -1,0 +1,78 @@
+ 
+
+.sliderContainer {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+ 
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sliderContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sliderText {
+    padding: 20px;
+    width:70%
+  }
+  
+  .sliderImage {
+    flex-grow: 1;
+    width: 50%;
+    height: auto;
+    order: 2; /* Order the image to the right */
+  }
+  .sliderImage img {
+    
+    width: 100%;
+    /* height: 275.41375px; */
+  
+   
+  }
+  .head1 {
+    color: var(--White-100, #FFF);
+
+    font-family: Quicksand;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 57.6px */
+    margin-left: 3%;
+  }
+  .head2 {
+    color: var(--White-100, #EBD5A8);
+
+    font-family: Quicksand;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 57.6px */
+    margin-left: 3%;  
+}
+  .sliderText p {
+    color: var(--White-100, #FFF);
+
+    margin-left: 3%;
+    margin-top: 3%;
+    font-family: Quicksand;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal
+  }
+  
+ 
+  .pageContainer {
+    background-image: url('/public/AAS background.png'); /* Specify the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure the background covers the entire viewport height */
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+  }

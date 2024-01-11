@@ -1,0 +1,16 @@
+.carousel {
+    display: contents;
+}
+
+.carousel-inner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-indicators {
+    bottom: 248px !important;
+    left: -205px !important;
+    justify-content: flex-start !important;
+    flex-direction: column !important;
+}

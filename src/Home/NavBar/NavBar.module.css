@@ -1,11 +1,7 @@
 .cont {
-<<<<<<< HEAD
-    position: fixed;
-=======
     z-index: 9999;
     /* position: fixed; */
 
->>>>>>> 236c07eac71ccd4aae06a9d1ea3653d6dfaa7a47
     height: 150px;
 }
 

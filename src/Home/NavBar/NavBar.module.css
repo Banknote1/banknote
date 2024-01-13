@@ -1,4 +1,8 @@
 .cont {
+<<<<<<< HEAD
+=======
+    position: fixed;
+>>>>>>> 1c277ef37cdaa1eca7b4e572ac970d72dd9d44d1
     z-index: 9999;
     /* position: fixed; */
 
@@ -6,21 +10,21 @@
 }
 
 nav {
-  
+
     backdrop-filter: blur(4px);
     --d: 15px;
     --b: 4px;
     --c: orange;
     --gc: var(--c) calc(50% + var(--b)*0.707), #0000 0;
     --gl: var(--c), #0000 40% 60%, var(--c);
+
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
     height: 64px;
     width: 937px;
-    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
-
 }
 
 .backgroundOverlay {
-    
+
     width: 937px;
     height: 64px;
     left: 0;

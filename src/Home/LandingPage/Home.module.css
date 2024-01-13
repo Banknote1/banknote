@@ -1,44 +1,52 @@
 .bg {
-
-    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+    height: 50vh;
     width: 100%;
-
     background-image: url('/public/sea.png');
     background-size: cover;
-    background-position: bottom bottom;
+    background-position: bottom;
     background-repeat: no-repeat;
-
+    filter: brightness(0.3);
 }
 
-/* .overlay {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
 
-    z-index: 1;
-} */
-
-.Coinbg {
+.ship {
     width: 55%;
     height: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.Coinbg img {
+.ship img {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
+    /* animation: moveShip 5s linear infinite; */
+}
+
+@keyframes moveShip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(calc(100% - 100px));
+        /* Adjust the distance the ship moves */
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .finance {
     width: 45%;
-    align-self: center;
+    align-self: end;
 }
 
 .mainTitleWhite {
@@ -53,7 +61,7 @@
 
 h1 {
     width: 90%;
-    margin-left: 40px;
+    margin-left: 80px;
 }
 
 .mainTitleYellow {
@@ -76,14 +84,7 @@ p {
     line-height: 30px;
     margin-top: 50px !important;
     width: 90%;
-    margin-left: 40px;
-}
-
-.homeContainer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: end;
-    height: 100vh;
+    margin-left: 80px;
 }
 
 .subTitleYellow {
@@ -110,4 +111,31 @@ p {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
+}
+
+.count {
+    margin-left: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #00000033, #53535380);
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+
+    z-index: 1;
+
+}
+
+
+.homeContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    height: 100vh;
 }

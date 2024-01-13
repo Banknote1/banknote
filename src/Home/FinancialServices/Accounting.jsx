@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Slider from './Slider';
 import styles from './Accounting.module.css';
@@ -102,6 +103,11 @@ const Accounting = () => {
       window.removeEventListener('wheel', handleScroll);
     };
   }, [currentSlide, handleNextClick, handlePrevClick]);
+=======
+import React from 'react';
+import Slider from './Slider';
+import styles from './FinancialService.module.css'; // Assuming you have a CSS module for styling
+>>>>>>> 1c277ef37cdaa1eca7b4e572ac970d72dd9d44d1
 
   return (
     <div className={styles.pageContainer}>
@@ -135,6 +141,10 @@ const Accounting = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Accounting;
 
 // http://localhost:3000/financialservices/aas?pagenumb=2
+=======
+export default FinancialServices;
+>>>>>>> 1c277ef37cdaa1eca7b4e572ac970d72dd9d44d1

@@ -1,4 +1,16 @@
 import React from 'react'
+<<<<<<< HEAD
+
+function FinancialServices() {
+    return (
+        <div>
+            
+        </div>
+    )
+}
+
+export default FinancialServices
+=======
 import styles from './FinancialServices.module.css';
 import IconsSocial from '../Social-icons/IconsSocial';
 function FinancialServices() {
@@ -122,3 +134,4 @@ function FinancialServices() {
 }
 
 export default FinancialServices
+>>>>>>> 1c277ef37cdaa1eca7b4e572ac970d72dd9d44d1

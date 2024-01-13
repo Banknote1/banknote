@@ -1,0 +1,203 @@
+ 
+ 
+.backgroundImage{
+  height: 100%;
+}
+
+.CarouselCont{
+  height: 100vh;
+}
+.leftarrow {
+position: absolute;
+margin: 92vh 0% 0% 78.7vw;
+z-index: 2;
+  background:  url('/public/leftarrow.svg');
+  width: 36px; /* Adjust the width and height based on your SVG dimensions */
+  height: 36px;
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Add a pointer cursor for better UX */
+ 
+}
+
+ .rightarrow{
+  z-index: 2;
+  position: absolute;
+  margin: -8vh 0% 0% 87vw;
+  background:  url('/public/rightarrow.svg');
+  width: 36px; /* Adjust the width and height based on your SVG dimensions */
+  height: 36px;
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Add a pointer cursor for better UX */
+ 
+ }
+
+ .slidecontainer {
+  display: flex;
+ margin-top: 20%;
+  height: 100%; 
+  width: 100%;
+ }
+.leftCont{
+width: 60%;
+height: 100%;
+margin-left: 10%;
+}
+.rightCont{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+}
+
+.lefttopCont{
+  width: 100%;
+  height: 42%;
+ }
+.leftbottomCont{
+  display: flex;
+  width: 100%;
+  height: 50%;
+ }
+.righttopCont{
+  justify-content: center;
+  
+  display: flex;
+  width: 100%;
+  height:auto;
+}
+.rightbottomCont{
+  display: flex;
+  
+  width: 100%;
+  height: 50%;
+  justify-content: right;
+}
+
+.headline h1 {
+  margin: 0;
+  width: 100%;
+  color: var(--White-600, #FFF);
+  font-family: Quicksand;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  text-align: left;  
+  width: auto;
+}
+.headline h2 {
+  margin: 0;
+  width: 100%;
+  color: var(--White-600, #EBD5A8);
+  font-family: Quicksand;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  text-align: left;  
+
+}
+
+.des1 p{
+  margin: 0;
+  color: var(--White-100, #FFF);
+  text-align: left;
+ font-family: Quicksand;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.iconsCont{
+  display: flex;
+  width: 33.33%;
+  height: 100%;
+  flex-direction: column;
+}
+.icon{
+  height: 35%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  display: flex;
+  align-items: center;
+}
+.icon img{
+  width: 30% !important;
+  margin: 0 !important;
+  align-self: flex-start;
+}
+.icon p{
+  width: 100%;
+  height: 22%;
+  color: var(--Sand-200, #DDB96E);
+  margin: 0;
+/* Quick Sand/20/Semi Bold */
+font-family: Quicksand;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: left;
+margin-top: 0px !important;
+}
+
+.righttopCont img {
+  
+  width: 85% !important;
+  height: auto;
+  margin-left: 10%;
+}
+.des2 {
+  width: 88%;
+}
+.des2 p{
+  margin: 0 ;
+  margin-top: 30px !important;
+  color: var(--White-100, #FFF);
+  text-align: left;
+ font-family: Quicksand;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 100%;
+}
+
+.pageNumber {
+  color: var(--Gray-300, #8D8F91);
+
+/* Quick Sand/24/Medium */
+font-family: Quicksand;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+background-color: transparent;
+border: transparent;
+cursor: auto !important;
+}
+
+.selectedPage {
+
+  color: var(--White-200, #FCF8F1);
+  /* Quick Sand/24/Medium */
+  font-family: Quicksand;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: transparent;
+  border: transparent;
+  cursor: auto !important;
+}
+.arrows{
+  z-index: 2;
+  position: absolute;
+  margin: -7.6vh 0% 0% 81vw;
+ 
+  border: none; /* Remove default button border */
+ 
+}

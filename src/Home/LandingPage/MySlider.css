@@ -13,4 +13,18 @@
     left: -205px !important;
     justify-content: flex-start !important;
     flex-direction: column !important;
+    width: 50px !important;
+}
+
+.carousel-indicators button {
+    width: 9px !important;
+    height: 8px !important;
+    border-radius: 40% !important;
+}
+
+.carousel-indicators .active {
+    height: 44px !important;
+    background-color: #EBD5A8 !important;
+    border-radius: 20% !important;
+
 }

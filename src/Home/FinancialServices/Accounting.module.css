@@ -1,248 +1,267 @@
- 
+ .sliderCont {
+   width: 100%;
+   height: 100vh;
+   margin: auto;
 
 
-.sliderCont {
-  width: 100%;
-  height: 100vh;
-  margin: auto;
-   
-  
-}
+ }
 
-.sliderContainer {
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-   
-  }
-  
-  .sliderContent {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    height: 60%;
-   
-  }
-  
-  .sliderText {
-    height: 72%;
-    padding: 20px;
-    width: 52%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .sliderImage {
-    /* flex-grow: 1; */
-    width: 41%;
-    height: auto;
-    
-    /* order: 2; */
-    /* display: flex; */
-  }
-  .sliderImage img {
-    
-    width: 73%;
-  z-index: 2;
+ .sliderContainer {
+   width: 100%;
+   height: 100vh;
+   margin: auto;
 
-   
-  }
-  .head1 {
-    color: var(--White-100, #FFF);
+ }
 
-    font-family: Quicksand;
-    font-size: 54px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 90%; /* 57.6px */
-    margin-left: 3%;
-  }
-  .head2 {
-    color: var(--White-100, #EBD5A8);
+ .sliderContent {
+   width: 100%;
+   display: flex;
+   justify-content: end;
+   align-items: end;
+   height: 60%;
 
-    font-family: Quicksand;
-    font-size: 54px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 90%; /* 57.6px */
-    margin-left: 3%;  
-}
-.disCont{
-  display: flex;
-  margin-top: -35px;
-}
-  .disCont p {
-    color: var(--White-100, #FFF);
+ }
 
-    margin-left: 3%;
-    margin-top: 3%;
-    font-family: Quicksand;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal
-  }
-  
- 
-  .pageContainer {
-    background-image: url('/public/BG\ financial.png'); /* Specify the path to your background image */
-    background-size: cover;
-    
-    
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Ensure the background covers the entire viewport height */
-    
-  
-  }
+ .sliderText {
+   height: 72%;
+   padding: 20px;
+   width: 52%;
+   display: flex;
+   flex-direction: column;
+ }
 
-  .framesContainer {
-    display: flex;
-    margin: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+ .sliderImage {
+   /* flex-grow: 1; */
+   width: 41%;
+   height: auto;
 
-  }
-  
-  .frame {
-    
-    z-index: 3;
-    background-color: #171719;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    width: 345px;
-    height: 60px;
-    
-     color: var(--White-500, #F1E3C5);  
-    text-align: center;
-    /* Quick Sand/20/Semi Bold */
-    font-family: Quicksand;
-     
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
+   /* order: 2; */
+   /* display: flex; */
+ }
 
-  .frame h3 {
-    
-   
-   
-    color: var(--White-500, #F1E3C5);
-    text-align: center;
-    /* Quick Sand/20/Semi Bold */
-    font-family: Quicksand;
-     font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
+ .sliderImage img {
 
-  .separator{
-    width: 100%;
-    display: flex;
-    opacity: 1;
-    border-top-width: 3px;
-    border-top-style: solid;
-    border-top-color: #171719;
-  align-self: center;
-    margin-bottom: 0;
-    filter: drop-shadow(1px 0px 4px rgba(219, 197, 152, 0.60));
-    z-index: 2;
-  }
-  .shapecontainer{
-     display: flex;
-    flex-direction: column;
-    height: 83px;
-    align-items: center;
- 
-  }
- 
-.frameRow{
-  margin: -50px 373px 0 0;
-}
+   width: 73%;
+   z-index: 2;
 
-.numberingshape {
-  margin-top: -7px;
-  margin-left: -45px; /* Adjust the spacing between the numbering shape and the separator */
-  z-index: 3;
-  width: 45px; /* Adjust the width of the shape as needed */
-  height: 45px; /* Adjust the height of the shape as needed */
-  background-color: #171719; /* Adjust the background color as needed */
-  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-  filter: drop-shadow(1px 0px 4px rgba(219, 197, 152, 0.60));
-  position: absolute;
-}
-.numbline{
- width: 395px;
- align-self: start;
-}
-.number {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--White-500, #F1E3C5);
-  text-align: center;
-  /* Quick Sand/20/Semi Bold */
-  font-family: Quicksand;
+
+ }
+
+ .head1 {
+   color: var(--White-100, #FFF);
+
+   font-family: Quicksand;
+   font-size: 54px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 90%;
+   /* 57.6px */
+   margin-left: 3%;
+ }
+
+ .head2 {
+   color: var(--White-100, #EBD5A8);
+
+   font-family: Quicksand;
+   font-size: 54px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 90%;
+   /* 57.6px */
+   margin-left: 3%;
+ }
+
+ .disCont {
+   display: flex;
+   margin-top: -35px;
+ }
+
+ .disCont p {
+   color: var(--White-100, #FFF);
+
+   margin-left: 3%;
+   margin-top: 3%;
+   font-family: Quicksand;
+   font-size: 25px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal
+ }
+
+
+ .pageContainer {
+   background-image: url('/public/BG\ financial.png');
+   /* Specify the path to your background image */
+   background-size: cover;
+
+
+   background-repeat: no-repeat;
+   min-height: 100vh;
+   /* Ensure the background covers the entire viewport height */
+
+
+ }
+
+ .framesContainer {
+   display: flex;
+   margin: 20px;
+   flex-wrap: wrap;
+   justify-content: center;
+
+ }
+
+ .frame {
+
+   z-index: 3;
+   background-color: #171719;
+   color: white;
+   padding: 20px;
+   text-align: center;
+   width: 345px;
+   height: 60px;
+
+   color: var(--White-500, #F1E3C5);
+   text-align: center;
+   /* Quick Sand/20/Semi Bold */
+   font-family: Quicksand;
+
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+ }
+
+ .frame h3 {
+
+
+
+   color: var(--White-500, #F1E3C5);
+   text-align: center;
+   /* Quick Sand/20/Semi Bold */
+   font-family: Quicksand;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+ }
+
+ .separator {
+   width: 100%;
+   display: flex;
+   opacity: 1;
+   border-top-width: 3px;
+   border-top-style: solid;
+   border-top-color: #171719;
+   align-self: center;
+   margin-bottom: 0;
+   filter: drop-shadow(1px 0px 4px rgba(219, 197, 152, 0.60));
+   z-index: 2;
+ }
+
+ .shapecontainer {
+   display: flex;
+   flex-direction: column;
+   height: 83px;
+   align-items: center;
+
+ }
+
+ .frameRow {
+   margin: -50px 373px 0 0;
+ }
+
+ .numberingshape {
+   margin-top: -7px;
+   margin-left: -45px;
+   /* Adjust the spacing between the numbering shape and the separator */
+   z-index: 3;
+   width: 45px;
+   /* Adjust the width of the shape as needed */
+   height: 45px;
+   /* Adjust the height of the shape as needed */
+   background-color: #171719;
+   /* Adjust the background color as needed */
+   clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+   filter: drop-shadow(1px 0px 4px rgba(219, 197, 152, 0.60));
+   position: absolute;
+ }
+
+ .numbline {
+   width: 395px;
+   align-self: start;
+ }
+
+ .number {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: var(--White-500, #F1E3C5);
+   text-align: center;
+   /* Quick Sand/20/Semi Bold */
+   font-family: Quicksand;
    font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.slider1{
-  transition: all 1s ease;
-  transform: translateX(100%),
-}
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+ }
 
-.slidersbuttons{
-display: flex;
-margin-top: -50px;
-margin-left: 90%;
+ .slider1 {
+   transition: all 1s ease;
+   transform: translateX(100%),
+ }
 
+ .slidersbuttons {
+   display: flex;
+   margin-top: -50px;
+   margin-left: 90%;
  }
 
  .leftarrow {
-  background:  url('/public/leftarrow.svg');
-  width: 36px; /* Adjust the width and height based on your SVG dimensions */
-  height: 36px;
-  border: none; /* Remove default button border */
-  cursor: pointer; /* Add a pointer cursor for better UX */
-  z-index: 2;
-}
+   background: url('/public/leftarrow.svg');
+   width: 36px;
+   /* Adjust the width and height based on your SVG dimensions */
+   height: 36px;
+   border: none;
+   /* Remove default button border */
+   cursor: pointer;
+   /* Add a pointer cursor for better UX */
+   z-index: 2;
+ }
 
- .rightarrow{
-  background:  url('/public/rightarrow.svg');
-  width: 36px; /* Adjust the width and height based on your SVG dimensions */
-  height: 36px;
-  border: none; /* Remove default button border */
-  cursor: pointer; /* Add a pointer cursor for better UX */
-  z-index: 2;
+ .rightarrow {
+   background: url('/public/rightarrow.svg');
+   width: 36px;
+   /* Adjust the width and height based on your SVG dimensions */
+   height: 36px;
+   border: none;
+   /* Remove default button border */
+   cursor: pointer;
+   /* Add a pointer cursor for better UX */
+   z-index: 2;
  }
 
  .pageNumber {
-  color: var(--Gray-300, #8D8F91);
+   color: var(--Gray-300, #8D8F91);
 
-/* Quick Sand/24/Medium */
-font-family: Quicksand;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-background-color: transparent;
-border: transparent;
-}
+   /* Quick Sand/24/Medium */
+   font-family: Quicksand;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   background-color: transparent;
+   border: transparent;
+ }
 
-.selectedPage {
+ .selectedPage {
 
-  color: var(--White-200, #FCF8F1);
-  /* Quick Sand/24/Medium */
-  font-family: Quicksand;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  background-color: transparent;
-  border: transparent;
-}
+   color: var(--White-200, #FCF8F1);
+   /* Quick Sand/24/Medium */
+   font-family: Quicksand;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   background-color: transparent;
+   border: transparent;
+ }

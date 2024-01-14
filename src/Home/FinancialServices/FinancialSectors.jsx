@@ -5,7 +5,7 @@ function FinancialSectors() {
     return (
         <>
 
-            <div className={styles.servicesbg} ></div>
+            <div className={styles.Sectorbg} ></div>
 
             <div className={styles.overlay}>
                 <div className={` ${styles.leftCont}`}>

@@ -19,10 +19,10 @@ function App() {
 
       <Routes >
 
-        <Route path='/' element={<Home />} ></Route>
+        <Route path='/' element={<MySlider />} ></Route>
         <Route path='/financialservices/' element={<FinancialServices />} ></Route>
         <Route path='/financialservices/aas' element={<Accounting />} ></Route>
-        <Route path='/Secrors/weserve' element={<SecrorsSlider />} ></Route>
+        <Route path='/Sectors/weserve' element={<SecrorsSlider />} ></Route>
         <Route path='/partners' element={<Partners />} ></Route>
         <Route path='/' element={<MySlider />} ></Route>
         <Route path='/finacialServices' element={<FinancialServices />}></Route>

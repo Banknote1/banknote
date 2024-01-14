@@ -45,8 +45,10 @@
 }
 
 .finance {
+    margin-top: 5vh;
+    margin-left: 3%;
     width: 45%;
-    align-self: end;
+    align-self: center;
 }
 
 .mainTitleWhite {

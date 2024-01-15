@@ -23,8 +23,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  z-index: 1;
 }
 
 .app {

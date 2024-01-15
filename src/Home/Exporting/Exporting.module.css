@@ -1,0 +1,175 @@
+.bg {
+
+    background-image: url('/public/Exporting\ background.svg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    z-index: 1;
+}
+
+.Cont {
+    display: flex;
+    height: 80%;
+}
+
+
+
+
+.finance {
+    width: 65%;
+    align-self: center;
+    padding: 100px;
+
+}
+
+.Exportingicons {
+
+    width: 50%;
+
+}
+
+.Exportingicons img {
+    height: 75%;
+}
+
+.mainTitleWhite {
+    color: #ffffff;
+    font-family: Quicksand;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70px;
+    /* 115.2px */
+    margin-left: 3%;
+}
+
+h1 {
+    width: 90%;
+    margin-left: 40px;
+}
+
+.mainTitleYellow {
+    color: #EBD5A8;
+    font-family: Quicksand;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70px;
+    margin-left: 3%;
+
+
+}
+
+.finance p {
+    color: white;
+    font-family: Quicksand;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 50px !important;
+    width: 90%;
+    margin-left: 40px;
+    box-sizing: 682px !important;
+}
+
+.financeCont {
+
+    width: 100%;
+}
+
+.ContRibbon {
+    animation: animate2 40s linear infinite;
+    animation-delay: -20s;
+
+}
+
+
+
+.ribbon {
+    position: fixed;
+    opacity: 60%;
+
+    left: -3.4em;
+    z-index: 9999;
+    width: 150em;
+    height: 2em;
+    overflow: hidden;
+    background-color: none;
+    border-style: dashed;
+    border-width: 3px;
+
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    line-height: 1em;
+    color: #DDB96E;
+    font-family: Quicksand;
+    font-size: 1em;
+    text-align: center;
+    /* text-decoration: none; 
+    /* font-weight: normal; */
+    top: auto;
+    bottom: 8em;
+    transform: rotate(7deg) translateY(35px) translateX(20px);
+    box-shadow: 0 -5px -15px rgba(0, 0, 0, .5);
+
+}
+
+.ribbon2 {
+    position: fixed;
+    opacity: 60%;
+    left: -3.4em;
+    z-index: 9999;
+    width: 150em;
+    height: 2em;
+    overflow: hidden;
+    background-color: none;
+    border: dashed;
+    stroke-dasharray: 8em;
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    line-height: 2em;
+    color: #DDB96E;
+
+    font-family: Quicksand;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    top: auto;
+    bottom: 8em;
+    transform: rotate(-8deg) translateY(-3px) translateX(-100px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    animation: animateStrokeDasharray 2s infinite;
+}
+
+@keyframes animateStrokeDasharray {
+    0% {
+        stroke-dasharray: 8em;
+    }
+
+    50% {
+        stroke-dasharray: 16em;
+    }
+
+    100% {
+        stroke-dasharray: 8em;
+    }
+}

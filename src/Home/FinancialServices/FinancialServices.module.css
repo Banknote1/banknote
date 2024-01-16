@@ -11,6 +11,19 @@
     filter: brightness(0.5);
 }
 
+.Sectorbg {
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/public/sectors.png');
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* filter: brightness(0.5); */
+}
+
 .mainTitleWhite {
     color: #ffffff;
     font-family: Quicksand;

@@ -15,7 +15,7 @@ function Home() {
                     </p>
                     <div className={`d-flex justify-content-start align-items-start ${styles.count}`}>
                         <div className='d-flex flex-column justify-content-center align-items-center'>
-                            <div className='p-3' >
+                            <div className={`${styles.box}`} >
                                 <span className={styles.subTitleYellow}>+</span>
                                 <span className={styles.subTitleWhite}>14</span>
                             </div>
@@ -23,14 +23,14 @@ function Home() {
                             <h2 className={styles.subMainTitleWhite}>Years</h2>
                         </div>
                         <div className='d-flex flex-column justify-content-center align-items-center'>
-                            <div className='p-3'>
+                            <div className={`${styles.box}`}>
                                 <span className={styles.subTitleYellow}>+</span>
                                 <span className={styles.subTitleWhite}>500</span>
                             </div>
                             <h2 className={styles.subMainTitleWhite}>Happy Clients</h2>
                         </div>
                         <div className='d-flex flex-column justify-content-center align-items-center'>
-                            <div className='p-3'>
+                            <div className={`${styles.box}`} >
                                 <span className={styles.subTitleYellow}>+</span>
                                 <span className={styles.subTitleWhite}>80</span>
                             </div>
@@ -38,17 +38,19 @@ function Home() {
                             <h2 className={styles.subMainTitleWhite}>Parteners</h2>
                         </div>
                     </div>
-                </div>
+                </div >
                 <div className={styles.ship}>
                     <img src="/ship.png" alt="Ship Icon" />
                 </div>
+
                 <div>
                     <IconsSocial />
                 </div>
-            </div>
+            </div >
 
         </>
     );
 }
 
 export default Home;
+

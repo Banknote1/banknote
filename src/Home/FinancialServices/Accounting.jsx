@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Slider from './Slider';
 import styles from './Accounting.module.css';
 import { useLocation } from 'react-router-dom';
-import '../../index.css' ;
+import '../../index.css';
 
 const framesData = [
   {
@@ -11,11 +10,11 @@ const framesData = [
     head2: 'Advisory Services',
     description: 'Banknote experts guide you through difficult, complicated challenges brought on by transactions and corporate choices.',
     imageSrc: '/AAS.png',
-    frame1:  'Auditing Financial Documents' ,
-    frame2:  'Transaction Support',
-    frame3:  'Risk Management',
-    frame4:  'Technical accounting consultation',
-    frame5:  'Ensuring regulatory compliance',
+    frame1: 'Auditing Financial Documents',
+    frame2: 'Transaction Support',
+    frame3: 'Risk Management',
+    frame4: 'Technical accounting consultation',
+    frame5: 'Ensuring regulatory compliance',
     frame6: 'Accounting Standards Interpretation'
   },
   {
@@ -23,11 +22,11 @@ const framesData = [
     head2: 'Planning',
     description: 'We offers a comprehensive range of solutions focused on managing and optimizing your financial resources.',
     imageSrc: '/Financial\ planning\ pic.png',
-    frame1:  'Budgeting and Saving Strategies' ,
-    frame2:  'Insurance Planning',
-    frame3:  'Tax Planning',
-    frame4:  'Investment Planning',
-    frame5:  'Debt Management',
+    frame1: 'Budgeting and Saving Strategies',
+    frame2: 'Insurance Planning',
+    frame3: 'Tax Planning',
+    frame4: 'Investment Planning',
+    frame5: 'Debt Management',
     frame6: 'Cash Flow Management'
   },
   {
@@ -35,11 +34,11 @@ const framesData = [
     head2: '& Advisory',
     description: 'We ensure that our customers\' innovative concepts stand on a solid financial foundation, backed by rational logic and stringent compliance with legal requisites.',
     imageSrc: '/Assurance\ &\ Advisory\ Pic.png',
-    frame1:  'Global Accounting Standards' ,
-    frame2:  'Internal Control Evaluation',
-    frame3:  'Commercial Risk Service',
-    frame4:  'Preparing financial statements',
-    frame5:  'Ensuring the regulatory compliance',
+    frame1: 'Global Accounting Standards',
+    frame2: 'Internal Control Evaluation',
+    frame3: 'Commercial Risk Service',
+    frame4: 'Preparing financial statements',
+    frame5: 'Ensuring the regulatory compliance',
     frame6: 'Risk Management'
   },
   {
@@ -47,11 +46,11 @@ const framesData = [
     head2: 'Facilities',
     description: 'Bank note deal with more then 27 governmental and private bank ensuring a wide array of funding options perfectly suited to your company\'s needs.',
     imageSrc: '/Banking\ Facilities\ Pic.png',
-    frame1:  'Suggestion for funding from diverse sources' ,
-    frame2:  'Restructuring current firms',
-    frame3:  'Accurate Financial Projections',
-    frame4:  'Customized business planes',
-    frame5:  'Company Evaluation',
+    frame1: 'Suggestion for funding from diverse sources',
+    frame2: 'Restructuring current firms',
+    frame3: 'Accurate Financial Projections',
+    frame4: 'Customized business planes',
+    frame5: 'Company Evaluation',
     frame6: 'Transaction Support'
   }
 ];
@@ -103,11 +102,6 @@ const Accounting = () => {
       window.removeEventListener('wheel', handleScroll);
     };
   }, [currentSlide, handleNextClick, handlePrevClick]);
-=======
-import React from 'react';
-import Slider from './Slider';
-import styles from './FinancialService.module.css'; // Assuming you have a CSS module for styling
->>>>>>> 1c277ef37cdaa1eca7b4e572ac970d72dd9d44d1
 
   return (
     <div className={styles.pageContainer}>
@@ -125,9 +119,8 @@ import styles from './FinancialService.module.css'; // Assuming you have a CSS m
           {[...Array(totalSlides).keys()].map((pageNum) => (
             <button
               key={pageNum}
-              className={`${styles.pageNumber} ${
-                pageNum === currentSlide ? styles.selectedPage : ''
-              }`}
+              className={`${styles.pageNumber} ${pageNum === currentSlide ? styles.selectedPage : ''
+                }`}
               onClick={() => setCurrentSlide(pageNum)}
             >
               {pageNum + 1}
@@ -141,10 +134,6 @@ import styles from './FinancialService.module.css'; // Assuming you have a CSS m
   );
 };
 
-<<<<<<< HEAD
 export default Accounting;
 
 // http://localhost:3000/financialservices/aas?pagenumb=2
-=======
-export default FinancialServices;
->>>>>>> 1c277ef37cdaa1eca7b4e572ac970d72dd9d44d1

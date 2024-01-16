@@ -27,8 +27,6 @@ const Hero = () => {
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-700%)', transition: 'transform .5s' }}>e</h1>
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-800%)', transition: 'transform .5s' }}>s</h1>
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-900%)', transition: 'transform .5s' }}>t</h1>
-
-
                     </div>
                     <div className={styles.headline}>
                         <h2>Financial</h2>
@@ -66,7 +64,7 @@ const Hero = () => {
                                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>+</h1>
                                         <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-200%)', transition: 'transform .5s' }}>5</h2>
                                         <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-300%)', transition: 'transform .5s' }}>0</h2>
-                                        <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-300%)', transition: 'transform .5s' }}>0</h2>
+                                        <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-400%)', transition: 'transform .5s' }}>0</h2>
                                     </div>
 
                                 </div>

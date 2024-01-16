@@ -20,10 +20,15 @@
     height: 100%;
  
 }
-
 .ship {
     width: 50%;
     z-index: 6!important;
+}
+
+.ship2 {
+    width: 50%;
+    z-index: 6!important;
+   
 }
 
 .ship img {
@@ -31,29 +36,50 @@
     top: 9.6vw;
     width: 50% !important;
     position: absolute;
-    width: 100%;
-    z-index: 6 !important;
     filter: brightness(1.2);
-    animation: moveShip 5s linear;
+    animation: moveAndFlip 9.5s linear 1;  
 }
 
+.ship2 img {
+    
+    left: -100%;
+    top: 9.6vw;
+    width: 50% !important;
+    position: absolute;
+    filter: brightness(1.2);
+    animation: moveAndFlip2 2.5s linear 1;  
+    animation-delay: 7s;  
+}
 
-
-
-
-@keyframes moveShip {
-
+@keyframes moveAndFlip {
     0% {
-        left: 90%;
+        left: -50%;
+        transform: rotate(180deg);
     }
 
+    100% {
+        left: 200%;
+        transform: rotate(180deg);
+    
+    }
+}
 
+@keyframes moveAndFlip2 {
+    
+    0% {
+        
+        left: 100%;
+         
+    }
 
     100% {
         left: 45%;
+       
+     
     }
-
 }
+
+
 
 
 

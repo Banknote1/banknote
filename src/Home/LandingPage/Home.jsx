@@ -122,6 +122,10 @@ function Home() {
                         <img src="/ship.png" alt="Ship Icon" />
 
                     </div>
+                    <div className={styles.ship2}>
+                        <img src="/ship.png" alt="Ship Icon" />
+
+                    </div>
                     <div className={styles.bg}></div>
                     <div>
                         <IconsSocial />

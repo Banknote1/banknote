@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Hero.module.css';
+import style from '../LandingPage/Home.module.css'
 import IconsSocial from '../Social-icons/IconsSocial';
-
+import '../../index.css'
 const Hero = () => {
 
     const [animate, setAnimate] = useState(false);
@@ -14,7 +15,7 @@ const Hero = () => {
     return (
         <div className={styles.homeContainer}>
             <div className={styles.bg}></div>
-            <div className='overlay'>
+            <div className={style.overlay}>
                 <div className={styles.finance}>
                     <div className={styles.headline} style={{ display: 'flex', flexDirection: 'row' }} >
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>Y</h1>

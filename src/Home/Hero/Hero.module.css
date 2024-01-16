@@ -1,26 +1,41 @@
 .Coinbg {
-    width: 50%;
-
+    width: 30%;
+    height: auto;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
 }
 
 .Coinbg img {
-    width: 100%;
-
+    width: auto;
+    height: 100%;
     transition: transform 0.5s ease;
     position: relative;
     animation: moveCoinbg 0.6s linear 1;
+    top: -25%;
+
+}
+
+.cont {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
 }
 
 @keyframes moveCoinbg {
     from {
-        top: -100%;
+        top: -100vh;
         transform: scaleX(-1);
 
     }
 
     to {
         transform: scaleX(1);
-        top: 0%;
+        top: -25vh;
     }
 
     /* 100% {
@@ -33,9 +48,10 @@
 
 
 .finance {
-    width: 50%;
-    margin-left: 5%;
-    margin-top: 5vh;
+    width: 40%;
+    margin-left: 7%;
+
+
 
 }
 
@@ -54,7 +70,7 @@
     width: 100%;
     color: var(--White-600, #FFF);
     font-family: Quicksand;
-    font-size: 128px;
+    font-size: 6rem;
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
@@ -69,36 +85,43 @@ h1 {
     margin-left: 3%;
 } */
 
-.mainTitleYellow {
+.headline h2 {
     color: #EBD5A8;
     font-family: Quicksand;
-    font-size: 128px;
+    font-size: 6rem;
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
     text-align: left;
     width: auto;
-    margin-left: 3%;
+    margin: 0 !important;
+
 }
 
-p {
+.des {
+    display: flex;
+}
+
+.des p {
     color: white;
     font-family: Quicksand;
     font-size: 22px;
     font-style: normal;
     font-weight: 300;
     line-height: 30px;
-    margin-top: 50px !important;
-    width: 78%;
-    margin-left: 3%;
-
+    width: 70%;
+    margin: 0 !important;
+    margin-top: 3% !important;
 }
 
 .homeContainer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: end;
-    height: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    margin-left: 11% !important;
+    margin-right: 11% !important;
+    margin-top: 11% !important;
 
 }
 
@@ -112,11 +135,11 @@ p {
 
 }
 
-.subMainTitleWhite {
+.subMainTitleWhite h2 {
     font-weight: 400;
     font-style: normal;
     font-family: Quicksand;
-    font-size: 54px;
+    font-size: 20px;
 
 }
 
@@ -145,8 +168,47 @@ p {
 }
 
 .count {
-    margin-left: 3%;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10%;
+}
+
+.numbers {
+    margin: 0 !important;
+    display: flex;
+    margin-top: 5% !important;
+}
+
+
+
+.numbCont {
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.subTitleYellow h2 {
+    color: #ffffff;
+    font-family: Quicksand;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.subTitleYellow h1 {
+    margin: 0;
+
+    color: #EBD5A8;
+    font-family: Quicksand;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
     white-space: nowrap;
-    padding-bottom: 10vh;
 
 }

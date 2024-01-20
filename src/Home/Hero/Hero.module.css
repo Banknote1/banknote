@@ -149,19 +149,46 @@ h1 {
     font-weight: 400;
 }
 
+
+
 .subMainTitleWhite {
+    color: #ffffff;
+    font-family: Quicksand;
+    font-size: 20px;
+}
+
+.count {
+    margin: 0 !important;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10%;
+}
+
+.numbers {
+    margin: 0 !important;
+    display: flex;
+    margin-top: 5% !important;
+}
+
+
+
+.numbCont {
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.subTitleYellow h2 {
     color: #ffffff;
     font-family: Quicksand;
     font-size: 54px;
     font-style: normal;
     font-weight: 400;
 
-}
-
-.subMainTitleWhite {
-    color: #ffffff;
-    font-family: Quicksand;
-    font-size: 20px;
 }
 
 .count {

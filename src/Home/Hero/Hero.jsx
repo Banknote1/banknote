@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Hero.module.css';
+import style from '../LandingPage/Home.module.css'
 import IconsSocial from '../Social-icons/IconsSocial';
-
+import '../../index.css'
 const Hero = () => {
 
     const [animate, setAnimate] = useState(false);
@@ -105,13 +106,25 @@ const Hero = () => {
                                     <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-800%)', transition: 'transform .5s' }}>s</h2>
                                 </div>                            </div>
                         </div>
+                        <div className={styles.numbCont}>
+                            <div className={styles.subnumber}>
+                                <div className={styles.subTitleYellow} style={{ display: 'flex', flexDirection: 'row' }} >
+                                    <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>+</h1>
+                                    <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-200%)', transition: 'transform .5s' }}>8</h2>
+                                    <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-300%)', transition: 'transform .5s' }}>0</h2>
+                                </div>
+                            </div>
+                            <div className={styles.subMainTitleWhite} style={{ display: 'flex', flexDirection: 'row' }} >
+                                <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>P</h2>
+                                <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-200%)', transition: 'transform .5s' }}>a</h2>
+                                <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-300%)', transition: 'transform .5s' }}>r</h2>
+                                <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-400%)', transition: 'transform .5s' }}>t</h2>
+                                <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-500%)', transition: 'transform .5s' }}>n</h2>
+                                <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-600%)', transition: 'transform .5s' }}>e</h2>
+                                <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-700%)', transition: 'transform .5s' }}>r</h2>
+                                <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-800%)', transition: 'transform .5s' }}>s</h2>
+                            </div>                            </div>
                     </div>
-                </div>
-                <div className={styles.Coinbg}>
-                    <img src="./hero-image.png" alt="" />
-                </div>
-                <div>
-                    <IconsSocial />
                 </div>
             </div>
         </div >

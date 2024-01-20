@@ -10,7 +10,42 @@
 
 .carousel-indicators {
     bottom: 248px !important;
-    left: -205px !important;
+    left: -137px !important;
     justify-content: flex-start !important;
     flex-direction: column !important;
+    width: 50px !important;
+}
+
+.carousel-indicators button {
+    width: 9px !important;
+    height: 8px !important;
+    border-radius: 40% !important;
+}
+
+.carousel-indicators .active {
+    height: 44px !important;
+    background-color: #EBD5A8 !important;
+    border-radius: 20% !important;
+
+}
+
+.carousel-control-prev-icon {
+    background-image: url('/public/leftarrow.svg') !important;
+    transform: rotate(90deg);
+}
+
+.carousel-control-next-icon {
+    background-image: url('/public/rightarrow.svg') !important;
+    transform: rotate(90deg);
+}
+
+.carousel-control-prev {
+    width: 13.5% !important;
+    height: 592px !important;
+}
+
+.carousel-control-next {
+    align-items: end !important;
+    height: 500px !important;
+    left: -14px !important;
 }

@@ -1,39 +1,39 @@
 .socialButtons {
-    position: fixed;
-    right: 3rem;
-    top: 40%;
-    display: flex;
-    flex-direction: column;
-  }
+  position: fixed;
+  right: 3rem;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
 
-  .socialButtons a {
-    display: inline-flex;
-    text-decoration: none;
-    font-size: 18px;
-  
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 4px 0 20px 0; 
-  }
+.socialButtons a {
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 18px;
 
-  .socialButtons a::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    z-index: -1;
-    transition: 0.3s ease-in;
-  }
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 4px 0 20px 0;
+}
 
-  .socialButtons a:hover::before {
-    transform: scale(0);
-  }
+.socialButtons a::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
 
-  .socialButtons a i {
-    transition: 0.3s ease-in; /* Add your transition properties here */
-  }
+.socialButtons a:hover::before {
+  transform: scale(0);
+}
 
-  
+.socialButtons a i {
+  transition: 0.3s ease-in;
+  /* Add your transition properties here */
+}

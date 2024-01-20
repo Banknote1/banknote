@@ -14,7 +14,7 @@ body {
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0;
   width: 100%;
@@ -23,6 +23,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .app {

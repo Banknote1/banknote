@@ -11,6 +11,8 @@ import FinancialServices from './Home/FinancialServices/FinancialServices';
 import FinancialSectors from './Home/FinancialServices/FinancialSectors';
 import SecrorsSlider from './Home/Sectors/SectorsSlider';
 import Partners from './Home/Partners/Partners'
+import Partners1 from './Home/Partners/Partners1'
+
 import Hero from './Home/Hero/Hero';
 import Exporting from './Home/Exporting/Exporting'
 function App() {
@@ -25,8 +27,9 @@ function App() {
         <Route path='/' element={<Home />} ></Route>
         <Route path='/financialservices/' element={<FinancialServices />} ></Route>
         <Route path='/financialservices/aas' element={<Accounting />} ></Route>
-        <Route path='/Secrors/weserve' element={<SecrorsSlider />} ></Route>
+        <Route path='/Sectors/weserve' element={<SecrorsSlider />} ></Route>
         <Route path='/partners' element={<Partners />} ></Route>
+        <Route path='/partners1' element={<Partners1 />} ></Route>
         <Route path='/' element={<MySlider />} ></Route>
         <Route path='/finacialServices' element={<FinancialServices />}></Route>
         <Route path='/finacialSectors' element={<FinancialSectors />}></Route>

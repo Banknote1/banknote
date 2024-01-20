@@ -1,8 +1,8 @@
 .bg {
     position: fixed;
-    top: 25vw;
+    top: 70vw;
     z-index: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url('/public/sea.png');
     background-size: cover;
@@ -33,23 +33,24 @@
 }
 
 .ship img {
-    left: 45%;
-    top: 9.6vw;
-    width: 50% !important;
-    position: absolute;
-    filter: brightness(1.2);
-    animation: moveAndFlip 9.5s linear 1;
-}
-
-.ship2 img {
-
     left: -100%;
     top: 9.6vw;
     width: 50% !important;
     position: absolute;
     filter: brightness(1.2);
-    animation: moveAndFlip2 2.5s linear 1;
-    animation-delay: 7s;
+    animation: moveAndFlip 10s linear 1;
+}
+
+.ship2 img {
+
+    left: 45%;
+    top: 9.6vw;
+    width: 50% !important;
+    position: absolute;
+    filter: brightness(1.2);
+    animation: moveAndFlip2 10s linear 1;
+
+
 }
 
 @keyframes moveAndFlip {
@@ -69,13 +70,14 @@
 
     0% {
 
-        left: 100%;
+        left: 250%;
+        opacity: 0;
 
     }
 
     100% {
         left: 45%;
-
+        opacity: 1;
 
     }
 }
@@ -95,7 +97,7 @@
     color: #ffffff;
 
     font-family: Quicksand;
-    font-size: 10%;
+    font-size: 80px;
     font-style: normal;
     font-weight: 400;
     line-height: 70px;
@@ -104,27 +106,30 @@
 
 h1 {
     width: 90%;
+    margin-left: 80px;
 }
 
 .mainTitleYellow {
     color: #EBD5A8;
     font-family: Quicksand;
-    font-size: 10%;
+    font-size: 80px;
     font-style: normal;
     font-weight: 400;
     line-height: 70px;
+
+
 }
 
 p {
     color: white;
     font-family: Quicksand;
-    font-size: 1vh;
+    font-size: 18px;
     font-style: normal;
     font-weight: 300;
     line-height: 30px;
     margin-top: 50px !important;
-    width: 7 0vw;
-    margin-left: 3%;
+    width: 90%;
+    margin-left: 80px;
 }
 
 .subTitleYellow {
@@ -162,7 +167,7 @@ p {
 }
 
 .count {
-    /* margin-left: 50px; */
+    margin-left: 50px;
 }
 
 .overlay {
@@ -230,7 +235,7 @@ p {
     font-style: normal;
     font-weight: 300;
     line-height: 30px;
-    width: 70vw;
+    width: 100%;
     margin: 0 !important;
     margin-top: 3% !important;
 }
@@ -263,7 +268,7 @@ p {
 .subTitleYellow h2 {
     color: #ffffff;
     font-family: Quicksand;
-    font-size: 6vh;
+    font-size: 54px;
     font-style: normal;
     font-weight: 400;
 
@@ -274,7 +279,7 @@ p {
 
     color: #EBD5A8;
     font-family: Quicksand;
-    font-size: 6vh;
+    font-size: 54px;
     font-style: normal;
     font-weight: 400;
     white-space: nowrap;

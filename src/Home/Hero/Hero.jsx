@@ -111,9 +111,7 @@ const Hero = () => {
             <div className={styles.Coinbg}>
                 <img src="./hero-image.png" alt="" />
             </div>
-            <div>
-                <IconsSocial />
-            </div>
+
         </div>
         // </div >
 

@@ -127,9 +127,7 @@ function Home() {
 
                 </div>
                 <div className={styles.bg}></div>
-                <div>
-                    <IconsSocial />
-                </div>
+
             </div >
             {/* </div > */}
         </>

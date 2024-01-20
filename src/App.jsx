@@ -22,7 +22,7 @@ function App() {
 
       <Routes >
 
-        <Route path='/' element={<MySlider />} ></Route>
+        {/* <Route path='/' element={<MySlider />} ></Route> */}
         <Route path='/financialservices/' element={<FinancialServices />} ></Route>
         <Route path='/financialservices/aas' element={<Accounting />} ></Route>
         <Route path='/Sectors/weserve' element={<SecrorsSlider />} ></Route>

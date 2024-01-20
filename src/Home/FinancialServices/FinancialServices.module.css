@@ -45,7 +45,7 @@
 
 .serBox {
     width: 250px;
-    height: 35.3vh;
+    height: 34vh;
     flex-shrink: 0;
     margin-right: 15px;
     box-shadow: 8px 8px 4px #00000040;
@@ -107,7 +107,7 @@
 }
 
 .textContent {
-    width: 55%;
+    width: 100%;
     align-self: center;
 }
 
@@ -133,4 +133,22 @@ h5 {
     font-weight: 600;
     line-height: normal;
     margin-top: 16px !important;
+}
+
+.NumWhite {
+    color: var(--White-100, #FFF);
+    font-family: Quicksand;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.NumYellow {
+    color: var(--White-600, #EBD5A8);
+    font-family: Quicksand;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }

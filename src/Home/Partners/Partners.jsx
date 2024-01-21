@@ -841,7 +841,6 @@ const Partners = () => {
           <button
             key={index}
             className={`${styles.pageNumber} ${index === selectedPage ? styles.selectedPage : ''}`}
-
           >
             {index + 1}
           </button>

@@ -1,0 +1,39 @@
+.homecontiner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 12%;
+
+}
+
+.leftContiner {
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+
+}
+
+.rightContiner {
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+
+}
+
+/* Place this text at the top of your CSS file */
+.text {
+    color: #ffffff;
+    /* Quick Sand/24/Medium */
+    font-family: Quicksand;
+
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+/* .firstleftContiner button {
+    background-image:url()
+} */

@@ -11,6 +11,8 @@ import FinancialServices from './Home/FinancialServices/FinancialServices';
 import FinancialSectors from './Home/FinancialServices/FinancialSectors';
 import SecrorsSlider from './Home/Sectors/SectorsSlider';
 import Partners from './Home/Partners/Partners'
+import Partners1 from './Home/Partners/Partners1'
+
 import Hero from './Home/Hero/Hero';
 import Exporting from './Home/Exporting/Exporting'
 import FAQs from './Home/FAQs/FAQs.jsx';

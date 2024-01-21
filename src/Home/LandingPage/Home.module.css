@@ -32,23 +32,24 @@
 }
 
 .ship img {
-    left: 45%;
-    top: 9.6vw;
-    width: 50% !important;
-    position: absolute;
-    filter: brightness(1.2);
-    animation: moveAndFlip 9.5s linear 1;  
-}
-
-.ship2 img {
-    
     left: -100%;
     top: 9.6vw;
     width: 50% !important;
     position: absolute;
     filter: brightness(1.2);
-    animation: moveAndFlip2 2.5s linear 1;  
-    animation-delay: 7s;  
+    animation: moveAndFlip 10s linear 1;  
+}
+
+.ship2 img {
+    
+    left: 45%;
+    top: 9.6vw;
+    width: 50% !important;
+    position: absolute;
+    filter: brightness(1.2);
+    animation: moveAndFlip2 10s linear 1;  
+     
+    
 }
 
 @keyframes moveAndFlip {
@@ -68,13 +69,14 @@
     
     0% {
         
-        left: 100%;
+        left: 250%;
+        opacity: 0;  
          
     }
 
     100% {
         left: 45%;
-       
+        opacity: 1; 
      
     }
 }

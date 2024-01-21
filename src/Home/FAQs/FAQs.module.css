@@ -1,0 +1,171 @@
+.pageCont{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+.TopframeCont{
+    display: flex;
+    position: fixed;
+    top: -2%;
+    z-index: 66;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    height: 20%;
+}
+/* .topFrame1{
+    backdrop-filter: blur(2px);
+    height: 3vh !important;
+    width: 65%;
+    background: rgba(17, 17, 17, 0.9);
+    align-self: center;
+} */
+    
+.topFrame{
+    --d: 15px;
+    --b: 4px;
+    --c: orange;
+    --gc: var(--c) calc(50% + var(--b)*0.707), #0000 0;
+    --gl: var(--c), #0000 40% 60%, var(--c);
+
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
+    backdrop-filter: blur(2px);
+    width: 95%;
+    border-radius: 15px;
+    height: 15vh !important;
+    background: rgba(38, 39, 41, 0.80);
+    padding: 10px;
+    display: inline-block;
+    align-self: center;
+    height: 100% !important;
+}
+.bgImageCont{
+    z-index: -1;
+    top:10%;
+    right: 2%;
+    width: 35%;
+    height:auto;
+    position: absolute;
+}
+
+.bgImageCont img{
+
+    width: 100%;
+    height: 100%;
+}
+.roundedFrame{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(2px);
+    width: 81%;
+    background: rgba(0, 0, 0, 0.60);
+    --d: 15px;
+    --b: 4px;
+    --c: orange;
+    --gc: var(--c) calc(50% + var(--b)*0.707), #0000 0;
+    --gl: var(--c), #0000 40% 60%, var(--c);
+
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .roundedFrame p{
+    color: var(--Gray-50, #B9BBBE);
+    font-family: Quicksand;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+  }
+  .subFrame{
+    display: flex;
+    flex-direction: row;
+    margin: 0 !important;
+    justify-content: center;
+  }
+ .framesCont{
+    margin-top: 10%;
+     display: flex;
+     flex-direction: column;
+     gap: 3%;
+     width: 80%;    
+     align-items: center;
+     align-self: center;
+     height: 100%;
+ }
+ .roundedFrame p{
+     margin: 0 !important;
+ }
+.headline h1{
+    color: var(--White-100, #FFF);
+    font-family: Quicksand;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 57.6px */
+    margin: 0 !important;
+
+}
+.headline h2{
+    color: var(--White-100, #FFF);
+    font-family: Quicksand;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 57.6px */
+    margin: 0 !important;
+
+}
+.headline{
+    flex-direction: column;
+    gap: 32px;
+    align-self: self-start;
+display: flex;
+margin-left: 9.5%;
+margin-bottom: 1.5%;
+}
+.subFrame p{
+    width: 100%;
+    margin: 0 !important;
+    align-self: center;
+    color: var(--Gray-50, #B9BBBE);
+    font-family: Quicksand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 21.6px */
+}
+.plusButton{
+    background-color: transparent; /* Set background to transparent */
+    color: #DDB96E; /* Change the text color to your desired color */
+    font-size: 30px;
+    border: none; /* Remove border if any */
+    cursor: pointer;
+}
+.plusButtonCont{
+
+    display: flex;
+    flex-direction: row;
+ 
+    align-items: center;
+    justify-content: center;
+}
+.SubframesCont1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:23px;
+    justify-content: center;
+}
+
+.contactCont{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    height: 60vw;
+}
+.ContactLabel{
+    align-self: center;
+}

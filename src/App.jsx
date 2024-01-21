@@ -13,6 +13,7 @@ import SecrorsSlider from './Home/Sectors/SectorsSlider';
 import Partners from './Home/Partners/Partners'
 import Hero from './Home/Hero/Hero';
 import Exporting from './Home/Exporting/Exporting'
+import FAQs from './Home/FAQs/FAQs.jsx';
 function App() {
 
 
@@ -27,12 +28,12 @@ function App() {
         <Route path='/financialservices/aas' element={<Accounting />} ></Route>
         <Route path='/Sectors/weserve' element={<SecrorsSlider />} ></Route>
         <Route path='/partners' element={<Partners />} ></Route>
-        <Route path='/' element={<MySlider />} ></Route>
-        <Route path='/finacialServices' element={<FinancialServices />}></Route>
-        <Route path='/finacialSectors' element={<FinancialSectors />}></Route>
+
+        <Route path='/financialServices' element={<FinancialServices />}></Route>
+        <Route path='/financialSectors' element={<FinancialSectors />}></Route>
         <Route path='/Hero' element={<Hero />} ></Route>
         <Route path='/Exporting' element={<Exporting />} ></Route>
-
+        <Route path='/FAQs' element={<FAQs />} ></Route>
 
 
       </Routes>

@@ -119,11 +119,11 @@ function Home() {
 
 
                     <div className={styles.ship}>
-                        <img src="/ship.png" alt="Ship Icon" />
+                        <img src="/Empty-Ship.png" alt="Ship Icon" />
 
                     </div>
                     <div className={styles.ship2}>
-                        <img src="/ship.png" alt="Ship Icon" />
+                        <img src="/Full-Ship.png" alt="Ship Icon" />
 
                     </div>
                     <div className={styles.bg}></div>

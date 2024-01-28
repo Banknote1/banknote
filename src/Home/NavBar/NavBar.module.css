@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 9999;
     /* position: fixed; */
-
+gap: 4%;
     height: 150px;
 }
 
@@ -47,7 +47,7 @@ nav {
 
 
 .navLink {
-    color: white !important;
+
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
@@ -131,4 +131,18 @@ nav {
     justify-content: center;
     align-items: center;
     width: 10%;
+}
+.dot{
+    justify-content: center;
+   display: flex;
+}
+.navLink {
+    color: #AAACAF !important;
+}
+
+.active {
+    color: #FFFFFF !important;
+}
+.navItem a{
+    padding-bottom: 0px;
 }

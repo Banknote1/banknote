@@ -2,6 +2,7 @@
 display: flex;
 flex-direction: column;
 width: 100%;
+height: 100%;
 }
 .TopframeCont{
     display: flex;
@@ -13,13 +14,7 @@ width: 100%;
     flex-direction: column;
     height: 20%;
 }
-/* .topFrame1{
-    backdrop-filter: blur(2px);
-    height: 3vh !important;
-    width: 65%;
-    background: rgba(17, 17, 17, 0.9);
-    align-self: center;
-} */
+ 
     
 .topFrame{
     --d: 15px;
@@ -30,7 +25,7 @@ width: 100%;
 
     clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
     backdrop-filter: blur(2px);
-    width: 95%;
+    width: 90%;
     border-radius: 15px;
     height: 15vh !important;
     background: rgba(38, 39, 41, 0.80);
@@ -69,6 +64,7 @@ width: 100%;
     clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
     padding: 20px;
     border-radius: 20px;
+    cursor: pointer;
   }
   .roundedFrame p{
     color: var(--Gray-50, #B9BBBE);
@@ -164,8 +160,275 @@ margin-bottom: 1.5%;
     margin-top: 10%;
     display: flex;
     flex-direction: row;
-    height: 60vw;
+    height: 100%  ;    
+    width: 100%;
 }
 .ContactLabel{
     align-self: center;
+    justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  height: 100%;
 }
+.ContactLabelCont{
+    width: auto;
+}
+.ContactLabelCont h1{
+    color: var(--White-100, #FFF);
+    width: auto;
+/* Quick Sand/64/Regualr */
+font-family: Quicksand;
+font-size: 60px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.contactForm{
+    height: 100%;
+    
+    display: flex;
+  justify-content: center;
+}
+
+.underlinetextfield {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    margin-top: 10vh;
+    width: 30vw;
+  }
+  
+ 
+  
+  .sendButton{
+    height: '3vw';
+    background: '#DDB96E';
+    border-radius: 5;
+    color: 'var(--Black-300, #262729)';
+    text-align: 'center';
+    font-family: 'Quicksand';
+    font-size: 25px;
+    stroke: none;
+  border: none;
+    font-style: 'normal';
+    font-weight: 700;
+    line-height: 'normal';
+    height: 3vw;
+    --d: 10px;
+    --b: 4px;
+    --c: orange;
+    --gc: var(--c) calc(50% + var(--b)*0.707), #0000 0;
+    --gl: var(--c), #0000 40% 60%, var(--c);
+    border-radius: 12px;
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d)); 
+}
+      
+.sendButton:hover {
+    background-color: #DDB96E !important;
+    color: #DDB96E !important;
+
+}
+
+.sendButton {
+    position: relative;
+  
+    background-color: #DDB96E;
+    overflow: hidden;
+}
+
+.sendButton:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    --d: 10px !important;
+    --b: 4px !important;
+    --c: orange !important;
+    --gc: var(--c) calc(50% + var(--b) * 0.707), #0000 0 !important;
+    --gl: var(--c), #0000 40% 60%, var(--c) !important;
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
+    border-radius: 12px;
+    transform: scale(0.994, 0.939);
+    z-index: -1;
+}
+ 
+
+.footer {
+    background-color: #0D0D0D;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+   
+    height: 13%;
+    width: 100%;
+    --d: 35px !important;
+    --b: 4px !important;
+    --c: orange !important;
+    --gc: var(--c) calc(50% + var(--b) * 0.707), #0000 0 !important;
+    --gl: var(--c), #0000 40% 60%, var(--c) !important;
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100%  ) 100%, var(--d) 100%, 0 calc(100%  ), 0 var(--d));
+    left: 0px;
+    bottom: 0px;
+    z-index: 3;
+    bottom: 0;
+    clear: both;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+   
+     
+   
+  
+ 
+  }
+ 
+  .footerSubCont{
+      gap: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 110%;
+  }
+  .footerSubCont img{
+      width: 32px;
+
+  }
+  .footerSubCont h1{
+      margin: 0;
+    color: var(--White-100, #FFF);
+    font-family: Quicksand;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 21.6px */
+    width: auto;
+    align-content: start;
+  display: flex;
+}
+
+.subScroll{
+    margin-top: 10%;
+}
+.question{
+    margin-left: 8%;
+  margin-right: 8%;
+}
+.msgInfo{
+    color: var(--Black-200, #434547);
+font-family: Quicksand;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+padding: 0px 15px 0px 15px;
+margin: 0 !important;
+width: 100%;
+}
+
+.modaloverlay {
+    padding-top: 6%;
+    z-index: 1031;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.74);
+            display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 5px;
+    padding-bottom: 2%;
+    border: 1px solid var(--Sand-100, #E4C78B);
+    background: var(--Black-1000, #000);
+    display: flex;
+    width: 54%;
+    height: 85%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%;
+    flex-shrink: 0;
+    z-index: 5; 
+  }
+  .Submitdate{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--Radius-1, 8px);
+    background: var(--Sand-200, #DDB96E);
+    border-color: transparent;
+    color: var(--Black-500, #171719);
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;  
+}
+.Canceldate{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--Radius-1, 8px);
+    border: 1.268px solid var(--Sand-200, #DDB96E);
+    color: var(--Sand-200, #DDB96E);
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+ .Calendar{
+  
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    gap: 8.386px;
+    border-radius: var(--Radius-2, 20.282px);
+    background: var(--Black-300, #262729);
+    box-shadow: 0px 5.07px 7.606px 0px rgba(86, 86, 86, 0.06), 0px 2.535px 5.07px 0px rgba(86, 86, 86, 0.08), 0px -1.268px 5.07px 0px rgba(86, 86, 86, 0.08);
+ }
+ .button {
+    border-radius: var(--Radius-1, 10.141px);
+border: 1.268px solid var(--White-300, #F8F1E2);
+color: var(--White-300, #F8F1E2);
+font-family: Quicksand;
+font-size: 1.1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+  .button:hover {
+    border: 1.268px solid var(--White-300, #DDB96E);
+    color: var(--White-300, #DDB96E);
+}
+
+  .selectedButton {
+    border-radius: var(--Radius-1, 10.141px);
+    background: var(--Sand-200, #F1E3C5);
+    color: var(--Black-300, #262729);
+    font-family: Quicksand;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }

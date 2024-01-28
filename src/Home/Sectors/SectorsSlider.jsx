@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the styles
 import styles from './SectorsSlider.module.css';
@@ -12,6 +13,20 @@ const SectorsSlider = () => {
     'Construction',
   ];
   const [selectedPage, setSelectedPage] = useState(0);
+
+  const location = useLocation();
+  useEffect(() => {
+    // Parse the 'pagenumb' query parameter from the URL
+    const params = new URLSearchParams(location.search);
+    const pageNumber = parseInt(params.get('pagenumb'), 10) || 0;
+
+    // Update the selectedPage state based on the parsed value
+    setSelectedPage(Math.max(0, Math.min(pageNumber - 1, sectors.length - 1)));
+  }, [location.search, sectors.length]);
+
+  const handlePageChange = (index) => {
+    setSelectedPage(index);
+  };
   const renderCustomArrow = (direction, clickHandler, isEnabled, label) => (
     <>
       {direction === 'prev' && (
@@ -41,14 +56,12 @@ const SectorsSlider = () => {
   );
 
 
-  const handlePageChange = (index) => {
-    setSelectedPage(index);
-  };
-
   return (
     <div className={styles.pageContainer}>
       {/* Carousel */}
       <Carousel
+        selectedItem={selectedPage}
+
         showThumbs={false}
         showStatus={false}
         infiniteLoop={true}

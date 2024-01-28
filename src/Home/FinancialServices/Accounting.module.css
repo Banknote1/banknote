@@ -93,12 +93,9 @@
   background-image: url('/public/BG\ financial.png');
   /* Specify the path to your background image */
   background-size: cover;
-
-
   background-repeat: no-repeat;
   min-height: 100vh;
   /* Ensure the background covers the entire viewport height */
-
 
 }
 

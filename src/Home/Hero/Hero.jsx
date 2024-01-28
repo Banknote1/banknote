@@ -12,7 +12,7 @@ const Hero = ({ isVisible, isTransitioning }) => {
         // Trigger animation after the component has mounted
         setAnimate(true);
         SetLeaveAnimate(isVisible);
-
+        console.log(isVisible);
     }, [isVisible]);
 
     return (
@@ -110,7 +110,12 @@ const Hero = ({ isVisible, isTransitioning }) => {
                     </div>
                 </div>
             </div>
-        </div >
+            <div className={styles.Coinbg}>
+                <img src="./hero-image.png" alt="" />
+            </div>
+
+        </div>
+        // </div >
 
     );
 }

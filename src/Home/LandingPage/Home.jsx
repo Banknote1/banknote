@@ -116,7 +116,10 @@ function Home({ animate = false, setAnimate }) {
                                     <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-800%)', transition: 'transform .5s' }}>s</h2>
                                 </div>                            </div>
                         </div>
-                    </div>
+                    </div >
+
+
+
                 </div >
 
 

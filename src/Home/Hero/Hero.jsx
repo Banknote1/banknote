@@ -110,12 +110,7 @@ const Hero = ({ isVisible, isTransitioning }) => {
                     </div>
                 </div>
             </div>
-            <div className={styles.Coinbg}>
-                <img src="./hero-image.png" alt="" />
-            </div>
-
-        </div>
-        // </div >
+        </div >
 
     );
 }

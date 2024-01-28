@@ -1,7 +1,3 @@
- .Carousel {
-   z-index: 999;
- }
-
  .pageContainer {
    background-image: url('/public/Partners\ background.png');
    /* Adjust the path accordingly */
@@ -20,7 +16,7 @@
 
  .leftarrow {
    position: absolute;
-   margin: 92vh 0% 0% 77.7vw;
+   margin: 92vh 0% 0% 78.7vw;
    z-index: 2;
    background: url('/public/leftarrow.svg');
    width: 36px;
@@ -36,7 +32,7 @@
  .rightarrow {
    z-index: 2;
    position: absolute;
-   margin: -8vh 0% 0% 88vw;
+   margin: -8vh 0% 0% 87vw;
    background: url('/public/rightarrow.svg');
    width: 36px;
    /* Adjust the width and height based on your SVG dimensions */
@@ -92,7 +88,7 @@
    top: 21%;
    left: 19%;
    display: flex;
-   width: 15%;
+   width: 23%;
  }
 
  .rightbottomCont {
@@ -143,7 +139,6 @@
  }
 
  .SelectedPartnerbutton {
-   z-index: 10;
 
    background-color: #171719;
    color: #fff;
@@ -166,7 +161,6 @@
  }
 
  .unSelectedPartnerbutton {
-   z-index: 10;
    background-color: #1E1F21;
    color: #fff;
    text-align: center;
@@ -188,14 +182,12 @@
  }
 
  .Subcontpartners {
-   z-index: 999;
    display: flex;
    flex-direction: column;
    gap: 22px;
  }
 
  .contpartners {
-   z-index: 999;
    display: flex;
    gap: 25px;
    align-self: center;
@@ -287,8 +279,6 @@
  }
 
  .partnerlogo img {
-   width: 65%;
-   left: 26%;
    top: -29px !important;
    position: absolute;
    width: 100%;
@@ -297,13 +287,4 @@
  .partnerlogo {
    display: flex;
    width: auto;
- }
-
- .headlineLetter {
-   transition: transform 1s ease;
-   /* Set your desired transition duration and easing function */
- }
-
- .headlineLetter.animate {
-   transform: translateY(0);
  }

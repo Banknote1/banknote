@@ -210,6 +210,40 @@ h1 {
 
 }
 
+.count {
+    margin: 0 !important;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10%;
+}
+
+.numbers {
+    margin: 0 !important;
+    display: flex;
+    margin-top: 5% !important;
+}
+
+
+
+.numbCont {
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.subTitleYellow h2 {
+    color: #ffffff;
+    font-family: Quicksand;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
 .subTitleYellow h1 {
     margin: 0;
     color: #EBD5A8;

@@ -3,8 +3,8 @@ import styles from './FinancialServices.module.css';
 import IconsSocial from '../Social-icons/IconsSocial';
 function FinancialServices() {
     return (
-        <>
 
+        <>
             <div className={styles.servicesbg} ></div>
 
             <div className={styles.overlay}>

@@ -1,281 +1,309 @@
- 
- .Carousel{
-  z-index: 999;
+ .Carousel {
+   z-index: 999;
  }
-.pageContainer {
-    background-image: url('/public/Partners\ background.png');  /* Adjust the path accordingly */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;  /* This makes the background fixed */
- width: 100% !important;
- height: 100% !important;
-    position: relative;   
-  }
- 
-  .CarouselCont{
-    height: 100vh;
-  }
-  .leftarrow {
-  position: absolute;
-  margin: 92vh 0% 0% 77.7vw;
-  z-index: 2;
-    background:  url('/public/leftarrow.svg');
-    width: 36px; /* Adjust the width and height based on your SVG dimensions */
-    height: 36px;
-    border: none; /* Remove default button border */
-    cursor: pointer; /* Add a pointer cursor for better UX */
-   
-  }
-  
-   .rightarrow{
-    z-index: 2;
-    position: absolute;
-    margin: -8vh 0% 0% 88vw;
-    background:  url('/public/rightarrow.svg');
-    width: 36px; /* Adjust the width and height based on your SVG dimensions */
-    height: 36px;
-    border: none; /* Remove default button border */
-    cursor: pointer; /* Add a pointer cursor for better UX */
-   
-   }
-  .pageNumber {
-    color: var(--Gray-300, #8D8F91);
-  
-  /* Quick Sand/24/Medium */
-  font-family: Quicksand;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  background-color: transparent;
-  border: transparent;
-  cursor: auto !important;
-  }
-  
-  .selectedPage {
-  
-    color: var(--White-200, #FCF8F1);
-    /* Quick Sand/24/Medium */
-    font-family: Quicksand;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    background-color: transparent;
-    border: transparent;
-    cursor: auto !important;
-  }
-  .arrows{
-    z-index: 2;
-    position: absolute;
-    margin: -7.6vh 0% 0% 81vw;
-   
-    border: none; /* Remove default button border */
-   
-  }
 
-  .lefttopCont{
-    z-index: 5;
-    position: absolute;
-    top: 21%;   
-    left: 19%;   
-    display: flex;
-    width: 15%;
-   }
+ .pageContainer {
+   background-image: url('/public/Partners\ background.png');
+   /* Adjust the path accordingly */
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   /* This makes the background fixed */
+   width: 100% !important;
+   height: 100% !important;
+   position: relative;
+ }
 
-   .rightbottomCont{
-    z-index: 5;
-    position: absolute;
-    top: 65%;   
-    left: 52%;     
-    display: flex;
-    width: 36%;
-    height: 25%;
-   }
+ .CarouselCont {
+   height: 100vh;
+ }
 
-.headline h1 {
+ .leftarrow {
+   position: absolute;
+   margin: 92vh 0% 0% 77.7vw;
+   z-index: 2;
+   background: url('/public/leftarrow.svg');
+   width: 36px;
+   /* Adjust the width and height based on your SVG dimensions */
+   height: 36px;
+   border: none;
+   /* Remove default button border */
+   cursor: pointer;
+   /* Add a pointer cursor for better UX */
 
-    margin: 0;
-    width: 100%;
-    color: var(--White-600, #FFF);
-    font-family: Quicksand;
-    font-size: 90px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 90%;
-    text-align: left;  
-    width: auto;
-  }
-  .headline h2 {
-    margin: 0;
-    width: 100%;
-    color: var(--White-600, #EBD5A8);
-    font-family: Quicksand;
-    font-size: 90px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 90%;
-    text-align: left;  
-  
-  }
-  .leftbottomCont{
-    z-index: 6;
-    display: flex;
-    width: 100%;
-    height: 50%;
-    margin-top: 30vh;
-    flex-direction: column;
-   
-   }
+ }
 
-   .SelectedPartnerbutton{
-    z-index: 10;
+ .rightarrow {
+   z-index: 2;
+   position: absolute;
+   margin: -8vh 0% 0% 88vw;
+   background: url('/public/rightarrow.svg');
+   width: 36px;
+   /* Adjust the width and height based on your SVG dimensions */
+   height: 36px;
+   border: none;
+   /* Remove default button border */
+   cursor: pointer;
+   /* Add a pointer cursor for better UX */
 
-    background-color: #171719;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: Quicksand;
-    line-height: auto;
-    border-style: hidden;
-    outline: none;
-    width: 155px;
+ }
+
+ .pageNumber {
+   color: var(--Gray-300, #8D8F91);
+
+   /* Quick Sand/24/Medium */
+   font-family: Quicksand;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   background-color: transparent;
+   border: transparent;
+   cursor: auto !important;
+ }
+
+ .selectedPage {
+
+   color: var(--White-200, #FCF8F1);
+   /* Quick Sand/24/Medium */
+   font-family: Quicksand;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   background-color: transparent;
+   border: transparent;
+   cursor: auto !important;
+ }
+
+ .arrows {
+   z-index: 2;
+   position: absolute;
+   margin: -7.6vh 0% 0% 81vw;
+
+   border: none;
+   /* Remove default button border */
+
+ }
+
+ .lefttopCont {
+   z-index: 5;
+   position: absolute;
+   top: 21%;
+   left: 19%;
+   display: flex;
+   width: 15%;
+ }
+
+ .rightbottomCont {
+   z-index: 5;
+   position: absolute;
+   top: 65%;
+   left: 52%;
+   display: flex;
+   width: 36%;
+   height: 25%;
+ }
+
+ .headline h1 {
+
+   margin: 0;
+   width: 100%;
+   color: var(--White-600, #FFF);
+   font-family: Quicksand;
+   font-size: 90px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 90%;
+   text-align: left;
+   width: auto;
+ }
+
+ .headline h2 {
+   margin: 0;
+   width: 100%;
+   color: var(--White-600, #EBD5A8);
+   font-family: Quicksand;
+   font-size: 90px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 90%;
+   text-align: left;
+
+ }
+
+ .leftbottomCont {
+   z-index: 6;
+   display: flex;
+   width: 100%;
+   height: 50%;
+   margin-top: 30vh;
+   flex-direction: column;
+
+ }
+
+ .SelectedPartnerbutton {
+   z-index: 10;
+
+   background-color: #171719;
+   color: #fff;
+   text-align: center;
+   font-weight: bold;
+   font-size: 20px;
+   font-family: Quicksand;
+   line-height: auto;
+   border-style: hidden;
+   outline: none;
+   width: 155px;
    height: 40px;
-    --d: 9px !important;
-    --b: 4px !important;
-    --c: orange !important;
-    --gc: var(--c) calc(50% + var(--b) * 0.707), #0000 0 !important;
-    --gl: var(--c), #0000 40% 60%, var(--c) !important;
-    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
-    border-radius: 12px;
-}
-.unSelectedPartnerbutton{
-  z-index: 10;
-  background-color: #1E1F21;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  font-family: Quicksand;
-  line-height: auto;
-  border-style: hidden;
-  outline: none;
-  width: 155px;
- height: 40px;
-  --d: 9px !important;
-  --b: 4px !important;
-  --c: orange !important;
-  --gc: var(--c) calc(50% + var(--b) * 0.707), #0000 0 !important;
-  --gl: var(--c), #0000 40% 60%, var(--c) !important;
-  clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
-  border-radius: 12px;
-}
-.Subcontpartners{
-  z-index: 999;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-.contpartners{
-  z-index: 999;
-    display: flex;
-    gap: 25px;
-    align-self: center;
-}
-.slidecontainer {
-    display: flex;
+   --d: 9px !important;
+   --b: 4px !important;
+   --c: orange !important;
+   --gc: var(--c) calc(50% + var(--b) * 0.707), #0000 0 !important;
+   --gl: var(--c), #0000 40% 60%, var(--c) !important;
+   clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
+   border-radius: 12px;
+ }
+
+ .unSelectedPartnerbutton {
+   z-index: 10;
+   background-color: #1E1F21;
+   color: #fff;
+   text-align: center;
+   font-weight: bold;
+   font-size: 20px;
+   font-family: Quicksand;
+   line-height: auto;
+   border-style: hidden;
+   outline: none;
+   width: 155px;
+   height: 40px;
+   --d: 9px !important;
+   --b: 4px !important;
+   --c: orange !important;
+   --gc: var(--c) calc(50% + var(--b) * 0.707), #0000 0 !important;
+   --gl: var(--c), #0000 40% 60%, var(--c) !important;
+   clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
+   border-radius: 12px;
+ }
+
+ .Subcontpartners {
+   z-index: 999;
+   display: flex;
+   flex-direction: column;
+   gap: 22px;
+ }
+
+ .contpartners {
+   z-index: 999;
+   display: flex;
+   gap: 25px;
+   align-self: center;
+ }
+
+ .slidecontainer {
+   display: flex;
    margin-top: 20%;
-    height: 100%; 
-    width: 100%;
-   }
-.righttopCont{
- 
-    
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height:auto;
-  }
-  .leftCont{
-    width: 50%;
-    height: 100%;
-    margin-left: 11%;
-    }
-    .rightCont{
-      width: 50%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-right: 11%;
-    }
+   height: 100%;
+   width: 100%;
+ }
 
-    .des{
-        display: flex;
-        flex-direction: row;
-        gap: 22px;
-    }
-    .des1{
-        display:flex;
-        flex-direction: column;
-    }
-    .des1 h1 {
-        color: var(--White-100, #FFF);
-        font-family: Quicksand;
-        font-size: 60px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin: 0;
-        text-align: center;
-        width: 100%;
-    }
-    .des1 h2 {
-        color: var(--White-600, #EBD5A8);
-        font-family: Quicksand;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-align: center;
-    }
-    
+ .righttopCont {
 
-    .des2{
-        display:flex;
-     
-    }
- 
-    .des2 h1{
-        width: 100%;
-        margin: 0;
-        color: var(--White-100, #FFF);
-font-family: Quicksand;
-font-size: 26px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-    }
 
-.lefttopCont2{
-    display: flex;
-    
-}
-.partnerlogo img {
-  width: 65%;
-  left: 26%;
-  top: -29px !important;
-  position: absolute;
-  width: 100%;
-}
-.partnerlogo{
-  display: flex;
-    width: auto;
-}
-.headlineLetter {
-  transition: transform 1s ease; /* Set your desired transition duration and easing function */
-}
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: auto;
+ }
 
-.headlineLetter.animate {
-  transform: translateY(0);
-}
+ .leftCont {
+   width: 50%;
+   height: 100%;
+   margin-left: 11%;
+ }
+
+ .rightCont {
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-right: 11%;
+ }
+
+ .des {
+   display: flex;
+   flex-direction: row;
+   gap: 22px;
+ }
+
+ .des1 {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .des1 h1 {
+   color: var(--White-100, #FFF);
+   font-family: Quicksand;
+   font-size: 60px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   margin: 0;
+   text-align: center;
+   width: 100%;
+ }
+
+ .des1 h2 {
+   color: var(--White-600, #EBD5A8);
+   font-family: Quicksand;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   text-align: center;
+ }
+
+
+ .des2 {
+   display: flex;
+
+ }
+
+ .des2 h1 {
+   width: 100%;
+   margin: 0;
+   color: var(--White-100, #FFF);
+   font-family: Quicksand;
+   font-size: 26px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+ }
+
+ .lefttopCont2 {
+   display: flex;
+
+ }
+
+ .partnerlogo img {
+   width: 65%;
+   left: 26%;
+   top: -29px !important;
+   position: absolute;
+   width: 100%;
+ }
+
+ .partnerlogo {
+   display: flex;
+   width: auto;
+ }
+
+ .headlineLetter {
+   transition: transform 1s ease;
+   /* Set your desired transition duration and easing function */
+ }
+
+ .headlineLetter.animate {
+   transform: translateY(0);
+ }

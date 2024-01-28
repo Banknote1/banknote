@@ -12,7 +12,6 @@ const fadeAnimationHandler = (props, state) => {
   let slideStyle = {
     position: 'absolute',
     display: 'block',
-
     minHeight: '100%',
     opacity: 0,
     top: 0,

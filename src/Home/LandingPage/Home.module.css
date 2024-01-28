@@ -1,6 +1,6 @@
 .bg {
     position: fixed;
-    top: 70vw;
+    top: 25vw;
     z-index: 0;
     height: 100%;
     width: 100%;
@@ -12,13 +12,11 @@
 }
 
 .cont {
-    margin-top: 20%;
+    margin-top: 14%;
     display: flex;
     justify-content: center;
-    position: fixed;
     width: 100%;
     height: 100%;
-
 }
 
 .ship {
@@ -34,7 +32,7 @@
 
 .ship img {
     left: -100%;
-    top: 9.6vw;
+    top: 20vw;
     width: 50% !important;
     position: absolute;
     filter: brightness(1.2);
@@ -44,7 +42,7 @@
 .ship2 img {
 
     left: 45%;
-    top: 9.6vw;
+    top: 20vw;
     width: 50% !important;
     position: absolute;
     filter: brightness(1.2);
@@ -81,10 +79,6 @@
 
     }
 }
-
-
-
-
 
 
 
@@ -178,8 +172,8 @@ p {
     height: 100%;
     background: linear-gradient(to bottom, #00000017, #53535380);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     color: #fff;
     z-index: 1;
 
@@ -221,6 +215,8 @@ p {
     text-align: left;
     width: auto;
     margin: 0 !important;
+    animation: fadeInOut 2s ease-in;
+    /* animation-delay: s; */
 
 }
 
@@ -238,6 +234,7 @@ p {
     width: 100%;
     margin: 0 !important;
     margin-top: 3% !important;
+    animation: fadeInOut 2s ease-in;
 }
 
 .count {
@@ -284,4 +281,30 @@ p {
     font-weight: 400;
     white-space: nowrap;
 
+}
+
+.fadeInFirstLIne {
+    animation: fadeOut 2s ease;
+    /* animation-delay: 3000ms; */
+}
+
+.fadeInSecond {
+    animation: fadeOut 2.5s ease;
+    /* animation-delay: 3000ms; */
+}
+
+.fadeInThird {
+    animation: fadeOut 2s ease;
+    /* animation-delay: 3000ms; */
+}
+
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

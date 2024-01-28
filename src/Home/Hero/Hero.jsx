@@ -3,22 +3,25 @@ import styles from './Hero.module.css';
 import style from '../LandingPage/Home.module.css'
 import IconsSocial from '../Social-icons/IconsSocial';
 import '../../index.css'
-const Hero = () => {
+import { isVisible } from '@testing-library/user-event/dist/utils';
+const Hero = ({ isVisible, isTransitioning }) => {
 
     const [animate, setAnimate] = useState(false);
-
+    const [leaveAnimate, SetLeaveAnimate] = useState(false);
     useEffect(() => {
         // Trigger animation after the component has mounted
         setAnimate(true);
-    }, []);
+        SetLeaveAnimate(isVisible);
+
+    }, [isVisible]);
 
     return (
 
 
         // <div className='overlay'>
-        <div className={styles.cont}>
+        <div className={`${styles.cont} `}>
             <div className={styles.finance}>
-                <div className={styles.headline} style={{ display: 'flex', flexDirection: 'row' }} >
+                <div className={`${styles.headline} `} style={{ display: 'flex', flexDirection: 'row' }} >
                     <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>Y</h1>
                     <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-200%)', transition: 'transform .5s' }}>o</h1>
                     <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-300%)', transition: 'transform .5s' }}>u</h1>
@@ -29,19 +32,18 @@ const Hero = () => {
                     <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-800%)', transition: 'transform .5s' }}>s</h1>
                     <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-900%)', transition: 'transform .5s' }}>t</h1>
                 </div>
-                <div className={styles.headline}>
+                <div className={`${styles.headline} ${styles.fadeInThird}`}>
                     <h2>Financial</h2>
                     <h2>solutions</h2>
                 </div>
-                <div className={styles.des}>
+                <div className={`${styles.des} ${styles.fadeInThird} `}>
                     <p>
                         We are a Financial Consulting Company offering essential methods for both large and small projects, aiding companies and institutions.
                     </p>
-
                 </div>
                 <div className={styles.numbers}>
                     <div className={styles.count}>
-                        <div className={styles.numbCont}>
+                        <div className={`${styles.numbCont}`}>
 
                             <div className={styles.subnumber}>
                                 <div className={styles.subTitleYellow} style={{ display: 'flex', flexDirection: 'row' }} >
@@ -59,7 +61,7 @@ const Hero = () => {
                                 <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-500%)', transition: 'transform .5s' }}>s</h2>
                             </div>
                         </div>
-                        <div className={styles.numbCont}>
+                        <div className={`${styles.numbCont} `}>
                             <div className={styles.subnumber}>
                                 <div className={styles.subTitleYellow} style={{ display: 'flex', flexDirection: 'row' }} >
                                     <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>+</h1>
@@ -87,7 +89,7 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.numbCont}>
+                        <div className={`${styles.numbCont} `}>
                             <div className={styles.subnumber}>
                                 <div className={styles.subTitleYellow} style={{ display: 'flex', flexDirection: 'row' }} >
                                     <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>+</h1>
@@ -104,7 +106,7 @@ const Hero = () => {
                                 <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-600%)', transition: 'transform .5s' }}>e</h2>
                                 <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-700%)', transition: 'transform .5s' }}>r</h2>
                                 <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-800%)', transition: 'transform .5s' }}>s</h2>
-                            </div>                            </div>
+                            </div></div>
                     </div>
                 </div>
             </div>

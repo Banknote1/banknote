@@ -4,20 +4,22 @@ import IconsSocial from '../Social-icons/IconsSocial';
 import '../../index.css'
 
 
-function Home() {
-    const [animate, setAnimate] = useState(false);
+function Home({ animate = false, setAnimate }) {
+    // const [animate, setAnimate] = useState(false);
+    // console.log(animate);
+    // useEffect(() => {
+    //     // Trigger animation whenever the 'animate' prop changes
 
-    useEffect(() => {
-        // Trigger animation after the component has mounted
-        setAnimate(true);
-    }, []);
+    //     setAnimate(true);
+
+    // }, [setAnimate]);
     return (
         <>
 
             {/* <div className={styles.overlay}> */}
             <div className={styles.cont}>
                 <div className={styles.finance}>
-                    <div className={styles.headline} style={{ display: 'flex', flexDirection: 'row' }} >
+                    <div className={`${styles.headline} `} style={{ display: 'flex', flexDirection: 'row' }} >
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>C</h1>
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-200%)', transition: 'transform .5s' }}>o</h1>
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-300%)', transition: 'transform .5s' }}>n</h1>
@@ -29,7 +31,7 @@ function Home() {
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-900%)', transition: 'transform .5s' }}>n</h1>
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-1000%)', transition: 'transform .5s' }}>g</h1>
                     </div>
-                    <div className={styles.headline} style={{ display: 'flex', flexDirection: 'row' }} >
+                    <div className={`${styles.headline} `} style={{ display: 'flex', flexDirection: 'row' }} >
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>W</h1>
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-200%)', transition: 'transform .5s' }}>o</h1>
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-300%)', transition: 'transform .5s' }}>r</h1>
@@ -38,18 +40,18 @@ function Home() {
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-600%)', transition: 'transform .5s' }}>s</h1>
                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-700%)', transition: 'transform .5s' }}>,</h1>
                     </div>
-                    <div className={styles.headline}>
+                    <div className={`${styles.headline} `}>
                         <h2>Exporting</h2>
                         <h2>Success</h2>
                     </div>
-                    <div className={styles.des}>
+                    <div className={`${styles.des}`}>
                         <p>
                             From customs compliance to logistics management, we are dedicated to helping you navigate the complexities of international trade, ensuring your business thrives in the global
                         </p>
                     </div>
                     <div className={styles.numbers}>
                         <div className={styles.count}>
-                            <div className={styles.numbCont}>
+                            <div className={`${styles.numbCont}`}>
 
                                 <div className={styles.subnumber}>
                                     <div className={styles.subTitleYellow} style={{ display: 'flex', flexDirection: 'row' }} >
@@ -67,7 +69,7 @@ function Home() {
                                     <h2 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-500%)', transition: 'transform .5s' }}>s</h2>
                                 </div>
                             </div>
-                            <div className={styles.numbCont}>
+                            <div className={`${styles.numbCont} `}>
                                 <div className={styles.subnumber}>
                                     <div className={styles.subTitleYellow} style={{ display: 'flex', flexDirection: 'row' }} >
                                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>+</h1>
@@ -95,7 +97,7 @@ function Home() {
                                     </div>
                                 </div>
                             </div>
-                            <div className={styles.numbCont}>
+                            <div className={`${styles.numbCont} `}>
                                 <div className={styles.subnumber}>
                                     <div className={styles.subTitleYellow} style={{ display: 'flex', flexDirection: 'row' }} >
                                         <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-100%)', transition: 'transform .5s' }}>+</h1>

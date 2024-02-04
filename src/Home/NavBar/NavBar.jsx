@@ -6,7 +6,7 @@ function NavBar({ selectedPage }) {
 
     return (
         <>
-            <div className={`d-flex justify-content-center align-items-center fixed-top   ${styles.cont}`}>
+            <div className={`d-flex justify-content-center align-items-center fixed-top ${styles.cont}`}>
                 <div>
                     <a className="navbar-brand" href="/">
                         <img src='/logo.png' width="89" height="82" alt="" />

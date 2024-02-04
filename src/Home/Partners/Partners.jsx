@@ -295,9 +295,6 @@ const Partners = () => {
                 {/* Overlay for Manufacturing */}
                 <div className='overlay'>
                   <div className={styles.slidecontainer}>
-
-
-
                     <div className={styles.leftCont}>
                       <div className={styles.lefttopCont}>
 

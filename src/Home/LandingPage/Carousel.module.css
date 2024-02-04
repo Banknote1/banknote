@@ -2,12 +2,11 @@
     position: absolute;
     top: 50vh;
     left: 50px;
-
-
 }
 
 .TopArrow {
     background-image: url('/public/leftarrow.svg');
+    background-size: cover;
     transform: rotate(90deg);
     height: 40px;
     width: 40px;
@@ -22,6 +21,7 @@
     width: 40px;
     background-color: transparent;
     border: none;
+    background-size: cover;
 }
 
 .dots {
@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 80px;
+    height: 130px;
 
 }
 

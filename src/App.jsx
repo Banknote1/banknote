@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import Header from './Home/NavBar/NavBar';
 import Accounting from './Home/FinancialServices/Accounting';
@@ -10,8 +10,8 @@ import Hero from './Home/Hero/Hero';
 import Exporting from './Home/Exporting/Exporting'
 import Carousel from './Home/LandingPage/Carousel';
 import FAQs from './Home/FAQs/FAQs.jsx';
-
-
+import MySlider from './Home/LandingPage/MySlider';
+import Landing from './Mobile/Landing';
 function App() {
   const navigate = useNavigate();
 
@@ -30,25 +30,50 @@ function App() {
     return '/';
   };
 
-  return (
-    <div className='app'>
-      {/* Pass the selectedPage to the NavBar component */}
-      <Header selectedPage={selectedPage()} />
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Initial state based on viewport width
 
-      <Routes>
-        <Route path='/' element={<Carousel />} />
-        <Route path='/financialservices/' element={<FinancialServices />} />
-        <Route path='/financialservices/aas' element={<Accounting />} />
-        <Route path='/financialSectors/weserve' element={<SectorsSlider />} />
-        <Route path='/partners' element={<Partners />} />
-        <Route path='/financialServices' element={<FinancialServices />} />
-        <Route path='/financialSectors' element={<FinancialSectors />} />
-        <Route path='/Hero' element={<Hero />} />
-        <Route path='/Exporting' element={<Exporting />} />
-        <Route path='/FAQs' element={<FAQs />} />
-      </Routes>
-    </div >
-  );
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Update state on window resize
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Cleanup
+    };
+  }, []);
+  if (isMobile) {
+    return (
+      <div className='app'>
+        <Routes>
+          <Route path='/' element={<Landing />} />
+        </Routes>
+      </div>
+    )
+  } else {
+    return (
+      <div className='app'>
+        {/* Pass the selectedPage to the NavBar component */}
+        <Header selectedPage={selectedPage()} />
+
+        <Routes>
+          <Route path='/' element={<Carousel />} />
+          <Route path='/financialservices/' element={<FinancialServices />} />
+          <Route path='/financialservices/aas' element={<Accounting />} />
+          <Route path='/financialSectors/weserve' element={<SectorsSlider />} />
+          <Route path='/partners' element={<Partners />} />
+          <Route path='/financialServices' element={<FinancialServices />} />
+          <Route path='/financialSectors' element={<FinancialSectors />} />
+          <Route path='/Hero' element={<Hero />} />
+          <Route path='/Exporting' element={<Exporting />} />
+          <Route path='/FAQs' element={<FAQs />} />
+          <Route path='/slider' element={<MySlider />} />
+
+        </Routes>
+      </div >
+    );
+  }
 }
 
 export default App;

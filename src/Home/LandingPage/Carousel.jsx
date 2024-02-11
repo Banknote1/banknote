@@ -9,30 +9,32 @@ import FinancialServices from '../FinancialServices/FinancialServices';
 import FinancialSectors from '../FinancialServices/FinancialSectors';
 import Partners from '../Partners/Partners';
 import FAQS from '../FAQs/FAQs';
+import { CSSTransition } from 'react-transition-group';
+import './SlideAnimation.css';
+import ParentFinancialServices from '../FinancialServices/ParentFinancialServices';
+import ParentFinancialSectors from '../FinancialServices/ParentFinancialSectors';
+
 function Carousel() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const handleNext = () => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % 4);
+        setActiveIndex((prevIndex) => (prevIndex + 1) % 7);
     };
 
     const AutoScroll = () => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % 2);
+        setActiveIndex((prevIndex) => (prevIndex + 1) % 7);
     };
 
     const handlePrev = () => {
-        setActiveIndex((prevIndex) => (prevIndex - 1 + 4) % 4);
+        setActiveIndex((prevIndex) => (prevIndex - 1 + 7) % 7);
     };
 
     const handleDotClick = (index) => {
         setActiveIndex(index);
-
     };
 
     const handleWheel = (event) => {
-
         if (event.deltaY > 0) {
-
             handleNext();
         } else {
             handlePrev();
@@ -40,7 +42,7 @@ function Carousel() {
     };
 
     useEffect(() => {
-        if (activeIndex < 2) {
+        if (activeIndex < 0) {
             const autoMoveTimer = setTimeout(() => {
                 AutoScroll();
             }, 3000);
@@ -52,33 +54,49 @@ function Carousel() {
     }, [activeIndex]);
 
     useEffect(() => {
-        // Trigger animation when activeIndex is 1
-        if (activeIndex === 1) {
-
-        }
-    }, [activeIndex]);
-
-    useEffect(() => {
         // Add event listener for wheel scroll
         window.addEventListener('wheel', handleWheel);
 
-        // Remove the event listener when component unmounts
+        // Remove the event listener when the component unmounts
         return () => {
             window.removeEventListener('wheel', handleWheel);
         };
     }, [activeIndex]);
 
     return (
-        <div className='overlay'>
+        <div>
+
 
             {activeIndex === 0 && <Hero />}
             {activeIndex === 1 && <Home />}
-            {activeIndex === 2 && <FinancialServices />}
-            {activeIndex === 3 && <FinancialSectors />}
+            <CSSTransition
+                in={activeIndex === 2}
+                timeout={{ enter: 1000, exit: 1000 }}
+                classNames={{
+                    enter: 'overlay-enter',
+                    enterActive: 'overlay-enter-active',
+                    exit: 'overlay-exit',
+                    exitActive: 'overlay-exit-active',
+                }}
+                unmountOnExit
+            >
+                <ParentFinancialServices />
+            </CSSTransition>
+            <CSSTransition
+                in={activeIndex === 3}
+                timeout={{ enter: 1000, exit: 1000 }}
+                classNames={{
+                    enter: 'overlay-enter',
+                    enterActive: 'overlay-enter-active',
+                    exit: 'overlay-exit',
+                    exitActive: 'overlay-exit-active',
+                }}
+                unmountOnExit
+            >
+                <ParentFinancialSectors />
+            </CSSTransition>
             {activeIndex === 5 && <Partners />}
             {activeIndex === 6 && <FAQS />}
-
-
 
             <div className={styles.arrows}>
                 <button className={styles.TopArrow} onClick={handlePrev}></button>

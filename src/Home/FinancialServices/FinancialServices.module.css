@@ -1,14 +1,13 @@
 .servicesbg {
-    position: fixed;
     bottom: 0;
     z-index: 0;
-    height: 120vh;
+    height: 100vh;
     width: 100%;
     background-image: url('/public/fsbg.png');
-    background-size: 100%;
-    background-position: bottom bottom;
+    background-size: cover;
+    background-position: center right;
     background-repeat: no-repeat;
-    filter: brightness(0.5);
+    /* filter: brightness(0.5); */
 }
 
 .Sectorbg {
@@ -22,26 +21,15 @@
     background-position: center center;
     background-repeat: no-repeat;
     /* filter: brightness(0.5); */
-    animation: fadeIn 1.5s linear;
-    animation-delay: 0.2s;
+
 }
 
-@keyframes fadeIn {
-    from {
-        transform: translateX(100%);
 
-    }
-
-    to {
-        transform: translateX(0);
-
-    }
-}
 
 .mainTitleWhite {
     color: #ffffff;
     font-family: Quicksand;
-    font-size: 128px;
+    font-size: 8rem;
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
@@ -50,7 +38,7 @@
 .mainTitleYellow {
     color: #EBD5A8;
     font-family: Quicksand;
-    font-size: 128px;
+    font-size: 8rem;
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
@@ -58,7 +46,7 @@
 }
 
 .serBox {
-    width: 15vw;
+    width: auto;
     height: 34vh;
     flex-shrink: 0;
     margin-right: 15px;
@@ -73,7 +61,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 35px;
     padding-right: 35px;
@@ -97,14 +85,13 @@
     /* Move to the center */
 }
 
-
 .overlay {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0;
     width: 100%;
     height: 120vh;
-    background: linear-gradient(to bottom, #00000000, #53535380);
+    background: linear-gradient(to bottom, #000000, #53535380);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,10 +101,6 @@
 
 }
 
-.textContent {
-    width: 100%;
-    align-self: center;
-}
 
 .boxContent {
     width: 60%;
@@ -134,9 +117,9 @@
 }
 
 h5 {
-    color: #FFF;
+    color: #FFF !important;
     font-family: Quicksand;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -146,7 +129,7 @@ h5 {
 .NumWhite {
     color: var(--White-100, #FFF);
     font-family: Quicksand;
-    font-size: 48px;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -155,8 +138,122 @@ h5 {
 .NumYellow {
     color: var(--White-600, #EBD5A8);
     font-family: Quicksand;
-    font-size: 64px;
+    font-size: 4rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+
+.section2 {
+    width: 90vw;
+}
+
+
+@media (max-width:1360px) {
+
+    .mainTitleWhite,
+    .mainTitleYellow {
+        font-size: 7rem;
+        display: inline;
+
+    }
+
+    .section {
+        width: 89vw;
+    }
+
+    .servicesbg {
+
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .servicesbg {
+        height: 100%;
+    }
+
+    .serBox {
+        width: 30vw;
+        height: 21vh;
+    }
+
+    .mainTitleWhite,
+    .mainTitleYellow {
+        font-size: 5rem;
+        display: inline;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        width: 89vw;
+    }
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+@media (max-width: 760px) {
+    .servicesbg {
+        background-image: none;
+        overflow-y: auto;
+    }
+
+    body {
+        overflow-y: auto;
+
+    }
+
+
+    .section {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .container {
+        padding: 0 !important;
+    }
+
+    .serBox {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+        height: 150px;
+        padding: 20px;
+    }
+
+    .mainTitleWhite,
+    .mainTitleYellow {
+        font-size: 2rem;
+        display: inline;
+    }
+
+    h5 {
+        font-size: 0.8rem !important;
+    }
+
+    .section {
+        width: 89vw;
+    }
+
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .overlay {
+        position: relative;
+    }
+
+    .NumWhite,
+    .NumYellow {
+        font-size: 1.5rem;
+    }
 }

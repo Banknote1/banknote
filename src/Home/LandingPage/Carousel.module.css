@@ -2,6 +2,7 @@
     position: absolute;
     top: 50vh;
     left: 50px;
+    z-index: 555;
 }
 
 .TopArrow {

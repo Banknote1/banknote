@@ -503,9 +503,6 @@ const Partners = () => {
                 {/* Overlay for Manufacturing */}
                 <div className={styles.overpageCont}>
                   <div className={styles.slidecontainer}>
-
-
-
                     <div className={styles.leftCont}>
                       <div className={styles.lefttopCont}>
 

@@ -117,7 +117,7 @@
 }
 
 h5 {
-    color: #FFF;
+    color: #FFF !important;
     font-family: Quicksand;
     font-size: 1.5rem;
     font-style: normal;
@@ -144,12 +144,39 @@ h5 {
     line-height: normal;
 }
 
- 
+
+.section2 {
+    width: 90vw;
+}
+
+
+@media (max-width:1360px) {
+
+    .mainTitleWhite,
+    .mainTitleYellow {
+        font-size: 7rem;
+        display: inline;
+
+    }
+
+    .section {
+        width: 89vw;
+    }
+
+    .servicesbg {
+
+        overflow-y: auto;
+    }
+}
 
 @media (max-width: 1024px) {
+    .servicesbg {
+        height: 100%;
+    }
+
     .serBox {
         width: 30vw;
-        height: 30vh;
+        height: 21vh;
     }
 
     .mainTitleWhite,
@@ -165,6 +192,12 @@ h5 {
     .section {
         width: 89vw;
     }
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+
 }
 
 @media (max-width: 760px) {
@@ -175,82 +208,51 @@ h5 {
 
     body {
         overflow-y: auto;
-        overflow-x: hidden;
     }
 
 
     .section {
         width: 100%;
-        padding: 20px;
+        padding: 5px;
+    }
+
+    .container {
+        padding: 0 !important;
     }
 
     .serBox {
         width: auto;
         margin-right: 0;
         margin-bottom: 20px;
-        height: auto;
+        height: 150px;
+        padding: 20px;
     }
 
     .mainTitleWhite,
     .mainTitleYellow {
-        font-size: 3rem;
+        font-size: 2rem;
         display: inline;
     }
 
     h5 {
-        font-size: 0.5rem;
-    }
-
-    .section {
-        width: 89vw;
-    }
-}
-
-/* 
-@media (max-width: 360px) {
-
-    .section {
-        width: 100%;
-    }
-
-    .serBox {
-        width: calc(50% - 10px);
-        height: 152px;
-        margin: 0 5px 20px;
-    }
-
-    .mainTitleWhite,
-    .mainTitleYellow {
-        font-size: 3rem;
-        display: block;
-    }
-
-    h5 {
-        font-size: 0.9rem;
-    }
-
-    body {
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-} */
-
-
-@media (min-width:1560px) {
-
-    .mainTitleWhite,
-    .mainTitleYellow {
-        font-size: 7rem;
-
+        font-size: 0.8rem !important;
     }
 
     .section {
         width: 89vw;
     }
 
-    .servicesbg {
-        background-image: none;
-        overflow-y: auto;
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .overlay {
+        position: relative;
+    }
+
+    .NumWhite,
+    .NumYellow {
+        font-size: 1.5rem;
     }
 }

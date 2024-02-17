@@ -13,9 +13,9 @@ function FinancialServices() {
 
         <div className={styles.section} style={{ marginTop: '0%' }}>
             <div className="container">
-                <div className="row row-cols-xxl-4  row-cols-md-2 row-cols-xs-2 justify-content-center">
+                <div className="row row-cols-xxl-4  row-cols-md-4 row-cols-xs-2 justify-content-center">
 
-                    <div className="col-xxl-6 col-md-9 col-md-12 mb-3 ">
+                    <div className="col-xxl-6 col-md-6 mb-3 ">
                         <div className={styles.textContent}>
 
                             <h1 className={styles.mainTitleWhite}>Financial </h1>

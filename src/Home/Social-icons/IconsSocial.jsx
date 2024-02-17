@@ -14,11 +14,11 @@ function IconsSocial() {
     <div className={styles.socialButtons}>
       <a href="https://eg.linkedin.com/company/banknoteeg">
         <i>
-          <img
-            src="https://test.banknoteconsult.com/wp-content/uploads/2024/01/Linkedin.svg"
+          <img style={{ width: '32px' }}
+            src="/socialicons/Linkedin.svg"
             alt="Linkedin"
-            data-hover="https://test.banknoteconsult.com/wp-content/uploads/2024/01/Linkedin_hover.svg"
-            data-normal="https://test.banknoteconsult.com/wp-content/uploads/2024/01/Linkedin.svg"
+            data-hover="/socialicons/Linkedin_hover.svg"
+            data-normal="/socialicons/Linkedin.svg"
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           />
@@ -26,11 +26,11 @@ function IconsSocial() {
       </a>
       <a href="https://api.whatsapp.com/send?phone=01154440599">
         <i>
-          <img
-            src="https://test.banknoteconsult.com/wp-content/uploads/2024/01/Whatsupp.svg"
+          <img style={{ width: '32px' }}
+            src="/socialicons/Whatsupp.svg"
             alt="Whatsapp"
-            data-hover="https://test.banknoteconsult.com/wp-content/uploads/2024/01/Whatsup_hover.svg"
-            data-normal="https://test.banknoteconsult.com/wp-content/uploads/2024/01/Whatsupp.svg"
+            data-hover="/socialicons/Whatsup_hover.svg"
+            data-normal="/socialicons/Whatsupp.svg"
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           />
@@ -38,11 +38,11 @@ function IconsSocial() {
       </a>
       <a href="https://www.facebook.com/Banknoteeg">
         <i>
-          <img
-            src="https://test.banknoteconsult.com/wp-content/uploads/2024/01/Facebook.svg"
+          <img style={{ width: '32px' }}
+            src="/socialicons/Facebook.svg"
             alt="Facebook"
-            data-hover="https://test.banknoteconsult.com/wp-content/uploads/2024/01/facebook_hover.svg"
-            data-normal="https://test.banknoteconsult.com/wp-content/uploads/2024/01/Facebook.svg"
+            data-hover="/socialicons/Facebook_hover.svg"
+            data-normal="/socialicons/Facebook.svg"
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           />
@@ -50,17 +50,17 @@ function IconsSocial() {
       </a>
       <a href="https://www.instagram.com/banknoteeg/">
         <i>
-          <img
-            src="https://test.banknoteconsult.com/wp-content/uploads/2024/01/Insta.svg"
+          <img style={{ width: '32px' }}
+            src="/socialicons/insta.svg"
             alt="Instagram"
-            data-hover="https://test.banknoteconsult.com/wp-content/uploads/2024/01/insta_hover.svg"
-            data-normal="https://test.banknoteconsult.com/wp-content/uploads/2024/01/Insta.svg"
+            data-hover="/socialicons/Insta_hover.svg"
+            data-normal="/socialicons/insta.svg"
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           />
         </i>
       </a>
-      <a href="#">
+      {/* <a href="#">
         <i>
           <img
             src="https://test.banknoteconsult.com/wp-content/uploads/2024/01/X.svg"
@@ -71,7 +71,7 @@ function IconsSocial() {
             onMouseOut={handleMouseOut}
           />
         </i>
-      </a>
+      </a> */}
     </div>
   );
 }

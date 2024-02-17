@@ -1,3 +1,16 @@
+.overpageCont{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 1;
+ }
  .pageContainer {
    background-image: url('/public/Partners\ background.png');
    /* Adjust the path accordingly */
@@ -32,7 +45,7 @@
  .rightarrow {
    z-index: 2;
    position: absolute;
-   margin: -8vh 0% 0% 87vw;
+   margin: -8vh 0% 0% 85.3vw;
    background: url('/public/rightarrow.svg');
    width: 36px;
    /* Adjust the width and height based on your SVG dimensions */
@@ -45,38 +58,39 @@
  }
 
  .pageNumber {
-   color: var(--Gray-300, #8D8F91);
-
-   /* Quick Sand/24/Medium */
-   font-family: Quicksand;
-   font-size: 20px;
-   font-style: normal;
-   font-weight: 500;
-   line-height: normal;
-   background-color: transparent;
-   border: transparent;
-   cursor: auto !important;
+  color: var(--Gray-300, #8D8F91);
+  font-family: Quicksand;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: transparent;
+  border: transparent;
+  cursor: auto !important;
+  padding: 0 !important;
+  width: 30px;
  }
 
  .selectedPage {
 
-   color: var(--White-200, #FCF8F1);
-   /* Quick Sand/24/Medium */
-   font-family: Quicksand;
-   font-size: 20px;
-   font-style: normal;
-   font-weight: 500;
-   line-height: normal;
-   background-color: transparent;
-   border: transparent;
-   cursor: auto !important;
+  color: var(--White-200, #FCF8F1);
+  font-family: Quicksand;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: transparent;
+  border: transparent;
+  cursor: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 30px;
  }
 
  .arrows {
    z-index: 2;
    position: absolute;
-   margin: -7.6vh 0% 0% 81vw;
-
+   margin: -8.2vh 0% 0% 81vw;
    border: none;
    /* Remove default button border */
 
@@ -86,7 +100,7 @@
    z-index: 5;
    position: absolute;
    top: 21%;
-   left: 19%;
+   left: 14%;
    display: flex;
    width: 23%;
  }
@@ -107,7 +121,7 @@
    width: 100%;
    color: var(--White-600, #FFF);
    font-family: Quicksand;
-   font-size: 90px;
+   font-size: 110px;
    font-style: normal;
    font-weight: 400;
    line-height: 90%;
@@ -120,7 +134,7 @@
    width: 100%;
    color: var(--White-600, #EBD5A8);
    font-family: Quicksand;
-   font-size: 90px;
+   font-size: 110px;
    font-style: normal;
    font-weight: 400;
    line-height: 90%;
@@ -133,7 +147,7 @@
    display: flex;
    width: 100%;
    height: 50%;
-   margin-top: 30vh;
+   margin-top: 34vh;
    flex-direction: column;
 
  }
@@ -162,7 +176,7 @@
 
  .unSelectedPartnerbutton {
    background-color: #1E1F21;
-   color: #fff;
+   color: #F5EAD4;
    text-align: center;
    font-weight: bold;
    font-size: 20px;
@@ -170,7 +184,7 @@
    line-height: auto;
    border-style: hidden;
    outline: none;
-   width: 155px;
+   width: 160px;
    height: 40px;
    --d: 9px !important;
    --b: 4px !important;
@@ -179,6 +193,10 @@
    --gl: var(--c), #0000 40% 60%, var(--c) !important;
    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
    border-radius: 12px;
+   display: flex;
+  align-content: center;
+  padding: 5px;
+  justify-content: center;
  }
 
  .Subcontpartners {

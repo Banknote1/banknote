@@ -1,16 +1,16 @@
 .arrows {
+    z-index: 99;
     position: absolute;
     top: 50vh;
     left: 50px;
-    z-index: 555;
 }
 
 .TopArrow {
     background-image: url('/public/leftarrow.svg');
     background-size: cover;
     transform: rotate(90deg);
-    height: 40px;
-    width: 40px;
+    height: 38px;
+    width: 38px;
     background-color: transparent;
     border: none;
 }
@@ -18,8 +18,8 @@
 .bottomArrow {
     background-image: url('/public/rightarrow.svg');
     transform: rotate(90deg);
-    height: 40px;
-    width: 40px;
+    height: 38px;
+    width: 38px;
     background-color: transparent;
     border: none;
     background-size: cover;
@@ -50,3 +50,23 @@
     width: 9px;
     border-radius: 2px;
 }
+ 
+.page-transition {
+    transition: transform 0.5s ease;
+  }
+  
+  .page-enter {
+    transform: translateX(100%);
+  }
+  
+  .page-enter-active {
+    transform: translateX(0);
+  }
+  
+  .page-exit {
+    transform: translateX(-100%);
+  }
+  
+  .page-exit-active {
+    transform: translateX(0);
+  }

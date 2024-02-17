@@ -1,0 +1,69 @@
+.pageContainer {
+    background-image: url('/public/Partners\ background.png');
+    /* Adjust the path accordingly */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* This makes the background fixed */
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+}
+
+.homecontiner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 12%;
+
+}
+
+.leftCont {
+    width: 30%;
+    flex-direction: column;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+}
+
+.rightCont {
+    width: 35%;
+    flex-direction: column;
+    display: flex;
+
+}
+
+/* Place this text at the top of your CSS file */
+.text {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.text h1 {
+    color: #ffffff;
+    /* Quick Sand/24/Medium */
+    font-family: Quicksand;
+
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+
+/* .firstleftContiner button {
+    background-image:url()
+} */
+
+.fristleftContiner {
+    display: flex;
+    flex-direction: row;
+}
+
+.iconButton {
+    height: 100%;
+}

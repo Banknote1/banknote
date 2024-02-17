@@ -1,5 +1,5 @@
 import React from 'react';
-import './Calendar.css'
+import './CalendarMob.css'
 class Day extends React.Component {
     constructor(props) {
         super(props);
@@ -13,7 +13,7 @@ class Day extends React.Component {
         let day = this.props.day;
 
         return (
-            <div className={"day-container"}>
+            <div className={"day-container"}  >
                 {day > 0
                     ? (
                         <div className={"day" + cls} onClick={e => this.props.setDay(this.props.day, e)}>
@@ -237,8 +237,8 @@ class Calendar extends React.Component {
                     <div style={{ width: `100%`, display: `flex`, justifyContent: `center` }}>  <div className="separator"></div></div>
 
                     {/* Days grid */}
-                    <div className="weekdays">{dayNames}</div>
-                    <div className="days">{days}</div>
+                    <div className="weekdays"  >{dayNames}</div>
+                    <div className="days"   >{days}</div>
                 </div>
 
                 {/* Event list

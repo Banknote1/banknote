@@ -89,10 +89,11 @@ button {
 /* Calendar Styles */
 .month {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: .9rem !important;
 }
 .month-active {
 align-items: center;
+color: var(--Gray-50, #B9BBBE);
 }
 .month .month-active {
   width: 9rem;
@@ -126,32 +127,24 @@ align-items: center;
  
 }
 
-.weekdays,
-.days {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  justify-content: center;
-  align-items: center;
-  width: 22rem;
- }
 
 .weekdays{
-  border-top-left-radius: 20.282px;
-border-top-right-radius: 20.282px;
+  border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+
 }
 
 .days{
-  border-bottom-left-radius: 20.282px;
-border-bottom-right-radius: 20.282px;
+  border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
 }
+ 
 .weekdays .day,
 .days .day {
   width: 3rem;
   height: 3rem;
   line-height: 3rem;
+  color: var(--Gray-50, #B9BBBE);
 }
 
  
@@ -185,8 +178,8 @@ font-family: Quicksand;
 .days .day.day-active {
   color: #fff;
   background: var(--col-main);
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 15px;
   align-items: center;
   
@@ -235,7 +228,7 @@ font-family: Quicksand;
   word-break: break-word;
   text-align: left;
   padding: 0;
-  font-size: 1.2rem;
+  font-size: .5rem;
 }
 
 .events ul li a {
@@ -277,10 +270,10 @@ font-family: Quicksand;
   }
 
   .calendar .day {
-    font-size: 2rem; /* Adjust font size as needed */
-    width: 4rem; /* Set a fixed width for each day */
-    height: 4rem; /* Set a fixed height for each day */
-    line-height: 4rem;
+    font-size: .9rem; /* Adjust font size as needed */
+    width: 2.1rem; /* Set a fixed width for each day */
+    height: 3rem; /* Set a fixed height for each day */
+    line-height: 3rem;
     flex: 0 0 auto; /* Prevents flex items from growing or shrinking */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
     text-align: center; /* Center-align text */
@@ -293,13 +286,7 @@ font-family: Quicksand;
     height: 0.8rem; /* Adjust size as needed */
   }
 }
-.day-container{
-  width: 3rem;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .separator{
   width: 90%;
 height: 1.048px;
@@ -308,3 +295,43 @@ left: 45.208px;
 top: 85.075px;
 background-color: white;
 }
+@media(max-width:600px){
+.weekdays,
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  width: 16rem !important;
+ }
+ .day-container{
+  width: 2.1rem;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+@media(min-width:600px){
+  .weekdays,
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    width:21rem !important;
+   }
+   .day-container{
+    width: 3rem;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  }

@@ -3,8 +3,21 @@ import Slider from './Slider';
 import styles from './Accounting.module.css';
 import { useLocation } from 'react-router-dom';
 import '../../index.css';
-
+import Footer from '../Footer/Footer'
+import BottomButton from '../Footer/BottomButton'
 const framesData = [
+  {
+    head1: 'Banking',
+    head2: 'Facilities',
+    description: 'Bank note deal with more then 27 governmental and private bank ensuring a wide array of funding options perfectly suited to your company\'s needs.',
+    imageSrc: '/Banking\ Facilities\ Pic.png',
+    frame1: 'Suggestion for funding from diverse sources',
+    frame2: 'Restructuring current firms',
+    frame3: 'Accurate Financial Projections',
+    frame4: 'Customized business planes',
+    frame5: 'Company Evaluation',
+    frame6: 'Transaction Support'
+  },
   {
     head1: 'Accounting',
     head2: 'Advisory Services',
@@ -41,18 +54,7 @@ const framesData = [
     frame5: 'Ensuring the regulatory compliance',
     frame6: 'Risk Management'
   },
-  {
-    head1: 'Banking',
-    head2: 'Facilities',
-    description: 'Bank note deal with more then 27 governmental and private bank ensuring a wide array of funding options perfectly suited to your company\'s needs.',
-    imageSrc: '/Banking\ Facilities\ Pic.png',
-    frame1: 'Suggestion for funding from diverse sources',
-    frame2: 'Restructuring current firms',
-    frame3: 'Accurate Financial Projections',
-    frame4: 'Customized business planes',
-    frame5: 'Company Evaluation',
-    frame6: 'Transaction Support'
-  }
+
 ];
 
 
@@ -104,33 +106,78 @@ const Accounting = () => {
   }, [currentSlide, handleNextClick, handlePrevClick]);
 
   return (
-    <div className={styles.pageContainer}>
-      <div className='overlay' style={{ display: 'block', position: 'fixed' }}>
-        <div style={slidesrowStyle}>
+    <>
+      <div className='overlay' style={{}}></div>
+      <div className={styles.mobPageContainer} style={{ overflowY: 'auto', maxHeight: '91vh', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
+        <div className={styles.submobPageContainer}>
+          <div className={styles.mobTitle}>
+            <h1>
+              Financial <span style={{ color: '#EBD5A8' }}>Services</span>
+            </h1>
+          </div>
           {framesData.map((data, index) => (
-            <div key={index} style={{ width: `${slideWidth}%` }}>
-              <Slider data={data} />
+            <div key={index} style={{ marginBottom: '15%' }} >
+              <div className={styles.mobimageCont}>
+                <img src={data.imageSrc} alt="" />
+              </div>
+              <div className={styles.mobText}>
+                <h2 className={styles.mobHead1}>{data.head1}</h2>
+                <h2 className={styles.mobHead2}>{data.head2}</h2>
+                <div className={styles.mobDisCont}><p>{data.description}</p></div>
+              </div>
+              {Object.entries(data).slice(3).filter(([key]) => key.startsWith('frame')).map(([key, value], frameIndex) => (
+                <div key={frameIndex} className={styles.mobshapecontainer}>
+                  <div className={styles.mobnumbline}>
+                    <div className={styles.mobnumberingshape}>
+                      <span className={styles.mobnumber}>{frameIndex + 1}</span>
+                    </div>
+                    <hr className={styles.mobseparator} />
+                  </div>
+                  <div className={styles.mobframe}>
+                    <h3>{value}</h3>
+                  </div>
+                </div>
+              ))}
+
             </div>
           ))}
+
         </div>
-        <div className={styles.slidersbuttons}>
-          <button className={styles.leftarrow} onClick={handlePrevClick}></button>
+        <Footer></Footer>
+        <BottomButton></BottomButton>
+      </div>
 
-          {[...Array(totalSlides).keys()].map((pageNum) => (
-            <button
-              key={pageNum}
-              className={`${styles.pageNumber} ${pageNum === currentSlide ? styles.selectedPage : ''
-                }`}
-              onClick={() => setCurrentSlide(pageNum)}
-            >
-              {pageNum + 1}
-            </button>
-          ))}
 
-          <button className={styles.rightarrow} onClick={handleNextClick}></button>
+
+      <div className={styles.pageContainer}>
+        <div className='overlay' style={{ display: 'block', position: 'fixed' }}>
+          <div style={slidesrowStyle}>
+            {framesData.map((data, index) => (
+              <div key={index} style={{ width: `${slideWidth}%` }}>
+                <Slider data={data} />
+              </div>
+            ))}
+          </div>
+          <div className={styles.slidersbuttons}>
+            <button className={styles.leftarrow} onClick={handlePrevClick}></button>
+
+            {[...Array(totalSlides).keys()].map((pageNum) => (
+              <button
+                key={pageNum}
+                className={`${styles.pageNumber} ${pageNum === currentSlide ? styles.selectedPage : ''
+                  }`}
+                onClick={() => setCurrentSlide(pageNum)}
+              >
+                {pageNum + 1}
+              </button>
+            ))}
+
+            <button className={styles.rightarrow} onClick={handleNextClick}></button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
+
   );
 };
 

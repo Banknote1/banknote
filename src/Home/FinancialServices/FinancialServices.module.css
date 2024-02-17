@@ -1,14 +1,13 @@
 .servicesbg {
-    position: fixed;
     bottom: 0;
     z-index: 0;
-    height: 120vh;
+    height: 100vh;
     width: 100%;
     background-image: url('/public/fsbg.png');
-    background-size: 100%;
-    background-position: bottom bottom;
+    background-size: cover;
+    background-position: center right;
     background-repeat: no-repeat;
-    filter: brightness(0.5);
+    /* filter: brightness(0.5); */
 }
 
 .Sectorbg {
@@ -22,12 +21,15 @@
     background-position: center center;
     background-repeat: no-repeat;
     /* filter: brightness(0.5); */
+
 }
+
+
 
 .mainTitleWhite {
     color: #ffffff;
     font-family: Quicksand;
-    font-size: 128px;
+    font-size: 8rem;
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
@@ -36,7 +38,7 @@
 .mainTitleYellow {
     color: #EBD5A8;
     font-family: Quicksand;
-    font-size: 128px;
+    font-size: 8rem;
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
@@ -44,7 +46,7 @@
 }
 
 .serBox {
-    width: 250px;
+    width: auto;
     height: 34vh;
     flex-shrink: 0;
     margin-right: 15px;
@@ -58,7 +60,8 @@
     clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
     display: flex;
     justify-content: flex-start;
-    padding-top: 40px;
+    align-items: flex-start;
+    padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 35px;
     padding-right: 35px;
@@ -70,33 +73,25 @@
     box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.leftCont {
-    width: 90%;
-    height: 28%;
-    /* height: 65%; */
-    margin-bottom: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+.FinancialServices {
+    position: relative;
+    transition: transform 1s ease-out;
+    transform: translateX(100%);
+
 }
 
-.rightCont {
-    width: 50%;
-    height: 28%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: space-between;
+.FinancialServices.animate {
+    transform: translateX(0);
+    /* Move to the center */
 }
 
 .overlay {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0;
     width: 100%;
     height: 120vh;
-    background: linear-gradient(to bottom, #00000000, #53535380);
+    background: linear-gradient(to bottom, #000000, #53535380);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,10 +101,6 @@
 
 }
 
-.textContent {
-    width: 100%;
-    align-self: center;
-}
 
 .boxContent {
     width: 60%;
@@ -128,7 +119,7 @@
 h5 {
     color: #FFF;
     font-family: Quicksand;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -138,7 +129,7 @@ h5 {
 .NumWhite {
     color: var(--White-100, #FFF);
     font-family: Quicksand;
-    font-size: 48px;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -147,8 +138,119 @@ h5 {
 .NumYellow {
     color: var(--White-600, #EBD5A8);
     font-family: Quicksand;
-    font-size: 64px;
+    font-size: 4rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+ 
+
+@media (max-width: 1024px) {
+    .serBox {
+        width: 30vw;
+        height: 30vh;
+    }
+
+    .mainTitleWhite,
+    .mainTitleYellow {
+        font-size: 5rem;
+        display: inline;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        width: 89vw;
+    }
+}
+
+@media (max-width: 760px) {
+    .servicesbg {
+        background-image: none;
+        overflow-y: auto;
+    }
+
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+
+    .section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .serBox {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .mainTitleWhite,
+    .mainTitleYellow {
+        font-size: 3rem;
+        display: inline;
+    }
+
+    h5 {
+        font-size: 0.5rem;
+    }
+
+    .section {
+        width: 89vw;
+    }
+}
+
+/* 
+@media (max-width: 360px) {
+
+    .section {
+        width: 100%;
+    }
+
+    .serBox {
+        width: calc(50% - 10px);
+        height: 152px;
+        margin: 0 5px 20px;
+    }
+
+    .mainTitleWhite,
+    .mainTitleYellow {
+        font-size: 3rem;
+        display: block;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+    }
+
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+} */
+
+
+@media (min-width:1560px) {
+
+    .mainTitleWhite,
+    .mainTitleYellow {
+        font-size: 7rem;
+
+    }
+
+    .section {
+        width: 89vw;
+    }
+
+    .servicesbg {
+        background-image: none;
+        overflow-y: auto;
+    }
 }

@@ -4,15 +4,15 @@ import IconsSocial from '../Social-icons/IconsSocial';
 import '../../index.css'
 
 
-function Home({ animate = false, setAnimate }) {
-    // const [animate, setAnimate] = useState(false);
-    // console.log(animate);
-    // useEffect(() => {
-    //     // Trigger animation whenever the 'animate' prop changes
+function Home() {
+    const [animate, setAnimate] = useState(false);
+    console.log(animate);
+    useEffect(() => {
+        // Trigger animation whenever the 'animate' prop changes
 
-    //     setAnimate(true);
+        setAnimate(true);
 
-    // }, [setAnimate]);
+    }, [setAnimate]);
     return (
         <>
 
@@ -140,4 +140,3 @@ function Home({ animate = false, setAnimate }) {
 }
 
 export default Home;
-

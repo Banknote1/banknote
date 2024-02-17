@@ -249,6 +249,9 @@
   line-height: normal;
   background-color: transparent;
   border: transparent;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  padding-top: 6px !important;
 }
 
 .selectedPage {
@@ -262,4 +265,203 @@
   line-height: normal;
   background-color: transparent;
   border: transparent;
+}
+
+@media (max-width: 600px) {
+  /* Styles for devices with a maximum width of 600px (mobile devices) */
+  .mobPageContainer {
+    display: flex  !important;  
+  }
+  .pageContainer {
+    display: none !important  ;  
+  }
+}
+
+@media (min-width: 600px) {
+ 
+  .mobPageContainer {
+      display: none !important  ;  
+  }
+  .pageContainer {
+      display: flex  !important;  
+  
+  }
+}
+
+.mobPageContainer{
+  position: relative;
+ background-image: url('/public/image2.png');
+  display: flex;
+  flex-direction: column;
+}
+.submobPageContainer{
+  position: relative;
+  z-index: 1; /* Ensure content appears above the background image */
+  margin-top: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+.mobTitle h1{
+  color: var(--White-100, #FFF);
+  width: 100%;
+/* Quick Sand/36/Regular */
+font-family: Quicksand;
+font-size: 2.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.mobimageCont{
+  width: 100%;
+  height: 12%;
+}
+.mobimageCont img{
+  width: 100%;
+  height: 100%;
+}
+
+.mobText {
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobHead1 {
+  color: var(--White-100, #FFF);
+
+  font-family: Quicksand;
+  font-size: 1.5rem;
+
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+ 
+}
+
+.mobHead2 {
+  color: var(--White-100, #EBD5A8);
+
+  font-family: Quicksand;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  
+ 
+}
+
+.mobDisCont {
+  display: flex;
+ 
+}
+
+.mobDisCont p {
+  color: var(--White-100, #FFF);
+  padding-top: 3%;
+  /* Quick Sand/18/Regular */
+  font-family: Quicksand;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 !important;
+  width: 100%;
+}
+.mobshapecontainer {
+  display: flex;
+  flex-direction: column;
+  height: 83px;
+  align-items: center;
+
+}
+.mobnumbline {
+  width: 93%;
+  align-self: start;
+}
+.mobnumberingshape {
+  
+  
+  /* Adjust the spacing between the numbering shape and the separator */
+  z-index: 3;
+  width: 35px;
+  /* Adjust the width of the shape as needed */
+  height: 35px;
+  /* Adjust the height of the shape as needed */
+  background-color: #171719;
+  /* Adjust the background color as needed */
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+   position: absolute;
+}
+
+.mobnumber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--White-500, #F1E3C5);
+  text-align: center;
+  /* Quick Sand/20/Semi Bold */
+  font-family: Quicksand;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+
+.mobseparator {
+  width: 100%;
+  display: flex;
+  opacity: 1;
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #171719;
+  align-self: center;
+  margin-bottom: 0;
+  filter: drop-shadow(1px 0px 4px rgba(219, 197, 152, 0.60));
+  z-index: 2;
+}
+ 
+
+.mobframe {
+  padding-left: 1%;
+  padding-right: 1%;
+  z-index: 3;
+  background-color: #171719;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  height: 60px;
+
+  color: var(--White-500, #F1E3C5);
+  text-align: center;
+  /* Quick Sand/20/Semi Bold */
+  font-family: Quicksand;
+
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.mobframe h3 {
+
+
+
+  color: var(--White-500, #F1E3C5);
+  text-align: center;
+  /* Quick Sand/20/Semi Bold */
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }

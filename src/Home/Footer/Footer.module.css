@@ -1,0 +1,103 @@
+.footer {
+    background-color: #0D0D0D;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+   
+    height: 25%;
+    width: 100%;
+    --d: 20px !important;
+    --b: 4px !important;
+    --c: orange !important;
+    --gc: var(--c) calc(50% + var(--b) * 0.707), #0000 0 !important;
+    --gl: var(--c), #0000 40% 60%, var(--c) !important;
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100%  ) 100%, var(--d) 100%, 0 calc(100%  ), 0 var(--d));
+    left: 0px;
+    bottom: 0px;
+   
+    bottom: 0;
+ 
+    clear: both;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+  }
+  .mobFooterrow{
+        gap: 3%;
+  }
+  .mobFooterrow{
+    align-items: center;
+
+  }
+ .mobFooterrow h1{
+    margin: 0 !important;
+    color: var(--White-100, #FFF);
+    font-family: Quicksand;
+    font-size: 0.825rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 300%; /* 0.5625rem */
+    width: auto;
+
+ }
+ .mobFooterrow img{
+    width: var(--Radius-2, 1.3rem);
+    height: 1.3rem;
+
+ }
+.socialicons{
+    
+    min-height: 19vh;
+    display: flex;
+padding: 0.75rem 0rem;
+justify-content: center;
+align-items: flex-start;
+gap: 0.75rem;
+align-self: stretch;
+background: var(--Black-400, #1E1F21);
+flex-direction: row;
+}
+.socialicons img{
+    width: 2rem;
+height:2rem;
+}
+
+.bottombuttoncontainer {
+
+  position: fixed;
+  bottom: 3%;
+     left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+.button{
+  backdrop-filter: blur(2px);
+  height: 100%;
+  background-color: #ddba6e9a;
+  color: #262729;
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  font-family: Quicksand;
+  line-height: auto;
+  border-style: hidden;
+  outline: none;
+  width: 152px;
+  --d: 9px !important;
+  --b: 4px !important;
+  --c: orange !important;
+  --gc: var(--c) calc(50% + var(--b) * 0.707), #0000 0 !important;
+  --gl: var(--c), #0000 40% 60%, var(--c) !important;
+  clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
+  border-radius: 12px;
+  color: var(--Black-300, #262729);
+  text-align: center;
+  
+  /* Quick Sand/24/Bold */
+  font-family: Quicksand;
+  
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

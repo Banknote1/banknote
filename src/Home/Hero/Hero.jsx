@@ -4,8 +4,8 @@ import style from '../LandingPage/Home.module.css'
 import IconsSocial from '../Social-icons/IconsSocial';
 import '../../index.css'
 import { isVisible } from '@testing-library/user-event/dist/utils';
-const Hero = ({ isVisible, isTransitioning }) => {
-
+const Hero = ({ isVisible, backFromDot }) => {
+    console.log(backFromDot);
     const [animate, setAnimate] = useState(false);
     const [leaveAnimate, SetLeaveAnimate] = useState(false);
     useEffect(() => {
@@ -32,11 +32,12 @@ const Hero = ({ isVisible, isTransitioning }) => {
                     <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-800%)', transition: 'transform .5s' }}>s</h1>
                     <h1 style={{ transform: animate ? 'translateY(0%)' : 'translateY(-900%)', transition: 'transform .5s' }}>t</h1>
                 </div>
-                <div className={`${styles.headline} ${styles.fadeInThird}`}>
+                <div className={`${styles.headline} ${backFromDot ? styles.fadeInThird : ''}`}>
                     <h2>Financial</h2>
                     <h2>solutions</h2>
                 </div>
-                <div className={`${styles.des} ${styles.fadeInThird} `}>
+                <div className={`${styles.des} ${backFromDot ? styles.fadeInThird : ''}`}>
+
                     <p>
                         We are a Financial Consulting Company offering essential methods for both large and small projects, aiding companies and institutions.
                     </p>

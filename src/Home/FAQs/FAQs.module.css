@@ -7,15 +7,28 @@ height: 100%;
 .TopframeCont{
     display: flex;
     position: fixed;
-    top: -2%;
+    top: -1vw;
     z-index: 66;
     width: 100%;
     justify-content: center;
     flex-direction: column;
-    height: 20%;
+    height: 10vw;
 }
  
-    
+    .overlay{
+      position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00000000, #53535380);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 1;
+    }
 .topFrame{
     --d: 15px;
     --b: 4px;
@@ -186,7 +199,7 @@ font-weight: 400;
 line-height: normal;
 }
 .contactForm{
-    height: 100%;
+    height: 1000px;
     
     display: flex;
   justify-content: center;
@@ -198,14 +211,14 @@ line-height: normal;
     display: flex;
     flex-direction: column;
     gap: 5vh;
-    margin-top: 10vh;
+    margin-top: 20vh;
     width: 30vw;
   }
   
  
   
   .sendButton{
-    height: '3vw';
+    height: auto !important;
     background: '#DDB96E';
     border-radius: 5;
     color: 'var(--Black-300, #262729)';
@@ -278,16 +291,12 @@ line-height: normal;
     bottom: 0px;
     z-index: 3;
     bottom: 0;
+ 
     clear: both;
     justify-content: center;
     align-items: center;
     display: flex;
     
-   
-     
-   
-  
- 
   }
  
   .footerSubCont{
@@ -340,7 +349,7 @@ width: 100%;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.74);
+    background: rgba(0, 0, 0, 0.884);
             display: flex;
     justify-content: center;
     align-items: center;
@@ -364,6 +373,24 @@ width: 100%;
     flex-shrink: 0;
     z-index: 5; 
   }
+  .modalmob {
+    padding-top: 7%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 5px;
+    padding-bottom: 2%;
+    border: 1px solid var(--Sand-100, #E4C78B);
+    background: var(--Black-1000, #000);
+    display: flex;
+    width: 85%;
+    height: 70%;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    gap: 2%;
+    flex-shrink: 0;
+    z-index: 999; 
+  }
   .Submitdate{
     width: 100%;
     height: 100%;
@@ -379,6 +406,22 @@ width: 100%;
     font-style: normal;
     font-weight: 600;
     line-height: normal;  
+}
+.Submitdatemob{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--Radius-1, 8px);
+  background: var(--Sand-200, #DDB96E);
+  border-color: transparent;
+  color: var(--Black-500, #171719);
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;  
 }
 .Canceldate{
     background-color: transparent;
@@ -396,10 +439,26 @@ width: 100%;
     font-weight: 600;
     line-height: normal;
 }
+.Canceldatemob{
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--Radius-1, 8px);
+  border: 1.268px solid var(--Sand-200, #DDB96E);
+  color: var(--Sand-200, #DDB96E);
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
  .Calendar{
   
     display: flex;
-   
+    padding: 0.3rem;
     justify-content: center;
     align-items: center;
     gap: 8.386px;
@@ -407,6 +466,17 @@ width: 100%;
     background: var(--Black-300, #262729);
     box-shadow: 0px 5.07px 7.606px 0px rgba(86, 86, 86, 0.06), 0px 2.535px 5.07px 0px rgba(86, 86, 86, 0.08), 0px -1.268px 5.07px 0px rgba(86, 86, 86, 0.08);
  }
+ .Calendarmob{
+  width: 17rem;
+  height: 17rem;
+  display: flex;
+   justify-content: center;
+  align-items: center;
+  gap: 8.386px;
+  border-radius: var(--Radius-2, 20.282px);
+  background: var(--Black-300, #262729);
+  box-shadow: 0px 5.07px 7.606px 0px rgba(86, 86, 86, 0.06), 0px 2.535px 5.07px 0px rgba(86, 86, 86, 0.08), 0px -1.268px 5.07px 0px rgba(86, 86, 86, 0.08);
+}
  .button {
     border-radius: var(--Radius-1, 10.141px);
 border: 1.268px solid var(--White-300, #F8F1E2);
@@ -432,3 +502,186 @@ line-height: normal;
     font-weight: 400;
     line-height: normal;
   }
+
+  @media (max-width: 600px) {
+    /* Styles for devices with a maximum width of 600px (mobile devices) */
+    .mobPageContainer {
+      display: flex  !important;  
+    }
+    .pageContainer {
+      display: none !important  ;  
+    }
+  }
+  
+  @media (min-width: 600px) {
+   
+    .mobPageContainer {
+        display: none !important  ;  
+    }
+    .pageContainer {
+        display: flex  !important;  
+    
+    }
+  }
+ 
+.mobPageContainer{
+  position: relative;
+  background: linear-gradient(to bottom, #000000, #53535380);
+
+  display: flex;
+  flex-direction: column;
+}
+.submobPageContainer{
+  position: relative;
+  z-index: 1; /* Ensure content appears above the background image */
+  margin-top: 35%;
+  display: flex;
+  flex-direction: column;
+
+  }
+.mobheadline h1{
+  color: var(--White-100, #FFF);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+/* Quick Sand/36/Regular */
+font-family: Quicksand;
+font-size: 2.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.mobheadline h2{
+  color: var(--White-100, #FFF);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  /* Quick Sand/24/Regular */
+  font-family: Quicksand;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mobroundedFrame{
+  margin-left: 1.5rem  !important;
+  margin-right: 1.5rem;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(2px);
+  width: 100% -2.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  --d: 15px;
+  --b: 4px;
+  --c: orange;
+  --gc: var(--c) calc(50% + var(--b)*0.707), #0000 0;
+  --gl: var(--c), #0000 40% 60%, var(--c);
+
+  clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.mobroundedFrame p{
+  width: 100%;
+  color: var(--Gray-50, #B9BBBE);
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0;
+  margin: 0 !important;
+  margin-top: 1.5rem !important;
+  
+}
+.mobsubFrame{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  margin: 0 !important;
+  justify-content: center;
+}
+.mobsubFrame p{
+  width: 100%;
+  margin: 0 !important;
+  align-self: center;
+  color: var(--Gray-50, #B9BBBE);
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+ 
+}
+.mobplusButtonCont{
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+}
+.mobplusButton{
+  background-color: transparent; /* Set background to transparent */
+  color: #DDB96E; /* Change the text color to your desired color */
+  font-size: 30px;
+  border: none; /* Remove border if any */
+  cursor: pointer;
+}
+.cropedCont {
+  margin-top: 15%;
+  background: url('/public/mobBGForm.svg') no-repeat; /* Set background image and prevent repeating */
+  background-size: cover; /* Adjust background size to cover the container */
+  width: 100%;
+  height: auto;
+  margin-right: 12rem !important;
+  margin-bottom: 5%;
+  background-position-x: 66%;
+}
+
+.mobContactLabelCont{
+  width: auto;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+}
+.mobContactLabelCont h1{
+  color:   #FFF ;
+
+  /* Quick Sand/32/Regular */
+  font-family: Quicksand;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.mobunderlinetextfield {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 5vh;
+  width: 90%;
+}
+.submobunderlinetextfield{
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 5vh;
+  width: 90%;
+}
+.mobbglogo{
+  position: absolute;
+  top: 62%;
+  height: 33%;
+  align-items: center;
+  display: flex;
+ 
+
+}
+.mobbglogo img{
+  width: 87%;
+}

@@ -10,7 +10,7 @@
 .socialButtons a {
   display: inline-flex;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 32px;
 
   color: #fff;
   justify-content: center;
@@ -36,4 +36,11 @@
 .socialButtons a i {
   transition: 0.3s ease-in;
   /* Add your transition properties here */
+}
+@media (max-width: 600px) {
+  /* Styles for devices with a maximum width of 600px (mobile devices) */
+ 
+  .socialButtons {
+    display: none !important  ;  
+  }
 }

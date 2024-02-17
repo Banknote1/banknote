@@ -106,11 +106,15 @@ h1 {
     text-align: left;
     width: auto;
     margin: 0 !important;
+
+}
+.fadeInThird h2
+.fadeInThird p{
     animation: fadeOut 1.5s ease-out;
     animation-delay: 2s;
 
 }
-
+ 
 .des {
     display: flex;
 }
@@ -125,8 +129,7 @@ h1 {
     width: 70%;
     margin: 0 !important;
     margin-top: 3% !important;
-    animation: fadeOut 1.5s ease-out;
-    animation-delay: 2s;
+   
 
 }
 

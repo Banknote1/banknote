@@ -12,10 +12,12 @@ import Carousel from './Home/LandingPage/Carousel';
 import FAQs from './Home/FAQs/FAQs.jsx';
 import MySlider from './Home/LandingPage/MySlider';
 import Landing from './Mobile/Landing';
+
 import PartnersDetails from './Home/Partners/PartnersDetails';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
-
+import PartnersMobile from './Mobile/partenersMobile.jsx';
+// import './Mobile/partnersMobile.jsx'
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -54,7 +56,9 @@ function App() {
     return (
       <div className='app'>
         <Routes>
+          <Route path='/partnersMobile' element={<PartnersMobile />} />
           <Route path='/' element={<Landing />} />
+          <Route path='/financialSectors/weserve' element={<SectorsSlider />} />
         </Routes>
       </div>
     )
@@ -100,6 +104,7 @@ function Routes1({ location }) {
       <Route path='/PartnersDetails' element={<PartnersDetails />} />
       <Route path='/Exporting' element={<Exporting />} />
       <Route path='/FAQs' element={<FAQs />} />
+
     </Routes>
   );
 }

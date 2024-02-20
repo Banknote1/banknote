@@ -9,6 +9,18 @@ import { useNavigate } from 'react-router-dom';
 const Slider = ({ img1, img2, video, videoThumbnail }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     const handleClick = () => {
         // If on the last slide, loop back to the first slide
         if (currentSlide === slides.length - 1) {
@@ -36,6 +48,7 @@ const Slider = ({ img1, img2, video, videoThumbnail }) => {
     // Render only the current slide
     return (
         <div>
+
             {slides[currentSlide].content}
 
             {/* Navigation buttons */}
@@ -111,7 +124,7 @@ const PartnersDetails = () => {
                     </div>
                 </div>
 
-                <div style={{ height: '100%', display: 'flex', flexDirection: 'row', gap: '10vw', marginTop: '2vw' }}>
+                <div className={styles.mobileContainer} style={{ height: '100%', display: 'flex', flexDirection: 'row', gap: '10vw', marginTop: '2vw' }}>
                     <div className={styles.leftCont}>
                         <img src={LogoimageSrc} alt="" style={{ width: '20vw' }} />
                     </div>

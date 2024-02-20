@@ -67,3 +67,11 @@
 .iconButton {
     height: 100%;
 }
+
+@media(max-width:768px) {
+    .mobileContainer {
+        flex-direction: column !important;
+    }
+
+    .rightCont {}
+}

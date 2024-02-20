@@ -1,0 +1,28 @@
+.ribbon2 {
+    gap: 3%;
+    display: flex;
+    position: fixed;
+    left: -3.4em;
+    z-index: 9999;
+    width: 300em;
+    height: 2em;
+    overflow: hidden;
+    background-color: #00000020;
+    border: dashed;
+    stroke-dasharray: 8em;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    line-height: 2em;
+    color: #DDB96E;
+    font-family: Quicksand;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    top: auto;
+    bottom: 21em;
+    transform: rotate(-8deg) translateY(-3px) translateX(-100px);
+}

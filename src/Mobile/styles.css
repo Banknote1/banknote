@@ -61,23 +61,25 @@
     }
 
     .carousel {
-        height: 540px !important;
+        height: 550px !important;
+
     }
 }
 
 @media (max-width: 768px) {
     .section .container {
         max-width: 100% !important;
+        margin-top: 55px;
 
     }
 
     .carousel {
-        height: 590px !important;
+        height: 460px !important;
     }
 }
 
 @media(max-width:300px) {
     .carousel {
-        height: 430px !important;
+        /* height: 430px !important; */
     }
 }

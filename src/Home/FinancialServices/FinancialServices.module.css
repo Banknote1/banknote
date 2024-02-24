@@ -29,7 +29,7 @@
 .mainTitleWhite {
     color: #ffffff;
     font-family: Quicksand;
-    font-size: 8rem;
+    font-size: 6rem;
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
@@ -38,7 +38,7 @@
 .mainTitleYellow {
     color: #EBD5A8;
     font-family: Quicksand;
-    font-size: 8rem;
+    font-size: 6rem;
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
@@ -257,7 +257,6 @@ h5 {
     h5 {
         font-size: 0.8rem !important;
     }
-
 
 
     svg {

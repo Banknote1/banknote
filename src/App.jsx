@@ -15,7 +15,8 @@ import Landing from './Mobile/Landing';
 import PartnersDetails from './Home/Partners/PartnersDetails';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
-
+import PartnersMobile from './Mobile/partenersMobile.jsx';
+// import './Mobile/partnersMobile.jsx'
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -66,6 +67,7 @@ function App() {
           <Route path='/PartnersDetails' element={<PartnersDetails />} />
           <Route path='/Exporting' element={<Landing />} />
           <Route path='/FAQs' element={<FAQs />} />
+          <Route path='/partnersMobile' element={<PartnersMobile />} />
         </Routes>
       </div>
     )
@@ -111,7 +113,7 @@ function Routes1({ location }) {
       <Route path='/PartnersDetails' element={<PartnersDetails />} />
       <Route path='/Exporting' element={<Exporting />} />
       <Route path='/FAQs' element={<FAQs />} />
-    </Routes>
+    </Routes >
   );
 }
 export default App;

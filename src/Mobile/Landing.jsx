@@ -10,9 +10,9 @@ function Landing() {
 
 
     return (
-        <div className={`${styles.MobileCont} ${styles.overlay}`}>
+        <div className={`${styles.MobileCont}`}>
 
-            <div className={styles.hero} style={{ height: '570px', display: 'flex', alignItems: 'end', justifyContent: 'end' }}>
+            <div className={styles.hero}>
                 <HeroCarousel />
             </div>
             <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

@@ -1,10 +1,14 @@
+.section {
+    /* padding-right: 30px; */
+    /* padding-left: 30px; */
+    margin-right: 3rem !important;
+    margin-bottom: 3rem;
+}
+
 .MobileCont {
-    display: flex;
-    flex-direction: column;
-    height: auto;
+    display: block;
+    height: 100vh;
     overflow-y: auto;
-    justify-content: center;
-    align-items: center;
     background: linear-gradient(179deg, black 0%, rgba(49.46, 50.48, 52.52, 0.70) 61%, rgba(51.84, 51.84, 51.84, 0.60) 70%, rgba(69.69, 69.69, 69.69, 0.40) 85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
 }
 
@@ -16,6 +20,7 @@
     font-weight: 400;
     line-height: 90%;
     width: 150%;
+    display: block;
 
 }
 
@@ -26,6 +31,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
+    display: block;
+
 }
 
 .subParagraph {
@@ -156,7 +163,9 @@
 
 @media (max-width:1024px) {
     .hero {
-        height: 685px !important;
+        /* height: 685px !important; */
+        margin-top: 20%;
+        margin-bottom: 3rem;
     }
 
     .MainTitleWhite,
@@ -171,11 +180,20 @@
     }
 }
 
-
-
 @media (max-width:768px) {
     .hero {
-        height: 700px !important;
+        margin-top: 30%;
+        margin-bottom: 3rem;
+        /* height: 700px !important; */
+    }
+
+    .textContent {
+        display: inline-flex;
+        margin-bottom: 20px;
+    }
+
+    .mainTitleYellow {
+        margin-left: 15px;
     }
 
     .MainTitleWhite,
@@ -188,11 +206,20 @@
         line-height: 34px;
 
     }
+
+    .carousel-indicators {
+        bottom: 110px;
+    }
+
+    .section {
+        margin-right: 0.5rem !important;
+    }
 }
 
 @media (max-width:300px) {
     .hero {
-        height: 615px !important;
+        /* height: 615px !important; */
+
     }
 
     .MainTitleWhite,
@@ -204,6 +231,10 @@
         font-size: 16px;
         line-height: 34px;
 
+    }
+
+    .section {
+        margin-right: 0.5rem !important;
     }
 }
 
@@ -267,9 +298,4 @@ h5 {
     font-weight: 600;
     line-height: normal;
     margin-top: 16px !important;
-}
-
-.section {
-    padding-right: 30px;
-    padding-left: 30px;
 }

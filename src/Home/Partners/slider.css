@@ -1,6 +1,5 @@
-.carousel 
-    .control-dots {
-      /* position: absolute;
+.carousel .control-dots {
+  /* position: absolute;
       left: 0;
       right: 0;
       bottom: 10px;
@@ -8,28 +7,29 @@
       display: flex !important;
       justify-content: center;
       list-style: none; */
-       display: none;
-    }
-  
-    .control-dots .dot {
-      margin: 0 5px;
-    }
-  
-    .carousel-slider .control-prev.control-arrow {
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 0 !important;
-        padding-left: .2vw !important;
+  display: none;
+}
 
-      }
-    
-  
-      .carousel-slider .control-next.control-arrow {
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 0 !important;
-        padding-right: .2vw !important;
-      }
-    .carousel-status{
-        display: none;
-    }
+.control-dots .dot {
+  margin: 0 5px;
+}
+
+.carousel-slider .control-prev.control-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 !important;
+  padding-left: .2vw !important;
+
+}
+
+
+.carousel-slider .control-next.control-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 !important;
+  padding-right: .2vw !important;
+}
+
+.carousel-status {
+  display: none;
+}

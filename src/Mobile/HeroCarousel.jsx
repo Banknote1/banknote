@@ -29,36 +29,40 @@ function HeroCarousel() {
     };
 
     return (
-        <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ height: '400px' }}>
+        <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ height: '500px' }}>
             <div className="carousel-inner">
-                <div className={`carousel-item ${activeIndex === 0 ? 'active' : ''}`}>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className={`col-8 `}>
-                                <div className='mb-3'>
-                                    <h1 className={styles.MainTitleWhite}> Your Best</h1>
-                                    <h1 className={styles.MainTitleYellow}> Financial Solutions</h1>
-                                </div>
-                                <div className='mb-3'>
-                                    <p className={styles.subParagraph}> We are Financial Consulting Company offers essential methods for both large and small projects, aiding companies and institutions.</p>
-                                </div>
+                <div className={`carousel-item ${activeIndex === 0 ? 'active' : ''} `}>
+
+                    <div className="row justify-content-center ms-2 ms-md-5 ml-2 ml-md-5">
+
+                        <div className={`col-8 `}>
+                            <div className='mb-3'>
+                                <h1 className={styles.MainTitleWhite}> Your Best</h1>
+                                <h1 className={styles.MainTitleYellow}> Financial Solutions</h1>
+                            </div>
+                            <div className='mb-3'>
+                                <p className={styles.subParagraph}> We are Financial Consulting Company offers essential methods for both large and small projects, aiding companies and institutions.</p>
+                            </div>
+                            <div className=' ms-2 ms-md-2 ml-2 ml-md-2 '>
                                 {windowWidth > 360 && windowWidth <= 1024 && (
-                                    <div className="company-numbers-wrapper">
+                                    <div className="company-numbers-wrapper ">
                                         <CompanyNumbers />
                                     </div>
                                 )}
                             </div>
-                            <div className="col-4">
-                                <img src="/MobileCoin.png" alt="" />
-                            </div>
+
+                        </div>
+                        <div className="col-4">
+                            <img src="/MobileCoin.png" alt="" />
                         </div>
                     </div>
+
                 </div>
                 <div className={`carousel-item ${activeIndex === 1 ? 'active' : ''}`}>
-                    <div className="row justify-content-center ms-1">
+                    <div className="row justify-content-center ms-2 ms-md-5 ml-2 ml-md-5">
                         <div className={`col-8 `}>
                             <div className='mb-3'>
-                                <h1 className={styles.MainTitleWhite}> Exporting <br />&  <span className={styles.MainTitleYellow}>Trading</span></h1>
+                                <h1 className={styles.MainTitleWhite}> Exporting &  <span className={styles.MainTitleYellow}>Trading</span></h1>
                             </div>
                             <div className='mb-3'>
                                 <p className={styles.subParagraph}>we offer a comprehensive suite of services to streamline your importing operations in various trads. </p>
@@ -78,7 +82,6 @@ function HeroCarousel() {
                             </div>
                         </div>
                         <div className="col-4">
-
                         </div>
                     </div>
                     <div className="row">
@@ -124,15 +127,23 @@ function HeroCarousel() {
                             </div>
                         </div>
                     </div>
+                    <div className='col-9 ms-2 ms-md-5 ml-2 ml-md-5'>
+                        {windowWidth > 360 && windowWidth <= 1024 && (
+                            <div className="company-numbers-wrapper ms-2 ms-md-2">
+                                <CompanyNumbers />
+                            </div>
+
+                        )}
+                    </div>
                 </div>
             </div>
 
-            <div className="carousel-indicators">
+            <div className="carousel-indicators   ms-md-5  ml-md-5">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
 
-            {windowWidth < 360 && (
+            {windowWidth < 360 && windowWidth <= 1024 && (
                 <div>
                     <CompanyNumbers />
                 </div>

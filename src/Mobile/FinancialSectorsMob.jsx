@@ -2,15 +2,15 @@ import React from 'react'
 import styles from './Landing.module.css';
 function FinancialSectorsMob() {
     return (
-        <div className={styles.section}>
+        <div className={`ms-md-5 ms-3 ${styles.section}`}>
             <div className="row row-cols-md-3 row-cols-sm-2">
-                <div className="col-4">
+                <div className="col-xxl-4 col-md-6 col-sm-12">
                     <div className={styles.textContent}>
-                        <h1 className={styles.mainTitleWhite}>Sectors </h1>
-                        <h1 className={styles.mainTitleYellow}>We Serve</h1>
+                        <span className={styles.mainTitleWhite}>Sectors </span>
+                        <span className={styles.mainTitleYellow}>We Serve</span>
                     </div>
                 </div>
-                <div className="col mb-3">
+                <div className="col-6 col-md-6 mb-3">
                     <a style={{ textDecoration: `none`, color: `inherit` }} href="/financialSectors/weserve?pagenumb=1">
                         <div className={` ${styles.serBox}`}>
 
@@ -36,7 +36,7 @@ function FinancialSectorsMob() {
                         </div>
                     </a>
                 </div>
-                <div className="col mb-3">
+                <div className="col-6 col-md-6 mb-3">
                     <a style={{ textDecoration: `none`, color: `inherit` }} href="/financialSectors/weserve?pagenumb=3">
 
                         <div className={` ${styles.serBox}`} >
@@ -61,7 +61,7 @@ function FinancialSectorsMob() {
                         </div>
                     </a>
                 </div>
-                <div className="col mb-3">
+                <div className="col-6 col-md-6 mb-3">
                     <a style={{ textDecoration: `none`, color: `inherit` }} href="/financialSectors/weserve?pagenumb=5">
 
                         <div className={` ${styles.serBox}`} >
@@ -87,7 +87,7 @@ function FinancialSectorsMob() {
                     </a>
 
                 </div>
-                <div className="col mb-3">
+                <div className="col-6 col-md-6 mb-3">
                     <a style={{ textDecoration: `none`, color: `inherit` }} href="/financialSectors/weserve?pagenumb=2">
                         <div className={` ${styles.serBox}`} >
                             <div>
@@ -113,7 +113,7 @@ function FinancialSectorsMob() {
                             </div>
                         </div></a>
                 </div>
-                <div className="col mb-3">
+                <div className="col-6 col-md-6 mb-3">
                     <a style={{ textDecoration: `none`, color: `inherit` }} href="/financialSectors/weserve?pagenumb=4">
 
                         <div className={` ${styles.serBox}`} >
@@ -141,7 +141,7 @@ function FinancialSectorsMob() {
                             </div>
                         </div></a>
                 </div>
-                <div className="col mb-3">
+                <div className="col-6 col-md-6 mb-3">
                     <div className='' >
 
                         <div>

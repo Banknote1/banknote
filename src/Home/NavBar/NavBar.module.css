@@ -107,6 +107,8 @@ nav {
     overflow: hidden;
 }
 
+
+
 .buttonContainer .button:hover::before {
     content: '';
     position: absolute;
@@ -262,6 +264,24 @@ nav {
     .TabletNavBar {
         display: flex !important;
     }
+
+    .buttonContainer .button {
+        position: relative;
+        width: 120px !important;
+        height: 35px !important;
+        background-color: #DDB96E;
+        overflow: hidden;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    .mobButtonCont {
+        width: 120px !important;
+        height: 35px !important;
+        margin-left: 7px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -279,10 +299,6 @@ nav {
         display: none !important;
     }
 }
-
-
-
-
 
 
 .transitionOverlay {

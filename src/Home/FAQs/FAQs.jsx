@@ -477,7 +477,7 @@ function FAQs() {
     return (
         <div>
 
-            <div className={styles.mobPageContainer} style={{ maxHeight: '91vh', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
+            <div className={styles.mobPageContainer} style={{ maxHeight: '0', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
                 <div className={styles.submobPageContainer}>
 
                     <div className={styles.mobheadline}>
@@ -539,7 +539,7 @@ function FAQs() {
                                 Help your Business!
                             </h1>
                         </div>
-                        <div id="contactForm" className={styles.contactForm} style={{ height: `auto`, marginBottom: '10%' }}>
+                        <div id="contactForm" className={styles.contactForm} style={{ marginBottom: '10%' }}>
                             <div className={styles.mobunderlinetextfield}>
                                 <div className={styles.submobunderlinetextfield}>
                                     <TextField

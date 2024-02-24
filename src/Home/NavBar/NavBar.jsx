@@ -139,7 +139,7 @@ function NavBar({ selectedPage }) {
                         <img style={{ width: "4.875rem", }} src='/logo.png' alt="" />
 
                     </a>
-                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '42%' }}>
+                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', width: '42%' }}>
                         <div className={styles.buttonContainer}  >
                             <button onClick={handleContactUsClick} className={styles.button}  > Contact Us</button>
                         </div>

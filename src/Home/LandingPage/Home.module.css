@@ -314,3 +314,10 @@ p {
         display: none;
     }
 }
+
+@media (max-height: 708px) {
+    .cont {
+        margin-top: 8%;
+
+    }
+}

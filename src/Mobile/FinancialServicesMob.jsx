@@ -1,56 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import styles from './FinancialServices.module.css';
-import IconsSocial from '../Social-icons/IconsSocial';
-import './styles.css';
-function FinancialServices() {
-    const [animate, setAnimate] = useState(false);
-    console.log(animate);
-    useEffect(() => {
-        // Trigger animation whenever the 'animate' prop changes
-
-        setAnimate(true);
-
-    }, [setAnimate]);
+import React from 'react'
+import styles from './Landing.module.css#'
+function FinancialServicesMob() {
     return (
-
-        <div className={styles.section} >
-
-            <div className="row row-cols-xxl-4  row-cols-md-4 row-cols-xs-2 justify-content-center">
-
-                <div className="col-xxl-5 col-md-5 mb-3 ">
+        <div className={styles.section}>
+            <div className="row row-cols-md-3 row-cols-sm-2">
+                <div className="col-4" style={{ alignSelf: 'center' }}>
                     <div className={styles.textContent}>
 
                         <h1 className={styles.mainTitleWhite}>Financial </h1>
                         <h1 className={styles.mainTitleYellow}>Services</h1>
                     </div>
-
-                </div>
-                <div className="col mb-3">
-                    <div className={` ${styles.serBox}`} >
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                <g clip-path="url(#clip0_1058_43)">
-                                    <path d="M7.5 52.5H52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M7.5 25H52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M12.5 15L30 7.5L47.5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M10 25V52.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M50 25V52.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M20 35V42.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M30 35V42.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M40 35V42.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1058_43">
-                                        <rect width="60" height="60" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
-                        <div>
-                            <h5> Banking Facilities</h5>
-                        </div>
-                    </div>
-
                 </div>
                 <div className="col mb-3">
                     <div className={` ${styles.serBox}`}>
@@ -78,11 +37,38 @@ function FinancialServices() {
                             <h5>Accounting Advisory Services
                                 (AAS) </h5>
                         </div>
-
                     </div>
                 </div>
-                {/* <div className="col"></div> */}
-                <div className="col">
+                <div className="col mb-3">
+                    <div className={` ${styles.serBox}`} >
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <g clip-path="url(#clip0_1058_43)">
+                                    <path d="M7.5 52.5H52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7.5 25H52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 15L30 7.5L47.5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M10 25V52.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M50 25V52.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M20 35V42.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M30 35V42.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M40 35V42.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1058_43">
+                                        <rect width="60" height="60" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5> Banking Facilities</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div className="col mb-3">
                     <div className={` ${styles.serBox}`} >
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
@@ -106,7 +92,7 @@ function FinancialServices() {
                         </div>
                     </div>
                 </div>
-                <div className="col">
+                <div className="col mb-3">
                     <div className={` ${styles.serBox}`} >
 
                         <div>
@@ -129,12 +115,9 @@ function FinancialServices() {
                         </div>
                     </div>
                 </div>
-                {/* <div className="col"></div> */}
             </div>
-
-        </div >
-
+        </div>
     )
 }
 
-export default FinancialServices
+export default FinancialServicesMob

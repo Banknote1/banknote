@@ -477,7 +477,7 @@ function FAQs() {
     return (
         <div>
 
-            <div className={styles.mobPageContainer} style={{ overflowY: 'auto', maxHeight: '91vh', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
+            <div className={styles.mobPageContainer} style={{ maxHeight: '91vh', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
                 <div className={styles.submobPageContainer}>
 
                     <div className={styles.mobheadline}>

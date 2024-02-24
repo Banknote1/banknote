@@ -117,7 +117,7 @@
 }
 
 h5 {
-    color: #FFF;
+    color: #FFF !important;
     font-family: Quicksand;
     font-size: 1.5rem;
     font-style: normal;
@@ -144,12 +144,46 @@ h5 {
     line-height: normal;
 }
 
- 
 
+.section2 {
+    width: 90vw;
+}
+
+.section {
+    margin: 0 60px 0 60px;
+    width: 90%;
+}
+
+@media (max-width:1360px) {
+
+    .mainTitleWhite,
+    .mainTitleYellow {
+        font-size: 7rem;
+        display: inline;
+
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    .servicesbg {
+
+        overflow-y: auto;
+    }
+}
+
+
+/* 
 @media (max-width: 1024px) {
+    .servicesbg {
+        height: 100%;
+        overflow-y: auto;
+    }
+
     .serBox {
-        width: 30vw;
-        height: 30vh;
+        width: auto;
+        height: 21vh;
     }
 
     .mainTitleWhite,
@@ -163,8 +197,23 @@ h5 {
     }
 
     .section {
-        width: 89vw;
+        width: 100%;
+        margin: 150px 20px 0 20px;
     }
+
+    .section2 {
+        margin-top: 150px !important;
+    }
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+
 }
 
 @media (max-width: 760px) {
@@ -175,82 +224,58 @@ h5 {
 
     body {
         overflow-y: auto;
-        overflow-x: hidden;
     }
 
 
     .section {
         width: 100%;
-        padding: 20px;
+        padding: 5px;
+
+        margin: 40px 20px 0 20px;
+
+    }
+
+    .container {
+        padding: 0 !important;
+        max-width: 100% !important;
     }
 
     .serBox {
         width: auto;
         margin-right: 0;
         margin-bottom: 20px;
-        height: auto;
+        height: 150px;
+        padding: 20px;
     }
 
     .mainTitleWhite,
     .mainTitleYellow {
-        font-size: 3rem;
+        font-size: 2rem;
         display: inline;
     }
 
     h5 {
-        font-size: 0.5rem;
+        font-size: 0.8rem !important;
     }
 
-    .section {
-        width: 89vw;
-    }
-}
 
-/* 
-@media (max-width: 360px) {
 
-    .section {
-        width: 100%;
+    svg {
+        width: 40px;
+        height: 40px;
     }
 
-    .serBox {
-        width: calc(50% - 10px);
-        height: 152px;
-        margin: 0 5px 20px;
+    .overlay {
+        position: relative;
     }
 
-    .mainTitleWhite,
-    .mainTitleYellow {
-        font-size: 3rem;
-        display: block;
+    .NumWhite,
+    .NumYellow {
+        font-size: 1.5rem;
     }
 
-    h5 {
-        font-size: 0.9rem;
-    }
-
-    body {
-        overflow-y: auto;
-        overflow-x: hidden;
+    .section2 {
+        margin-top: 40px !important;
     }
 
 } */
-
-
-@media (min-width:1560px) {
-
-    .mainTitleWhite,
-    .mainTitleYellow {
-        font-size: 7rem;
-
-    }
-
-    .section {
-        width: 89vw;
-    }
-
-    .servicesbg {
-        background-image: none;
-        overflow-y: auto;
-    }
-}

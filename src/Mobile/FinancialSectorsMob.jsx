@@ -1,42 +1,38 @@
 import React from 'react'
-import styles from './FinancialServices.module.css';
-import IconsSocial from '../Social-icons/IconsSocial';
-import './styles.css';
-function FinancialSectors() {
+import styles from './Landing.module.css';
+function FinancialSectorsMob() {
     return (
-
-        <div className={styles.section2} >
-
-            <div className="row row-cols-xxl-4 rows-cols-md-3 rows-cols-xs-2 ">
-                <div className="col-xxl-5 col-md-5 col-xs-12 mb-3 ">
+        <div className={styles.section}>
+            <div className="row row-cols-md-3 row-cols-sm-2">
+                <div className="col-4">
                     <div className={styles.textContent}>
                         <h1 className={styles.mainTitleWhite}>Sectors </h1>
                         <h1 className={styles.mainTitleYellow}>We Serve</h1>
                     </div>
-
                 </div>
                 <div className="col mb-3">
-                    <a style={{ textDecoration: `none`, color: `inherit` }} href="/financialSectors/weserve?pagenumb=5">
+                    <a style={{ textDecoration: `none`, color: `inherit` }} href="/financialSectors/weserve?pagenumb=1">
+                        <div className={` ${styles.serBox}`}>
 
-                        <div className={` ${styles.serBox}`} >
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                    <g clip-path="url(#clip0_1074_229)">
-                                        <path d="M15 52.5H30" stroke="white" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M22.5 52.5V7.5L7.5 22.5H52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M22.5 7.5L47.5 22.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M42.5 22.5V32.5C43.4889 32.5 44.4556 32.7932 45.2779 33.3427C46.1001 33.8921 46.741 34.673 47.1194 35.5866C47.4978 36.5002 47.5969 37.5055 47.4039 38.4755C47.211 39.4454 46.7348 40.3363 46.0355 41.0355C45.3363 41.7348 44.4454 42.211 43.4755 42.4039C42.5055 42.5969 41.5002 42.4978 40.5866 42.1194C39.673 41.741 38.8921 41.1001 38.3427 40.2779C37.7932 39.4556 37.5 38.4889 37.5 37.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <g clip-path="url(#clip0_1074_1190)">
+                                        <path d="M10 52.5C12.8675 42.45 14.9575 32.4325 15 22.5H30C30.0425 32.4325 32.1325 42.45 35 52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M31.25 32.5H42.5C42.5625 39.03 44.735 45.74 47.5 52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M22.5 12.5C23.0679 11.7087 23.8199 11.0677 24.6911 10.6321C25.5622 10.1965 26.5263 9.97958 27.5 9.99997C28.4737 9.97958 29.4378 10.1965 30.3089 10.6321C31.1801 11.0677 31.9321 11.7087 32.5 12.5C33.0679 13.2912 33.8199 13.9323 34.6911 14.3679C35.5622 14.8034 36.5263 15.0204 37.5 15C38.4737 15.0204 39.4378 14.8034 40.3089 14.3679C41.1801 13.9323 41.9321 13.2912 42.5 12.5C43.0679 11.7087 43.8199 11.0677 44.6911 10.6321C45.5622 10.1965 46.5263 9.97958 47.5 9.99997C48.4737 9.97958 49.4378 10.1965 50.3089 10.6321C51.1801 11.0677 51.9321 11.7087 52.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7.5 52.5H55" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_1074_229">
+                                        <clipPath id="clip0_1074_1190">
                                             <rect width="60" height="60" fill="white" />
                                         </clipPath>
                                     </defs>
                                 </svg>
                             </div>
                             <div>
-                                <h5> Construction </h5>
+                                <h5>Manufacturing </h5>
                             </div>
+
                         </div>
                     </a>
                 </div>
@@ -66,30 +62,30 @@ function FinancialSectors() {
                     </a>
                 </div>
                 <div className="col mb-3">
-                    <a style={{ textDecoration: `none`, color: `inherit` }} href="/financialSectors/weserve?pagenumb=1">
-                        <div className={` ${styles.serBox}`}>
+                    <a style={{ textDecoration: `none`, color: `inherit` }} href="/financialSectors/weserve?pagenumb=5">
 
+                        <div className={` ${styles.serBox}`} >
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                    <g clip-path="url(#clip0_1074_1190)">
-                                        <path d="M10 52.5C12.8675 42.45 14.9575 32.4325 15 22.5H30C30.0425 32.4325 32.1325 42.45 35 52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M31.25 32.5H42.5C42.5625 39.03 44.735 45.74 47.5 52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M22.5 12.5C23.0679 11.7087 23.8199 11.0677 24.6911 10.6321C25.5622 10.1965 26.5263 9.97958 27.5 9.99997C28.4737 9.97958 29.4378 10.1965 30.3089 10.6321C31.1801 11.0677 31.9321 11.7087 32.5 12.5C33.0679 13.2912 33.8199 13.9323 34.6911 14.3679C35.5622 14.8034 36.5263 15.0204 37.5 15C38.4737 15.0204 39.4378 14.8034 40.3089 14.3679C41.1801 13.9323 41.9321 13.2912 42.5 12.5C43.0679 11.7087 43.8199 11.0677 44.6911 10.6321C45.5622 10.1965 46.5263 9.97958 47.5 9.99997C48.4737 9.97958 49.4378 10.1965 50.3089 10.6321C51.1801 11.0677 51.9321 11.7087 52.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M7.5 52.5H55" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <g clip-path="url(#clip0_1074_229)">
+                                        <path d="M15 52.5H30" stroke="white" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M22.5 52.5V7.5L7.5 22.5H52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M22.5 7.5L47.5 22.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M42.5 22.5V32.5C43.4889 32.5 44.4556 32.7932 45.2779 33.3427C46.1001 33.8921 46.741 34.673 47.1194 35.5866C47.4978 36.5002 47.5969 37.5055 47.4039 38.4755C47.211 39.4454 46.7348 40.3363 46.0355 41.0355C45.3363 41.7348 44.4454 42.211 43.4755 42.4039C42.5055 42.5969 41.5002 42.4978 40.5866 42.1194C39.673 41.741 38.8921 41.1001 38.3427 40.2779C37.7932 39.4556 37.5 38.4889 37.5 37.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_1074_1190">
+                                        <clipPath id="clip0_1074_229">
                                             <rect width="60" height="60" fill="white" />
                                         </clipPath>
                                     </defs>
                                 </svg>
                             </div>
                             <div>
-                                <h5>Manufacturing </h5>
+                                <h5> Construction </h5>
                             </div>
-
                         </div>
                     </a>
+
                 </div>
                 <div className="col mb-3">
                     <a style={{ textDecoration: `none`, color: `inherit` }} href="/financialSectors/weserve?pagenumb=2">
@@ -145,7 +141,7 @@ function FinancialSectors() {
                             </div>
                         </div></a>
                 </div>
-                <div className="col mb-3 d-flex justify-content-start align-items-center">
+                <div className="col mb-3">
                     <div className='' >
 
                         <div>
@@ -156,10 +152,8 @@ function FinancialSectors() {
                 </div>
 
             </div>
-
         </div>
-
     )
 }
 
-export default FinancialSectors
+export default FinancialSectorsMob

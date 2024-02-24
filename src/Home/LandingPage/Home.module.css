@@ -12,7 +12,7 @@
 }
 
 .cont {
-    margin-top: 14%;
+    margin-top: 10%;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -306,5 +306,11 @@ p {
 
     100% {
         opacity: 1;
+    }
+}
+
+@media(max-width:1024px) {
+    .overlay {
+        display: none;
     }
 }

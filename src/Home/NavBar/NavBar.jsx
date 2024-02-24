@@ -130,6 +130,28 @@ function NavBar({ selectedPage }) {
 
     return (
         <>
+            {/* Tablet View */}
+            <div className={styles.TabletNavBar}   >
+                {/* Mobile menu */}
+
+                <div style={{ display: 'flex', flexDirection: 'row', width: '100%', marginLeft: '1.25rem', marginRight: ' 1.25rem', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <a className="navbar-brand" href="/">
+                        <img style={{ width: "4.875rem", }} src='/logo.png' alt="" />
+
+                    </a>
+                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '42%' }}>
+                        <div className={styles.buttonContainer}  >
+                            <button onClick={handleContactUsClick} className={styles.button}  > Contact Us</button>
+                        </div>
+
+                        <div className={styles.mobButtonCont}>
+                            <button className={styles.mobBavButton}>
+                                Our Products
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {/* Mobile Navigation Bar */}
             <div className={styles.mobileNavBar}   >
                 {/* Mobile menu */}

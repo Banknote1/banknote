@@ -60,6 +60,16 @@ function Carousel() {
         };
     }, [activeIndex]);
 
+    useEffect(() => {
+        // Add event listener for wheel scroll
+        window.addEventListener('wheel', handleWheel);
+
+        // Remove the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('wheel', handleWheel);
+        };
+    }, [activeIndex]);
+
     return (
         <div className='overlay'>
 

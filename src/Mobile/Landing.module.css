@@ -10,6 +10,7 @@
     height: 100vh;
     overflow-y: auto;
     background: linear-gradient(179deg, black 0%, rgba(49.46, 50.48, 52.52, 0.70) 61%, rgba(51.84, 51.84, 51.84, 0.60) 70%, rgba(69.69, 69.69, 69.69, 0.40) 85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+    overflow-x: hidden;
 }
 
 .MainTitleWhite {
@@ -85,7 +86,8 @@
     margin: auto;
     overflow: hidden;
     position: absolute;
-    width: 100%;
+    width: 110%;
+    left: -5%;
 }
 
 .SliderCont::before,
@@ -161,6 +163,89 @@
 
 } */
 
+
+
+.mainTitleWhite {
+    color: #FFF;
+    font-family: Quicksand;
+    font-size: 2.25em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    /* 2.7rem */
+}
+
+.mainTitleYellow {
+    color: #EBD5A8;
+    font-family: Quicksand;
+    font-size: 2.25em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+
+}
+
+.serBox {
+    width: 42vw;
+    height: 42vw;
+    flex-shrink: 0;
+    margin-right: 15px;
+    box-shadow: 8px 8px 4px #00000040;
+    background-color: rgba(23, 23, 25, 1);
+    --d: 15px;
+    --b: 4px;
+    --c: orange;
+    --gc: var(--c) calc(50% + var(--b)*0.707), #0000 0;
+    --gl: var(--c), #0000 40% 60%, var(--c);
+    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 8%;
+    padding-top: 18%;
+    flex-direction: column;
+}
+
+
+.serBox:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+svg {
+    width: 50px;
+    height: 50px;
+}
+
+h5 {
+    color: #FFF !important;
+    font-family: Quicksand;
+    font-size: 2.7vh !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 16px !important;
+}
+
+
+.NumYellow {
+    color: var(--White-600, #EBD5A8);
+    font-family: Quicksand;
+    font-size: 2.80663rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.NumWhite {
+    color: var(--White-100, #FFF);
+    font-family: Quicksand;
+    font-size: 2.105rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 @media (max-width:1024px) {
     .hero {
         /* height: 685px !important; */
@@ -183,7 +268,7 @@
 @media (max-width:768px) {
     .hero {
         margin-top: 30%;
-        margin-bottom: 3rem;
+        margin-bottom: 6rem;
         /* height: 700px !important; */
     }
 
@@ -202,8 +287,8 @@
     }
 
     .subParagraph {
-        font-size: 20px;
-        line-height: 34px;
+        font-size: 18px;
+        line-height: 30px;
 
     }
 
@@ -213,6 +298,10 @@
 
     .section {
         margin-right: 0.5rem !important;
+    }
+
+    h5 {
+        font-size: 16px !important;
     }
 }
 
@@ -236,66 +325,4 @@
     .section {
         margin-right: 0.5rem !important;
     }
-}
-
-.mainTitleWhite {
-    color: #FFF;
-    font-family: Quicksand;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 90%;
-    /* 2.7rem */
-}
-
-.mainTitleYellow {
-    color: #EBD5A8;
-    font-family: Quicksand;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 90%;
-
-}
-
-.serBox {
-    width: auto;
-    height: 12rem;
-    flex-shrink: 0;
-    margin-right: 15px;
-    box-shadow: 8px 8px 4px #00000040;
-    background-color: rgba(23, 23, 25, 1);
-    --d: 15px;
-    --b: 4px;
-    --c: orange;
-    --gc: var(--c) calc(50% + var(--b)*0.707), #0000 0;
-    --gl: var(--c), #0000 40% 60%, var(--c);
-    clip-path: polygon(var(--d) 0, calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, var(--d) 100%, 0 calc(100% - var(--d)), 0 var(--d));
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 10px;
-    padding-top: 18px;
-    flex-direction: column;
-}
-
-
-.serBox:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-svg {
-    width: 50px;
-    height: 50px;
-}
-
-h5 {
-    color: #FFF !important;
-    font-family: Quicksand;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin-top: 16px !important;
 }

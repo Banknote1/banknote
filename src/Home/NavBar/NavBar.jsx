@@ -1,9 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './NavBar.module.css'; // Correct import statement
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import debounce from 'lodash/debounce'; // Import debounce function
 function NavBar({ selectedPage }) {
     const navigate = useNavigate();
     const [activeIndex, setActiveIndex] = useState(0);
+    const location = useLocation();
+    const mainPages = ['/', '/financialservices/', '/financialSectors', '/Exporting', '/Products', '/partners'];
+    const currentPage = location.pathname;
+    // Debounce the scroll event handling
+
+    const homenav = () => {
+        navigate('/', { state: { setTriggerScroll: false } });
+    };
+    const handleScroll = debounce((event) => {
+        if (mainPages.includes(currentPage)) {
+            if (event.deltaY > 0) {
+                // Scrolling down, go to the next page
+                handleNext();
+            } else if (event.deltaY < 0) {
+                // Scrolling up, go to the previous page (optional)
+                handlePrev();
+            }
+        }
+    }, 200); // Adjust the debounce delay as needed
+
+    useEffect(() => {
+        // Add event listener for mouse wheel scrolling
+        window.addEventListener('wheel', handleScroll);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('wheel', handleScroll);
+        };
+    }, [activeIndex]);
+
     const handlePrev = () => {
         // Handle previous button click
         navigate(getPreviousRoute(selectedPage));
@@ -34,6 +65,7 @@ function NavBar({ selectedPage }) {
                 return '/partners';
             default:
                 return '/';
+
         }
     };
     const updateActiveIndex = (page) => {
@@ -103,7 +135,7 @@ function NavBar({ selectedPage }) {
             case 4:
                 return '/Products';
             case 5:
-                return '/Products';
+                return '/partners';
             case 6:
                 return '/FAQs';
             default:
@@ -135,13 +167,14 @@ function NavBar({ selectedPage }) {
                 {/* Mobile menu */}
 
                 <div style={{ display: 'flex', flexDirection: 'row', width: '100%', marginLeft: '1.25rem', marginRight: ' 1.25rem', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <a className="navbar-brand" href="/">
-                        <img style={{ width: "4.875rem", }} src='/logo.png' alt="" />
-
-                    </a>
+                    <div>
+                        <button className="navbar-brand" onClick={homenav}>
+                            <img style={{ width: "4.875rem" }} src='/logo.png' alt="" />
+                        </button>
+                    </div>
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', width: '42%' }}>
                         <div className={styles.buttonContainer}  >
-                            <button onClick={handleContactUsClick} className={styles.button}  > Contact Us</button>
+                            <button onClick={handleContactUsClick} className={styles.buttonTablet}  > Contact Us</button>
                         </div>
 
                         <div className={styles.mobButtonCont}>
@@ -157,10 +190,11 @@ function NavBar({ selectedPage }) {
                 {/* Mobile menu */}
 
                 <div style={{ display: 'flex', flexDirection: 'row', width: '100%', marginLeft: '1.25rem', marginRight: ' 1.25rem', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <a className="navbar-brand" href="/">
-                        <img style={{ width: "4.875rem", }} src='/logo.png' alt="" />
-
-                    </a>
+                    <div style={{ width: '100%' }}>
+                        <button style={{ height: '100%' }} onClick={homenav}>
+                            <img style={{ width: "4.875rem" }} src='/logo.png' alt="" />
+                        </button>
+                    </div>
 
                     <div className={styles.mobButtonCont}>
                         <button className={styles.mobBavButton}>
@@ -222,19 +256,21 @@ function NavBar({ selectedPage }) {
                             </div>
                         </div>
                     </nav>
-                    <div className={styles.arrows}>
-                        <button className={styles.TopArrow} onClick={handlePrev}></button>
-                        <div className={styles.arrowdots}>
-                            {[0, 1, 2, 3, 4, 5, 6].map((index) => (
-                                <span
-                                    key={index}
-                                    className={`${styles.arrowdot} ${index === activeIndex ? styles['active-dot'] : ''}`}
-                                    onClick={() => handleDotClick(index)}
-                                ></span>
-                            ))}
+                    {mainPages.includes(currentPage) && (
+                        <div className={styles.arrows}>
+                            <button className={styles.TopArrow} onClick={handlePrev}></button>
+                            <div className={styles.arrowdots}>
+                                {[0, 1, 2, 3, 4, 5, 6].map((index) => (
+                                    <span
+                                        key={index}
+                                        className={`${styles.arrowdot} ${index === activeIndex ? styles['active-dot'] : ''}`}
+                                        onClick={() => handleDotClick(index)}
+                                    ></span>
+                                ))}
+                            </div>
+                            <button className={styles.bottomArrow} onClick={handleNext}></button>
                         </div>
-                        <button className={styles.bottomArrow} onClick={handleNext}></button>
-                    </div>
+                    )}
                     <div className={styles.buttonContainer}  >
                         <button onClick={handleContactUsClick} className={styles.button}  > Contact Us</button>
                     </div>

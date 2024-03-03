@@ -523,7 +523,7 @@ function FAQs() {
                         />
                     </div>
 
-                    <div className={styles.cropedCont}>
+                    <div className={styles.cropedCont} id="contactFormMob2" >
                         <div className={styles.mobbglogo}>
                             <img src="/bgmob.png" alt="" />
                         </div>
@@ -535,13 +535,13 @@ function FAQs() {
                                 Banknote here to
                             </h1>
 
-                            <h1 style={{ color: '#E4C78B' }}>
+                            <h1 id="contactFormMob1" style={{ color: '#E4C78B' }}>
                                 Help your Business!
                             </h1>
                         </div>
-                        <div id="contactForm" className={styles.contactForm} style={{ marginBottom: '10%' }}>
+                        <div id="contactFormMob" className={styles.contactForm} style={{ marginBottom: '10%' }}>
                             <div className={styles.mobunderlinetextfield}>
-                                <div className={styles.submobunderlinetextfield}>
+                                <div className={styles.submobunderlinetextfield} id="contactFormMob3">
                                     <TextField
                                         id="company-name"
                                         label={<span>Company Name <span style={redAsteriskStyle}>*</span></span>}
@@ -636,7 +636,7 @@ function FAQs() {
 
 
 
-                                    <button className={styles.sendButton} style={{ height: `3vw`, background: '#DDB96E', borderRadius: 5, color: '#000', fontSize: '1.4rem' }}>Schedule Consultation </button>
+                                    <button id="contactFormButtomMob" className={styles.sendButton} style={{ height: `3vw`, background: '#DDB96E', borderRadius: 5, color: '#000', fontSize: '1.4rem' }}>Schedule Consultation </button>
 
                                 </div>
                             </div>

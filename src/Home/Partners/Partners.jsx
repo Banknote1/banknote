@@ -387,36 +387,45 @@ const Partners = () => {
 
   const [selectedPage, setSelectedPage] = useState(0);
   const renderCustomArrow = (direction, clickHandler, isEnabled, label) => (
-    <>
+    <div className={styles.arrowsContainer}>
       {direction === 'prev' && (
         <button
           className={styles.leftarrow}
           onClick={() => {
             clickHandler();
             setSelectedPage((prevPage) => (prevPage === 0 ? sectors.length - 1 : prevPage - 1));
-            handleReset();
           }}
           disabled={!isEnabled}
           aria-label={label}
         ></button>
       )}
-
+      {/* Numbered buttons */}
+      {direction !== 'prev' && (
+        <div className={styles.arrows}>
+          {sectors.map((_, index) => (
+            <button
+              key={index}
+              className={`${styles.pageNumber} ${index === selectedPage ? styles.selectedPage : ''}`}
+              onClick={() => setSelectedPage(index)}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
+      )}
       {direction === 'next' && (
         <button
           className={styles.rightarrow}
           onClick={() => {
             clickHandler();
             setSelectedPage((prevPage) => (prevPage === sectors.length - 1 ? 0 : prevPage + 1));
-            handleReset();
-
           }}
           disabled={!isEnabled}
           aria-label={label}
         ></button>
       )}
-    </>
+    </div>
   );
-
 
   const [animate, setAnimate] = useState(false);
 
@@ -1039,17 +1048,7 @@ const Partners = () => {
         ))}
 
       </Carousel>
-      <div className={styles.arrows}>
-        {/* Numbered buttons */}
-        {sectors.map((_, index) => (
-          <button
-            key={index}
-            className={`${styles.pageNumber} ${index === selectedPage ? styles.selectedPage : ''}`}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+
     </div>
   );
 };

@@ -22,15 +22,16 @@
 
 .Cont {
     display: flex;
-    height: 80%;
-    margin-top: 10%;
+    height: 100%;
+    /* margin-top: 10%; */
+    width: 100%;
 }
 
 
 
 
 .finance {
-    width: 65%;
+    width: 50%;
     align-self: center;
 
 
@@ -38,7 +39,7 @@
 
 .Exportingicons {
 
-    width: 50%;
+    width: 50% !important;
 
 }
 
@@ -89,15 +90,24 @@ h1 {
 }
 
 .financeCont {
-
-    width: 100%;
+    /* margin-left: 13.5%; */
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+gap:5%;
+margin-top: 10%; 
 }
 
 
 .Exportingicons {
 
-    width: 50%;
-
+    width: 50% !important;
+    position: absolute;
+    left: 65vw;
 }
 
 .Exportingicons img {
@@ -125,8 +135,8 @@ h1 {
     background-color: #00000020;
     backdrop-filter: blur(5px);
     border-style: dashed;
-    border-width: 3px;
-    gap: 3%;
+    border-width: 2px;
+    gap: 4vw;
     display: flex;
     align-items: center;
     box-sizing: content-box;
@@ -136,7 +146,7 @@ h1 {
     font-size: 1em;
     text-align: center;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     top: auto;
     bottom: -1em;
     transform: rotate(6deg) translateY(35px) translateX(20px);
@@ -149,7 +159,7 @@ h1 {
 
 
 .ribbon2 {
-    gap: 3%;
+    gap: 4vw;
     display: flex;
     position: fixed;
     left: -3.4em;
@@ -159,6 +169,8 @@ h1 {
     overflow: hidden;
     background-color: #00000020;
     border: dashed;
+    border-spacing:50px 50px; /* Adjust the spacing as needed */
+    border-width: 2px;
     stroke-dasharray: 8em;
     align-items: center;
     backdrop-filter: blur(5px);
@@ -171,7 +183,7 @@ h1 {
     font-size: 1em;
     text-align: center;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     top: auto;
     bottom: 21em;
     transform: rotate(-8deg) translateY(-3px) translateX(-100px);
@@ -204,8 +216,8 @@ h1 {
 .buttonContainer {
     display: flex;
     justify-content: end;
-    align-items: center;
-    width: 70vh;
+    
+    width: 50%;
     margin: 0 !important;
     padding: 0 !important;
 

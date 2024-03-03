@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the styles
 import styles from './SectorsSlider.module.css';
 import Footer from '../Footer/Footer'
 import BottomButton from '../Footer/BottomButton'
+import debounce from 'lodash/debounce'; // Import debounce function
+
 const SectorsSlider = () => {
   const sectors = [
     'Manufacturing',
@@ -14,8 +16,9 @@ const SectorsSlider = () => {
     'Construction',
   ];
   const [selectedPage, setSelectedPage] = useState(0);
-
+  const footerIconsRef = useRef(null);
   const location = useLocation();
+  const [showBottomButton, setShowBottomButton] = useState(true); // State to manage button visibility
   useEffect(() => {
     // Parse the 'pagenumb' query parameter from the URL
     const params = new URLSearchParams(location.search);
@@ -24,12 +27,59 @@ const SectorsSlider = () => {
     // Update the selectedPage state based on the parsed value
     setSelectedPage(Math.max(0, Math.min(pageNumber - 1, sectors.length - 1)));
   }, [location.search, sectors.length]);
+  useEffect(() => {
+    const handleScroll = debounce((event) => {
+      if (event.deltaY > 0) {
+        // Scrolling down, go to the next page
+        setSelectedPage((prevPage) => (prevPage === sectors.length - 1 ? 0 : prevPage + 1));
+      } else if (event.deltaY < 0) {
+        // Scrolling up, go to the previous page
+        setSelectedPage((prevPage) => (prevPage === 0 ? sectors.length - 1 : prevPage - 1));
+
+      }
+    }, 200); // Adjust the debounce delay as needed
+
+    // Add the event listener to handle scroll events
+    window.addEventListener('wheel', handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('wheel', handleScroll);
+    };
+  }, [selectedPage]);
+
+  useEffect(() => {
+    const footerIcons = document.getElementById('footericons');
+    const observer = new IntersectionObserver(handleIntersect, {
+      root: null,
+      threshold: 0.1,
+    });
+    if (footerIcons) {
+      observer.observe(footerIcons);
+    }
+
+    return () => {
+      if (footerIcons) {
+        observer.unobserve(footerIcons);
+      }
+    };
+  }, []);
+
+  const handleIntersect = (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        setShowBottomButton(true); // If intersecting, show the button
+      } else {
+        setShowBottomButton(false); // If not intersecting, hide the button
+      }
+    });
+  };
 
   const handlePageChange = (index) => {
     setSelectedPage(index);
   };
   const renderCustomArrow = (direction, clickHandler, isEnabled, label) => (
-    <>
+    <div className={styles.arrowsContainer}>
       {direction === 'prev' && (
         <button
           className={styles.leftarrow}
@@ -41,7 +91,20 @@ const SectorsSlider = () => {
           aria-label={label}
         ></button>
       )}
-
+      {/* Numbered buttons */}
+      {direction !== 'prev' && (
+        <div className={styles.arrows}>
+          {sectors.map((_, index) => (
+            <button
+              key={index}
+              className={`${styles.pageNumber} ${index === selectedPage ? styles.selectedPage : ''}`}
+              onClick={() => setSelectedPage(index)}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
+      )}
       {direction === 'next' && (
         <button
           className={styles.rightarrow}
@@ -53,8 +116,9 @@ const SectorsSlider = () => {
           aria-label={label}
         ></button>
       )}
-    </>
+    </div>
   );
+
   const [positions, setPositions] = useState([0, 0, 0, 0, 0]);
   // const [prevClicked, setPrevClicked] = useState([0, 0, 0, 0]);
   const [touchStartX, setTouchStartX] = useState(0);
@@ -100,8 +164,8 @@ const SectorsSlider = () => {
 
 
   return (
-    <>
-      <div className={styles.mobPageContainer} style={{ overflowY: 'auto', overflowX: 'hidden', maxHeight: '91vh', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
+    <div>
+      <div className={styles.mobPageContainer} style={{ overflowY: 'auto', overflowX: 'hidden', maxHeight: '100vh', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
         <div className={styles.submobPageContainer}>
           <div className={styles.mobTitle}>
             <h1>
@@ -319,8 +383,7 @@ const SectorsSlider = () => {
           </div>
         </div>
         <Footer></Footer>
-        <BottomButton></BottomButton>
-
+        {showBottomButton && <BottomButton ref={footerIconsRef}></BottomButton>}
       </div>
 
       <div className={styles.pageContainer}>
@@ -750,20 +813,9 @@ const SectorsSlider = () => {
           ))}
 
         </Carousel>
-        <div className={styles.arrows}>
-          {/* Numbered buttons */}
-          {sectors.map((_, index) => (
-            <button
-              key={index}
-              className={`${styles.pageNumber} ${index === selectedPage ? styles.selectedPage : ''}`}
 
-            >
-              {index + 1}
-            </button>
-          ))}
-        </div>
       </div>
-    </>
+    </div>
   );
 };
 

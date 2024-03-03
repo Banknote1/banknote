@@ -1,7 +1,7 @@
 .socialButtons {
   position: fixed;
   right: 3rem;
-  top: 30%;
+  top: 36vh;
   display: flex;
   flex-direction: column;
   z-index: 99;
@@ -37,7 +37,7 @@
   transition: 0.3s ease-in;
   /* Add your transition properties here */
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   /* Styles for devices with a maximum width of 600px (mobile devices) */
  
   .socialButtons {

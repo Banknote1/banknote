@@ -8,15 +8,19 @@ const Slider = ({ data }) => {
     <div className={styles.sliderCont}>
       <div className={styles.sliderContainer}>
         <div className={styles.sliderContent}>
-          <div className={styles.sliderText}>
-            <h2 className={styles.head1}>{currentFrame.head1}</h2>
-            <h2 className={styles.head2}>{currentFrame.head2}</h2>
-            <div className={styles.disCont}><p>{currentFrame.description}</p></div>
-            
+          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+
+            <div className={styles.sliderText}>
+              <h2 className={styles.head1}>{currentFrame.head1}</h2>
+              <h2 className={styles.head2}>{currentFrame.head2}</h2>
+              <div className={styles.disCont}><p>{currentFrame.description}</p></div>
+
+            </div>
+            <div className={styles.sliderImage}>
+              <img src={currentFrame.imageSrc} alt="Slider Image" />
+            </div>
           </div>
-          <div className={styles.sliderImage}>
-            <img src={currentFrame.imageSrc} alt="Slider Image" />
-          </div>
+
         </div>
 
         {/* Frames container */}

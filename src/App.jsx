@@ -16,6 +16,7 @@ import PartnersDetails from './Home/Partners/PartnersDetails';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
 import PartnersMobile from './Mobile/partenersMobile.jsx';
+import Home from './Home/LandingPage/Home';
 // import './Mobile/partnersMobile.jsx'
 function App() {
   const navigate = useNavigate();
@@ -24,14 +25,16 @@ function App() {
   // Determine the selectedPage based on the current route
   const selectedPage = () => {
     const currentPath = location.pathname;
-
     if (currentPath === '/') return '/';
+    if (currentPath === '/partnersDetails') return '/partnersDetails';
+    if (currentPath === '/financialservices/aas') return '/financialservices/aas';
+    if (currentPath === '/financialSectors/weserve') return '/financialSectors/weserve';
     if (currentPath.startsWith('/financialservices')) return '/financialservices/';
     if (currentPath.startsWith('/financialSectors')) return '/financialSectors';
     if (currentPath.startsWith('/partners')) return '/partners';
-
+    if (currentPath === '/Products') return '/Products';
     if (currentPath === '/partners') return '/partners';
-    if (currentPath === '/Hero') return '/Hero';
+    if (currentPath === '/Home') return '/Home';
     if (currentPath === '/Exporting') return '/Exporting';
     if (currentPath === '/FAQs') return '/FAQs';
 
@@ -61,13 +64,15 @@ function App() {
           <Route path='/financialservices' element={<Landing />} />
           <Route path='/financialservices/aas' element={<Accounting />} />
           <Route path='/financialSectors' element={<ParentFinancialSectors />} />
-          <Route path='/financialSectors/weserve' element={<Landing />} />
-          <Route path='/partners' element={<Partners />} />
-          <Route path='/Hero' element={<Landing />} />
-          <Route path='/PartnersDetails' element={<PartnersDetails />} />
+          <Route path='/financialSectors/weserve' element={<SectorsSlider />} />
+          <Route path='/partners' element={<Landing />} />
+
+          <Route path='/PartnersDetails' element={<Landing />} />
           <Route path='/Exporting' element={<Landing />} />
-          <Route path='/FAQs' element={<FAQs />} />
-          <Route path='/partnersMobile' element={<PartnersMobile />} />
+          <Route path='/FAQs' element={<Landing />} />
+          <Route path='/partnersMobile' element={<Landing />} />
+          <Route path='/Products' element={<div></div>} />
+          <Route path='/Home' element={<Landing />} />
         </Routes>
       </div>
     )
@@ -113,6 +118,7 @@ function Routes1({ location }) {
       <Route path='/PartnersDetails' element={<PartnersDetails />} />
       <Route path='/Exporting' element={<Exporting />} />
       <Route path='/FAQs' element={<FAQs />} />
+      <Route path='/Products' element={<div></div>} />
     </Routes >
   );
 }

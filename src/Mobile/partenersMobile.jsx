@@ -22,7 +22,7 @@ const MobModal = ({ partner, onClose }) => {
 
     return (
         <div className={styles.modaloverlay}>
-            <div className=' modal-content' style={{ height: '50%', width: '80%', justifyContent: 'center', alignItems: 'center' }}>
+            <div className='modal-content' style={{ width: '100%', justifyContent: 'center', alignItems: 'center' }}>
                 <div className={`${styles.modalmob}`}>
                     <Slider2 img1={partner['Image1Url']} img2={partner['Image2Url']} video={partner['videoUrl']} videoThumbnail={partner['Image3Url']} />                    </div>
             </div>
@@ -80,9 +80,9 @@ const Slider2 = ({ img1, img2, video, videoThumbnail }) => {
     };
     // Define your slides array
     const slides = [
-        { type: 'img', content: <img src={img1} alt="1" onClick={handleClick} style={{ width: '100%', }} />, thumbnail: img1 },
-        { type: 'img', content: <img src={img2} alt="2" onClick={handleClick} style={{ width: '100%', }} />, thumbnail: img2 },
-        { type: 'video', content: <video alt="3" style={{ width: '100%' }} autoPlay loop muted controls><source src={video} type="video/mp4" /></video>, thumbnail: videoThumbnail }
+        { type: 'img', content: <img src={img1} alt="1" onClick={handleClick} style={{ width: '100%', height: '25vh' }} />, thumbnail: img1 },
+        { type: 'img', content: <img src={img2} alt="2" onClick={handleClick} style={{ width: '100%', height: '25vh' }} />, thumbnail: img2 },
+        { type: 'video', content: <video alt="3" style={{ width: '100%', height: '25vh' }} autoPlay loop muted controls><source src={video} type="video/mp4" /></video>, thumbnail: videoThumbnail }
     ];
 
     // Render only the current slide
@@ -96,12 +96,12 @@ const Slider2 = ({ img1, img2, video, videoThumbnail }) => {
                 display: 'flex',
                 justifyContent: 'space-between'
             }}>
-                <button style={{ color: 'blanchedalmond' }} onClick={handlePrev}>Prev</button>
-                <button style={{ color: 'blanchedalmond' }} onClick={handleClick}>Next</button>
+                {/* <button style={{ color: 'blanchedalmond' }} onClick={handlePrev}>Prev</button>
+                <button style={{ color: 'blanchedalmond' }} onClick={handleClick}>Next</button> */}
             </div>
 
             {/* Thumbnails */}
-            <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '10px', }}>
+            <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '20px', }}>
                 {slides.map((slide, index) => (
                     <img
                         key={index}
@@ -290,13 +290,51 @@ function PartnersMobile() {
         setSelectedPartner(partner);
         setShowModal(true);
     };
+    const [slidesToShow, setSlidesToShow] = useState(1.65);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const screenWidth = window.innerWidth;
+            const breakpoints = {
+                300: 1.55,
+                400: 1.65,
+                500: 1.85,
+                600: 2.5,
+                700: 2.6,
+                800: 3,
+                900: 3.3,
+                1000: 3.6,
+            };
+
+            // Find the matching breakpoint and set slidesToShow accordingly
+            let calculatedSlidesToShow = 1;
+            Object.keys(breakpoints).forEach(breakpoint => {
+                if (screenWidth >= breakpoint) {
+                    calculatedSlidesToShow = breakpoints[breakpoint];
+                }
+            });
+
+            setSlidesToShow(calculatedSlidesToShow);
+        };
+
+        // Listen for window resize event
+        window.addEventListener('resize', handleResize);
+
+        // Initial call to set initial state
+        handleResize();
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 1.4,
+        slidesToShow: slidesToShow,
         slidesToScroll: 1
     };
 

@@ -50,8 +50,7 @@ const Exporting = () => {
     }, []);
     return (
         <div>
-            <div className={styles.bg}></div>
-            <div className={styles.bg}></div>
+
             <div className={styles.bg}></div>
             <div className='overlay'>
                 <div className={styles.Cont}>
@@ -114,7 +113,7 @@ const Exporting = () => {
 
             </div>
             <div>
-                <IconsSocial />
+
             </div>
 
 

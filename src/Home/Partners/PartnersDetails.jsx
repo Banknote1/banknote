@@ -40,9 +40,9 @@ const Slider = ({ img1, img2, video, videoThumbnail }) => {
     };
     // Define your slides array
     const slides = [
-        { type: 'img', content: <img src={img1} alt="1" onClick={handleClick} style={{ width: '100%', height: '41vh' }} />, thumbnail: img1 },
-        { type: 'img', content: <img src={img2} alt="2" onClick={handleClick} style={{ width: '100%', height: '41vh' }} />, thumbnail: img2 },
-        { type: 'video', content: <video alt="3" style={{ width: '100%' }} autoPlay loop muted controls><source src={video} type="video/mp4" /></video>, thumbnail: videoThumbnail }
+        { type: 'img', content: <img src={img1} alt="1" onClick={handleClick} style={{ width: '100%', height: '41vh', borderRadius: '10px', }} />, thumbnail: img1 },
+        { type: 'img', content: <img src={img2} alt="2" onClick={handleClick} style={{ width: '100%', height: '41vh', borderRadius: '10px', }} />, thumbnail: img2 },
+        { type: 'video', content: <video alt="3" style={{ width: '100%', height: '40vh', borderRadius: '10px', }} autoPlay loop muted controls><source src={video} type="video/mp4" /></video>, thumbnail: videoThumbnail }
     ];
 
     // Render only the current slide
@@ -52,16 +52,16 @@ const Slider = ({ img1, img2, video, videoThumbnail }) => {
             {slides[currentSlide].content}
 
             {/* Navigation buttons */}
-            <div style={{
+            {/* <div style={{
                 display: 'flex',
                 justifyContent: 'space-between'
             }}>
                 <button style={{ color: 'blanchedalmond' }} onClick={handlePrev}>Prev</button>
                 <button style={{ color: 'blanchedalmond' }} onClick={handleClick}>Next</button>
-            </div>
+            </div> */}
 
             {/* Thumbnails */}
-            <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '10px', }}>
+            <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '25px', }}>
                 {slides.map((slide, index) => (
                     <img
                         key={index}
@@ -70,11 +70,13 @@ const Slider = ({ img1, img2, video, videoThumbnail }) => {
                         style={{
                             width: '30%',
                             marginRight: '5px',
-                            border: index === currentSlide ? '2px solid blue' : 'none',
+                            border: index === currentSlide ? '2px solid #DDB96E' : 'none',
+                            borderRadius: '5px', // Example border radius value, adjust as needed
                             filter: 'brightness(50%)' // Adjust the brightness value as needed (e.g., 50%)
                         }}
                         onClick={() => setCurrentSlide(index)}
                     />
+
                 ))}
             </div>
         </div>
@@ -103,7 +105,7 @@ const PartnersDetails = () => {
         <div className={styles.pageContainer}>
 
             <div className={styles.homecontiner}>
-                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '5%', marginLeft: '13%' }}>
                     <button className={styles.iconButton} onClick={handleButtonClick}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
                             <g clipPath="url(#clip0_1270_1888)">
@@ -124,7 +126,7 @@ const PartnersDetails = () => {
                     </div>
                 </div>
 
-                <div className={styles.mobileContainer} style={{ height: '100%', display: 'flex', flexDirection: 'row', gap: '10vw', marginTop: '2vw' }}>
+                <div className={styles.mobileContainer} style={{ height: '65%', display: 'flex', flexDirection: 'row', gap: '10vw', justifyContent: 'center', alignItems: 'center' }}>
                     <div className={styles.leftCont}>
                         <img src={LogoimageSrc} alt="" style={{ width: '20vw' }} />
                     </div>

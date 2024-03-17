@@ -139,7 +139,6 @@ function Routes1({ location }) {
       <Route path='/PartnersDetails' element={<PartnersDetails />} />
       <Route path='/Exporting' element={<Exporting />} />
       <Route path='/FAQs' element={<FAQs />} />
-
     </Routes >
   );
 }

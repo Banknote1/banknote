@@ -6,7 +6,6 @@ import '../../index.css'
 
 function Home() {
     const [animate, setAnimate] = useState(false);
-    console.log(animate);
     useEffect(() => {
         // Trigger animation whenever the 'animate' prop changes
 

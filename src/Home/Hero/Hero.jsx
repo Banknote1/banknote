@@ -6,14 +6,12 @@ import '../../index.css'
 import { isVisible } from '@testing-library/user-event/dist/utils';
 import { Howl, Howler } from 'howler';
 const Hero = ({ isVisible, backFromDot }) => {
-    console.log(backFromDot);
     const [animate, setAnimate] = useState(false);
     const [leaveAnimate, SetLeaveAnimate] = useState(false);
     useEffect(() => {
         // Trigger animation after the component has mounted
         setAnimate(true);
         SetLeaveAnimate(isVisible);
-        console.log(isVisible);
     }, [isVisible]);
     useEffect(() => {
         // Initialize Howler

@@ -1,9 +1,50 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './NavBar.module.css'; // Correct import statement
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import debounce from 'lodash/debounce'; // Import debounce function
 function NavBar({ selectedPage }) {
     const navigate = useNavigate();
     const [activeIndex, setActiveIndex] = useState(0);
+    const location = useLocation();
+    const mainPages = ['/', '/financialservices', '/financialSectors', '/Exporting', '/Products', '/partners'];
+    const currentPage = location.pathname;
+    // Debounce the scroll event handling
+
+    const homenav = () => {
+
+        if (window.location.pathname !== '/') {
+            // Navigate to FAQs page without reloading
+            navigate('/', { state: { setTriggerScroll: false } });
+        }
+
+        // Scroll to start of the page
+
+
+
+
+    };
+    const handleScroll = debounce((event) => {
+        if (mainPages.includes(currentPage)) {
+            if (event.deltaY > 0) {
+                // Scrolling down, go to the next page
+                handleNext();
+            } else if (event.deltaY < 0) {
+                // Scrolling up, go to the previous page (optional)
+                handlePrev();
+            }
+        }
+    }, 200); // Adjust the debounce delay as needed
+
+    useEffect(() => {
+        // Add event listener for mouse wheel scrolling
+        window.addEventListener('wheel', handleScroll);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('wheel', handleScroll);
+        };
+    }, [activeIndex]);
+
     const handlePrev = () => {
         // Handle previous button click
         navigate(getPreviousRoute(selectedPage));
@@ -20,20 +61,19 @@ function NavBar({ selectedPage }) {
     };
     const getPreviousRoute = (currentPage) => {
         switch (currentPage) {
-            case '/financialservices/':
+            case '/financialservices':
                 return '/';
             case '/financialSectors':
-                return '/financialservices/';
+                return '/financialservices';
             case '/Exporting':
                 return '/financialSectors';
-            case '/Products':
-                return '/Exporting';
             case '/partners':
-                return '/Products';
+                return '/Exporting';
             case '/FAQs':
                 return '/partners';
             default:
                 return '/';
+
         }
     };
     const updateActiveIndex = (page) => {
@@ -41,7 +81,7 @@ function NavBar({ selectedPage }) {
             case '/':
                 setActiveIndex(0);
                 break;
-            case '/financialservices/':
+            case '/financialservices':
                 setActiveIndex(1);
                 break;
             case '/financialSectors':
@@ -50,14 +90,11 @@ function NavBar({ selectedPage }) {
             case '/Exporting':
                 setActiveIndex(3);
                 break;
-            case '/Products':
+            case '/partners':
                 setActiveIndex(4);
                 break;
-            case '/partners':
-                setActiveIndex(5);
-                break;
             case '/FAQs':
-                setActiveIndex(6);
+                setActiveIndex(5);
                 break;
             default:
                 setActiveIndex(0);
@@ -72,14 +109,12 @@ function NavBar({ selectedPage }) {
     const getNextRoute = (currentPage) => {
         switch (currentPage) {
             case '/':
-                return '/financialservices/';
-            case '/financialservices/':
+                return '/financialservices';
+            case '/financialservices':
                 return '/financialSectors';
             case '/financialSectors':
                 return '/Exporting';
             case '/Exporting':
-                return '/Products';
-            case '/Products':
                 return '/partners';
             case '/partners':
                 return '/FAQs';
@@ -95,16 +130,14 @@ function NavBar({ selectedPage }) {
             case 0:
                 return '/';
             case 1:
-                return '/financialservices/';
+                return '/financialservices';
             case 2:
-                return '/financialSectors/';
+                return '/financialSectors';
             case 3:
                 return '/Exporting';
             case 4:
-                return '/Products';
+                return '/partners';
             case 5:
-                return '/Products';
-            case 6:
                 return '/FAQs';
             default:
                 return '/';
@@ -127,7 +160,10 @@ function NavBar({ selectedPage }) {
             });
         }
     };
+    const OurProductClick = () => {
 
+        navigate('/Comingsoon');
+    }
     return (
         <>
             {/* Tablet View */}
@@ -135,17 +171,18 @@ function NavBar({ selectedPage }) {
                 {/* Mobile menu */}
 
                 <div style={{ display: 'flex', flexDirection: 'row', width: '100%', marginLeft: '1.25rem', marginRight: ' 1.25rem', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <a className="navbar-brand" href="/">
-                        <img style={{ width: "4.875rem", }} src='/logo.png' alt="" />
-
-                    </a>
+                    <div>
+                        <button className="navbar-brand" onClick={homenav}>
+                            <img style={{ width: "4.875rem" }} src='/logo.png' alt="" />
+                        </button>
+                    </div>
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', width: '42%' }}>
                         <div className={styles.buttonContainer}  >
-                            <button onClick={handleContactUsClick} className={styles.button}  > Contact Us</button>
+                            <button onClick={handleContactUsClick} className={styles.buttonTablet}  > Contact Us</button>
                         </div>
 
                         <div className={styles.mobButtonCont}>
-                            <button className={styles.mobBavButton}>
+                            <button className={styles.mobBavButton} onClick={OurProductClick}>
                                 Our Products
                             </button>
                         </div>
@@ -157,13 +194,14 @@ function NavBar({ selectedPage }) {
                 {/* Mobile menu */}
 
                 <div style={{ display: 'flex', flexDirection: 'row', width: '100%', marginLeft: '1.25rem', marginRight: ' 1.25rem', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <a className="navbar-brand" href="/">
-                        <img style={{ width: "4.875rem", }} src='/logo.png' alt="" />
-
-                    </a>
+                    <div style={{ width: '100%' }}>
+                        <button style={{ height: '100%' }} onClick={homenav}>
+                            <img style={{ width: "4.875rem" }} src='/logo.png' alt="" />
+                        </button>
+                    </div>
 
                     <div className={styles.mobButtonCont}>
-                        <button className={styles.mobBavButton}>
+                        <button className={styles.mobBavButton} onClick={OurProductClick}>
                             Our Products
                         </button>
                     </div>
@@ -194,8 +232,8 @@ function NavBar({ selectedPage }) {
                                             {isPageActive('/') && <div className={styles.dot}><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.2619" cy="4" r="4" fill="#DDB96E" /></svg></div>}
                                         </li>
                                         <li className={`nav-item ${styles.navItem}`}>
-                                            <Link className={`nav-link mx-2 ${isPageActive('/financialservices/') ? `${styles.active} ${styles.navLink}` : styles.navLink}`} to="/financialservices/">Financial Services</Link>
-                                            {isPageActive('/financialservices/') && <div className={styles.dot}><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.2619" cy="4" r="4" fill="#DDB96E" /></svg></div>}
+                                            <Link className={`nav-link mx-2 ${isPageActive('/financialservices') ? `${styles.active} ${styles.navLink}` : styles.navLink}`} to="/financialservices">Financial Services</Link>
+                                            {isPageActive('/financialservices') && <div className={styles.dot}><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.2619" cy="4" r="4" fill="#DDB96E" /></svg></div>}
                                         </li>
                                         <li className={`nav-item ${styles.navItem}`}>
                                             <Link className={`nav-link mx-2 ${isPageActive('/financialSectors') ? `${styles.active} ${styles.navLink}` : styles.navLink}`} to="/financialSectors">Sectors</Link>
@@ -205,10 +243,10 @@ function NavBar({ selectedPage }) {
                                             <Link className={`nav-link mx-2 ${isPageActive('/Exporting') ? `${styles.active} ${styles.navLink}` : styles.navLink}`} to="/Exporting">Exporting & Trading</Link>
                                             {isPageActive('/Exporting') && <div className={styles.dot}><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.2619" cy="4" r="4" fill="#DDB96E" /></svg></div>}
                                         </li>
-                                        <li className={`nav-item ${styles.navItem}`}>
+                                        {/* <li className={`nav-item ${styles.navItem}`}>
                                             <Link className={`nav-link mx-2 ${isPageActive('/Products') ? `${styles.active} ${styles.navLink}` : styles.navLink}`} to="/Products">Products</Link>
                                             {isPageActive('/Products') && <div className={styles.dot}><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.2619" cy="4" r="4" fill="#DDB96E" /></svg></div>}
-                                        </li>
+                                        </li> */}
                                         <li className={`nav-item ${styles.navItem}`}>
                                             <Link className={`nav-link mx-2 ${isPageActive('/partners') ? `${styles.active} ${styles.navLink}` : styles.navLink}`} to="/partners">Partners</Link>
                                             {isPageActive('/partners') && <div className={styles.dot}><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.2619" cy="4" r="4" fill="#DDB96E" /></svg></div>}
@@ -222,19 +260,21 @@ function NavBar({ selectedPage }) {
                             </div>
                         </div>
                     </nav>
-                    <div className={styles.arrows}>
-                        <button className={styles.TopArrow} onClick={handlePrev}></button>
-                        <div className={styles.arrowdots}>
-                            {[0, 1, 2, 3, 4, 5, 6].map((index) => (
-                                <span
-                                    key={index}
-                                    className={`${styles.arrowdot} ${index === activeIndex ? styles['active-dot'] : ''}`}
-                                    onClick={() => handleDotClick(index)}
-                                ></span>
-                            ))}
+                    {mainPages.includes(currentPage) && (
+                        <div className={styles.arrows}>
+                            <button className={styles.TopArrow} onClick={handlePrev}></button>
+                            <div className={styles.arrowdots}>
+                                {[0, 1, 2, 3, 4, 5].map((index) => (
+                                    <span
+                                        key={index}
+                                        className={`${styles.arrowdot} ${index === activeIndex ? styles['active-dot'] : ''}`}
+                                        onClick={() => handleDotClick(index)}
+                                    ></span>
+                                ))}
+                            </div>
+                            <button className={styles.bottomArrow} onClick={handleNext}></button>
                         </div>
-                        <button className={styles.bottomArrow} onClick={handleNext}></button>
-                    </div>
+                    )}
                     <div className={styles.buttonContainer}  >
                         <button onClick={handleContactUsClick} className={styles.button}  > Contact Us</button>
                     </div>

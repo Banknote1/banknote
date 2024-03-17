@@ -7,9 +7,17 @@
 .CarouselCont{
   height: 100vh;
 }
+.arrowsContainer{
+
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin: 92vh 0% 0% 85.7vw;
+  top:0
+}
 .leftarrow {
-position: absolute;
-margin: 92vh 0% 0% 78.7vw;
+/* position: absolute;
+margin: 92vh 0% 0% 84.1vw; */
 z-index: 2;
   background:  url('/public/leftarrow.svg');
   width: 36px; /* Adjust the width and height based on your SVG dimensions */
@@ -21,8 +29,8 @@ z-index: 2;
 
  .rightarrow{
   z-index: 2;
-  position: absolute;
-  margin: -8vh 0% 0% 87vw;
+  /* position: absolute;
+  margin: -8vh 0% 0% 92.355vw; */
   background:  url('/public/rightarrow.svg');
   width: 36px; /* Adjust the width and height based on your SVG dimensions */
   height: 36px;
@@ -40,14 +48,14 @@ z-index: 2;
 .leftCont{
 width: 60%;
 height: 100%;
-margin-left: 10%;
+margin-left: 15%;
 }
 .rightCont{
   width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-right: 10%;
+  margin-right: 15%;
 }
 
 .lefttopCont{
@@ -198,14 +206,15 @@ padding-right: 4px !important;
 }
 .arrows{
   z-index: 2;
-  position: absolute;
-  margin: 91.6vh 0% 0% 81vw;
- 
+  /* position: absolute;
+  margin: 91.6vh 0% 0% 86.5%; */
+  margin-left: 23%;
+  width: 128px;
   border: none; /* Remove default button border */
  
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   /* Styles for devices with a maximum width of 600px (mobile devices) */
   .mobPageContainer {
     display: flex  !important;  
@@ -215,7 +224,7 @@ padding-right: 4px !important;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
  
   .mobPageContainer {
       display: none !important  ;  
@@ -236,7 +245,7 @@ padding-right: 4px !important;
 .submobPageContainer{
   position: relative;
   z-index: 1; /* Ensure content appears above the background image */
-  margin-top: 30%;
+  margin-top: 17vh;
   display: flex;
   flex-direction: column;
 

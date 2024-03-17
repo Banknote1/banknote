@@ -2,11 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import styles from './Exporting.module.css';
 import IconsSocial from '../Social-icons/IconsSocial';
 import '../../index.css'
+import { useNavigate } from 'react-router-dom';
 
 const Exporting = () => {
-
+    const navigate = useNavigate();
     const pathRef = useRef(null);
-
+    const handleClick = () => {
+        navigate(`/Comingsoon`);
+    };
     useEffect(() => {
         const path = pathRef.current;
         if (!path) return;
@@ -21,7 +24,7 @@ const Exporting = () => {
             image.style.opacity = 0;
 
             let distance = initialOffset;
-            let speed = 0.9; // Adjust the speed as needed
+            let speed = 0.55; // Adjust the speed as needed
             const animate = () => {
                 distance += speed;
                 if (distance >= pathLength) {
@@ -37,10 +40,18 @@ const Exporting = () => {
                     opacity = 2 * (1 - distance / pathLength);
                 }
 
-                image.style.transform = `translate(${point.x}px, ${point.y}px)`;
+                // Calculate scale based on distance along the path
+                const minScale = 0.4; // Minimum scale
+                const maxScale = 0.9; // Maximum scale
+                const scale = minScale + (maxScale - minScale) * (distance / pathLength);
+
+                image.style.transform = `translate(${point.x}px, ${point.y}px) scale(${scale})`;
                 image.style.opacity = opacity;
                 requestAnimationFrame(animate);
             };
+
+            animate();
+
 
             animate();
         });
@@ -50,8 +61,7 @@ const Exporting = () => {
     }, []);
     return (
         <div>
-            <div className={styles.bg}></div>
-            <div className={styles.bg}></div>
+
             <div className={styles.bg}></div>
             <div className='overlay'>
                 <div className={styles.Cont}>
@@ -61,7 +71,7 @@ const Exporting = () => {
                             <h1 className={styles.mainTitleYellow}>Trading</h1>
                             {/* <h1 className={styles.mainTitleYellow}>solutions</h1> */}
                             <p>
-                                we offer a comprehensive suite of services to streamline your import and export operations in various trads.
+                                We offer a comprehensive variety of products to streamline your exporting & trading operations
                             </p>
 
                             <div className='d-flex justify-content-start align-items-start'>
@@ -69,8 +79,9 @@ const Exporting = () => {
                             </div>
                         </div>
                         <div className={styles.buttonContainer}  >
-                            <button className={styles.button} > Discover our products</button>
-                            <div className={styles.childButton}><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <button className={styles.button} onClick={handleClick}>
+                                Discover our products
+                            </button>                            <div className={styles.childButton}><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                 <g clip-path="url(#clip0_813_6584)">
                                     <path d="M17.8 7H7L14.2 16L7 25H17.8L25 16L17.8 7Z" stroke="#E4C78B" stroke-linecap="round" stroke-linejoin="round" />
                                 </g>
@@ -105,16 +116,17 @@ const Exporting = () => {
 
                 <div className={styles.ContRibbon}>
                     <a className={styles.ribbon}>
-                        <span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span><span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span><span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span>Wood <span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span>Wood <span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span>Wood <span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Prining Supplies</span>Wood <span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span>
+                        <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Wood</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Wood</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Wood</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Wood</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Prining</span> <span>Supplies</span> <span>Wood</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span>
                     </a>
                     <a className={styles.ribbon2}>
-                        <span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span><span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span><span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span>Wood <span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span>Wood <span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span>Wood <span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Prining Supplies</span>Wood <span>Animal Feeds  </span>Food <span>Oil  </span> <span>Metals  </span>Wheels <span>Printing Supplies</span>
+                        <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Wood</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Wood</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Wood</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span> <span>Wood</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Prining</span> <span>Supplies</span> <span>Wood</span> <span>Animal</span> <span>Feeds</span> <span>Food</span> <span>Oil</span> <span>Metals</span> <span>Wheels</span> <span>Printing</span> <span>Supplies</span>
                     </a>
                 </div>
 
+
             </div>
             <div>
-                <IconsSocial />
+
             </div>
 
 

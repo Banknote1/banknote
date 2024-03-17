@@ -4,6 +4,7 @@ import style from '../LandingPage/Home.module.css'
 import IconsSocial from '../Social-icons/IconsSocial';
 import '../../index.css'
 import { isVisible } from '@testing-library/user-event/dist/utils';
+import { Howl, Howler } from 'howler';
 const Hero = ({ isVisible, backFromDot }) => {
     console.log(backFromDot);
     const [animate, setAnimate] = useState(false);
@@ -14,6 +15,29 @@ const Hero = ({ isVisible, backFromDot }) => {
         SetLeaveAnimate(isVisible);
         console.log(isVisible);
     }, [isVisible]);
+    useEffect(() => {
+        // Initialize Howler
+        Howler.volume(1); // Adjust volume (0.0 to 1.0)
+
+
+        // Play the sound
+        const sound = new Howl({
+            src: './sound.mp3',
+            autoplay: true,
+            loop: false,
+            volume: 0.5, // Adjust volume (0.0 to 1.0)
+
+        });
+        // Clear listener after first call.
+        sound.once('load', function () {
+            sound.play();
+        });
+        sound.play();
+        // Clean up function
+        return () => {
+            sound.unload();
+        };
+    }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
     return (
 

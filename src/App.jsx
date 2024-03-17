@@ -10,28 +10,31 @@ import Hero from './Home/Hero/Hero';
 import Exporting from './Home/Exporting/Exporting'
 import Carousel from './Home/LandingPage/Carousel';
 import FAQs from './Home/FAQs/FAQs.jsx';
-import MySlider from './Home/LandingPage/MySlider';
 import Landing from './Mobile/Landing';
 import PartnersDetails from './Home/Partners/PartnersDetails';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
-import PartnersMobile from './Mobile/partenersMobile.jsx';
+import IconsSocial from './Home/Social-icons/IconsSocial';
+import Coming from './Home/Comingsoon/Coming'
 // import './Mobile/partnersMobile.jsx'
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
-
+  const isComingSoon = location.pathname === '/Comingsoon';
   // Determine the selectedPage based on the current route
   const selectedPage = () => {
     const currentPath = location.pathname;
-
+    console.log(currentPath);
     if (currentPath === '/') return '/';
-    if (currentPath.startsWith('/financialservices')) return '/financialservices/';
+    if (currentPath === '/partnersDetails') return '/partnersDetails';
+    if (currentPath === '/financialservices/aas') return '/financialservices/aas';
+    if (currentPath === '/financialSectors/weserve') return '/financialSectors/weserve';
+    if (currentPath.startsWith('/financialservices')) return '/financialservices';
     if (currentPath.startsWith('/financialSectors')) return '/financialSectors';
     if (currentPath.startsWith('/partners')) return '/partners';
-
+    // if (currentPath === '/Products') return '/Products';
     if (currentPath === '/partners') return '/partners';
-    if (currentPath === '/Hero') return '/Hero';
+    if (currentPath === '/Home') return '/Home';
     if (currentPath === '/Exporting') return '/Exporting';
     if (currentPath === '/FAQs') return '/FAQs';
 
@@ -51,7 +54,28 @@ function App() {
       window.removeEventListener("resize", handleResize); // Cleanup
     };
   }, []);
-  if (isMobile) {
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const pageid = params.get("pageid");
+    if (pageid) {
+      navigate(pageid); // Redirect to the page specified in pageid parameter
+    }
+    // www.banknoteconsult.com/?pageid=/partners
+  }, [location.search, navigate]);
+
+
+  if (isComingSoon) {
+    return (
+      <Routes>
+        <Route path='/Comingsoon' element={<Coming />} />
+
+      </Routes>
+
+    )
+
+  }
+
+  else if (isMobile) {
     return (
       <div className='app'>
         <Header selectedPage={selectedPage()} />
@@ -60,20 +84,22 @@ function App() {
           <Route path='/' element={<Landing />} />
           <Route path='/financialservices' element={<Landing />} />
           <Route path='/financialservices/aas' element={<Accounting />} />
-          <Route path='/financialSectors' element={<ParentFinancialSectors />} />
-          <Route path='/financialSectors/weserve' element={<Landing />} />
-          <Route path='/partners' element={<Partners />} />
-          <Route path='/Hero' element={<Landing />} />
-          <Route path='/PartnersDetails' element={<PartnersDetails />} />
+          <Route path='/financialSectors' element={<Landing />} />
+          <Route path='/financialSectors/weserve' element={<SectorsSlider />} />
+          <Route path='/partners' element={<Landing />} />
+          <Route path='/PartnersDetails' element={<Landing />} />
           <Route path='/Exporting' element={<Landing />} />
-          <Route path='/FAQs' element={<FAQs />} />
-          <Route path='/partnersMobile' element={<PartnersMobile />} />
+          <Route path='/FAQs' element={<Landing />} />
+          <Route path='/partnersMobile' element={<Landing />} />
+          <Route path='/Home' element={<Landing />} />
         </Routes>
       </div>
     )
-  } else {
+  }
+  else {
     return (
       <div className='app'>
+        <IconsSocial />
         <Header selectedPage={selectedPage()} />
         <RoutesWithTransition />
       </div>
@@ -113,6 +139,7 @@ function Routes1({ location }) {
       <Route path='/PartnersDetails' element={<PartnersDetails />} />
       <Route path='/Exporting' element={<Exporting />} />
       <Route path='/FAQs' element={<FAQs />} />
+
     </Routes >
   );
 }

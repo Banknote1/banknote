@@ -52,10 +52,10 @@ function MobFAQFrame({ question, initialText, additionalText }) {
 
             {expanded && <p className={styles.mobadditionalText}>{additionalText}</p>}
         </div>
-
     );
 }
-const Modal = ({ onClose }) => {
+
+const Modal = ({ onClose, onSubmit }) => {
     const [selectedButton, setSelectedButton] = useState({ column: 0, index: 0 });
 
     const handleButtonClick = (column, index) => {
@@ -88,7 +88,7 @@ const Modal = ({ onClose }) => {
 
 
         console.log('Selected Date & Time:', selectedDateTime);
-
+        onSubmit(selectedDateTime);
         const preferredCallTimeField = document.getElementById('preferred-call-time-web');
         const preferredCallTimeLabel = document.getElementById('preferred-call-time-web-label');
 
@@ -105,6 +105,8 @@ const Modal = ({ onClose }) => {
             // Replace the old class with the new class
             preferredCallTimeLabel.classList.remove('css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root');
             preferredCallTimeLabel.classList.add('css-1c2i806-MuiFormLabel-root-MuiInputLabel-root');
+            preferredCallTimeLabel.classList.remove('css-mnn31-MuiFormLabel-root-MuiInputLabel-root');
+
         }
 
         onClose(); // Close the modal after submitting
@@ -222,7 +224,7 @@ const Modal = ({ onClose }) => {
         </div >
     );
 };
-const MobModal = ({ onClose }) => {
+const MobModal = ({ onClose, onSubmit }) => {
     const [selectedButton, setSelectedButton] = useState({ column: 0, index: 0 });
 
     const handleButtonClick = (column, index) => {
@@ -252,7 +254,7 @@ const MobModal = ({ onClose }) => {
 
         // Combine selectedDate and selected time slot
         const selectedDateTime = `${selectedDate} ${selectedTimeSlot}`;
-
+        onSubmit(selectedDateTime);
 
         console.log('Selected Date & Time:', selectedDateTime);
 
@@ -440,7 +442,10 @@ const MobModal = ({ onClose }) => {
         </div >
     );
 };
+
 function FAQs() {
+    const [inputValue, setInputValue] = useState('');
+
     const location = useLocation();
     let setTriggerScroll = location.state?.setTriggerScroll || false;
 
@@ -460,6 +465,10 @@ function FAQs() {
     const handleTextFieldClickmob = () => {
         setShowModalmob(true);
     };
+    const [emailSent, setEmailSent] = useState(false);
+    const [showAlerts, setShowAlerts] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+
     useEffect(() => {
         if (setTriggerScroll) {
             // Scroll to the contactForm div
@@ -473,7 +482,147 @@ function FAQs() {
             setTriggerScroll = false;
         }
     }, [setTriggerScroll]);
+    const [selectedDateTime, setSelectedDateTime] = useState(null);
+    const handleSelectedDateTime = (dateTime) => {
+        setSelectedDateTime(dateTime);
+        setInputValue(dateTime);
 
+    };
+
+    const [formData, setFormData] = useState({
+        companyName: '',
+        yourSector: '',
+        fullName: '',
+        email: '',
+        phoneNumber: '',
+        CallTime: '',
+    });
+    const handleInputChange = (field) => (event) => {
+        setFormData((prevData) => ({
+            ...prevData,
+            [field]: event.target.value,
+        }));
+    };
+    useEffect(() => {
+        console.log(formData);
+    }, [formData]);
+    const handleSendButtonClick = async () => {
+        const updatedFormData = {
+            ...formData,
+            CallTime: selectedDateTime,
+        };
+
+        if (
+            updatedFormData.companyName === '' ||
+            updatedFormData.yourSector === '' ||
+            updatedFormData.fullName === '' ||
+            updatedFormData.email === '' ||
+            updatedFormData.phoneNumber === '' ||
+            updatedFormData.CallTime === ''
+        ) {
+            console.error('Please fill in all the fields before sending the email');
+            setEmailSent(false);
+            setErrorMessage("Please fill all fields.");
+            setShowAlerts(true); // Show alerts even if there's an error
+            return; // Exit the function if any field is empty
+        }
+
+        // Update formData with the selectedDateTime
+
+        try {
+            const response = await fetch('https://data.banknoteconsult.com/FinancialForm/mails.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(updatedFormData)
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            setEmailSent(true);
+            setShowAlerts(true); // Show alerts after email is sent
+        } catch (error) {
+            console.error('There was an error submitting the form:', error.message);
+            setEmailSent(false);
+            setErrorMessage("Please check your connectivity.");
+            setShowAlerts(true); // Show alerts even if there's an error
+        }
+    };
+
+
+
+    const [formDataMob, setFormDataMob] = useState({
+        companyName: '',
+        yourSector: '',
+        fullName: '',
+        email: '',
+        phoneNumber: '',
+        CallTime: '',
+    });
+    const [selectedMobDateTime, setSelectedMobDateTime] = useState(null);
+    const handleMobSelectedDateTime = (dateTime) => {
+        setSelectedMobDateTime(dateTime);
+        setInputValue(dateTime);
+
+    };
+    const handleMobInputChange = (field) => (event) => {
+        setFormDataMob((prevData) => ({
+            ...prevData,
+            [field]: event.target.value,
+        }));
+    };
+
+    useEffect(() => {
+        console.log(formDataMob);
+    }, [formDataMob]);
+
+    const handleMobSendButtonClick = async () => {
+        const updatedFormData = {
+            ...formDataMob,
+            CallTime: selectedMobDateTime,
+        };
+        if (
+            updatedFormData.companyName === '' ||
+            updatedFormData.yourSector === '' ||
+            updatedFormData.fullName === '' ||
+            updatedFormData.email === '' ||
+            updatedFormData.phoneNumber === '' ||
+            updatedFormData.CallTime === ''
+        ) {
+            console.error('Please fill in all the fields before sending the email');
+            setEmailSent(false);
+            setErrorMessage("Please Fill all fields.");
+            setShowAlerts(true); // Show alerts even if there's an error
+            return; // Exit the function if any field is empty
+        }
+
+        // Update formData with the selectedDateTime
+
+        try {
+            const response = await fetch('https://data.banknoteconsult.com/FinancialForm/mails.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(updatedFormData)
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            setEmailSent(true);
+            setShowAlerts(true); // Show alerts after email is sent
+        } catch (error) {
+            console.error('There was an error submitting the form:', error.message);
+            setEmailSent(false);
+            setErrorMessage("Message not sent, Please check your connectivity.");
+            setShowAlerts(true); // Show alerts even if there's an error
+        }
+    };
     return (
         <div>
 
@@ -523,7 +672,7 @@ function FAQs() {
                         />
                     </div>
 
-                    <div className={styles.cropedCont}>
+                    <div className={styles.cropedCont} id="contactFormMob2" >
                         <div className={styles.mobbglogo}>
                             <img src="/bgmob.png" alt="" />
                         </div>
@@ -535,13 +684,13 @@ function FAQs() {
                                 Banknote here to
                             </h1>
 
-                            <h1 style={{ color: '#E4C78B' }}>
+                            <h1 id="contactFormMob1" style={{ color: '#E4C78B' }}>
                                 Help your Business!
                             </h1>
                         </div>
-                        <div id="contactForm" className={styles.contactForm} style={{ marginBottom: '10%' }}>
+                        <div id="contactFormMob" className={styles.contactForm} style={{ marginBottom: '10%' }}>
                             <div className={styles.mobunderlinetextfield}>
-                                <div className={styles.submobunderlinetextfield}>
+                                <div className={styles.submobunderlinetextfield} id="contactFormMob3">
                                     <TextField
                                         id="company-name"
                                         label={<span>Company Name <span style={redAsteriskStyle}>*</span></span>}
@@ -555,6 +704,9 @@ function FAQs() {
                                                 borderBottomColor: '#DDB96E', // Change focus underline color to black
                                             },
                                         }}
+                                        value={formDataMob.companyName}
+                                        onChange={handleMobInputChange('companyName')}
+
                                     />
                                     <TextField
                                         id="your-sector"
@@ -569,6 +721,8 @@ function FAQs() {
                                                 borderBottomColor: '#DDB96E', // Change focus underline color to black
                                             },
                                         }}
+                                        value={formDataMob.yourSector}
+                                        onChange={handleMobInputChange('yourSector')}
                                     />
                                     <TextField
                                         id="full-name"
@@ -583,6 +737,8 @@ function FAQs() {
                                                 borderBottomColor: '#DDB96E', // Change focus underline color to black
                                             },
                                         }}
+                                        value={formDataMob.fullName}
+                                        onChange={handleMobInputChange('fullName')}
                                     />
                                     <TextField
                                         id="email"
@@ -597,12 +753,14 @@ function FAQs() {
                                                 borderBottomColor: '#DDB96E', // Change focus underline color to black
                                             },
                                         }}
+                                        value={formDataMob.email}
+                                        onChange={handleMobInputChange('email')}
                                     />
                                     <TextField
                                         id="phone-number"
                                         label={<span>Phone Number <span style={redAsteriskStyle}>*</span></span>}
                                         variant="standard"
-                                        inputProps={{ style: textFieldStyle }}
+                                        inputProps={{ style: textFieldStyle, type: 'tel' }} // Set type attribute to 'tel' for mobile keypad
                                         InputLabelProps={{
                                             style: { color: 'white' }, // Color for label
                                         }}
@@ -611,7 +769,10 @@ function FAQs() {
                                                 borderBottomColor: '#DDB96E', // Change focus underline color to black
                                             },
                                         }}
+                                        value={formDataMob.phoneNumber}
+                                        onChange={handleMobInputChange('phoneNumber')}
                                     />
+
                                     <div style={{ position: 'relative' }}>
                                         <TextField
                                             style={{ width: `100%` }}
@@ -628,16 +789,33 @@ function FAQs() {
                                                     borderBottomColor: '#DDB96E', // Change focus underline color to black
                                                 },
                                             }}
+                                            onChange={handleMobInputChange('preferredCallTime')}
+                                            value={inputValue}
                                         />
-                                        {showModalmob && <MobModal onClose={() => setShowModalmob(false)} />} {/* Render modal if showModal is true */}
+                                        {showModalmob && <MobModal onClose={() => setShowModalmob(false)} onSubmit={handleMobSelectedDateTime} />} {/* Render modal if showModal is true */}
 
 
                                     </div>
 
 
 
-                                    <button className={styles.sendButton} style={{ height: `3vw`, background: '#DDB96E', borderRadius: 5, color: '#000', fontSize: '1.4rem' }}>Schedule Consultation </button>
-
+                                    <button id="contactFormButtomMob" onClick={handleMobSendButtonClick} className={styles.sendButton} style={{ height: `3vw`, background: '#DDB96E', borderRadius: 5, color: '#000', fontSize: '1.4rem' }}>Schedule Consultation </button>
+                                    {showAlerts && emailSent && (
+                                        <div className="ValidalertMessage" style={{ height: 60, paddingLeft: 10, paddingRight: 0, background: 'rgba(0, 0, 0, 0.80)', borderRadius: 5, border: '1px #7FBE8D solid', justifyContent: 'flex-start', alignItems: 'center', gap: 23, display: 'inline-flex' }}>
+                                            <div className="Frame427320152" style={{ justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'flex' }}>
+                                                <img style={{ width: '22px' }} src="/valid.svg" alt="" />
+                                                <div className="ThankYouWeWillContactYouVerySoon" style={{ color: '#7FBE8D', fontSize: '4.4vw', fontFamily: 'Quicksand', fontWeight: '400', wordWrap: 'break-word' }}>Thanks, We will contact you soon.</div>
+                                            </div>
+                                        </div>
+                                    )}
+                                    {showAlerts && !emailSent && (
+                                        <div className="WrongalertMessage" style={{ height: 60, paddingLeft: 10, paddingRight: 16, background: 'rgba(0, 0, 0, 0.80)', borderRadius: 5, border: '1px #D75353 solid', justifyContent: 'flex-start', alignItems: 'center', gap: 23, display: 'inline-flex' }}>
+                                            <div className="Frame427320152" style={{ justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'flex' }}>
+                                                <img style={{ width: '22px' }} src="/notvalid.svg" alt="" />
+                                                <div className="MessageNotSentPleaseCheckYourConnectivity" style={{ color: '#D75353', fontSize: '4.4vw', fontFamily: 'Quicksand', fontWeight: '400', wordWrap: 'break-word' }}>{errorMessage}</div>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -740,6 +918,8 @@ function FAQs() {
                                                         borderBottomColor: '#DDB96E', // Change focus underline color to black
                                                     },
                                                 }}
+                                                value={formData.companyName}
+                                                onChange={handleInputChange('companyName')}
                                             />
                                             <TextField
                                                 id="your-sector"
@@ -754,6 +934,8 @@ function FAQs() {
                                                         borderBottomColor: '#DDB96E', // Change focus underline color to black
                                                     },
                                                 }}
+                                                value={formData.yourSector}
+                                                onChange={handleInputChange('yourSector')}
                                             />
                                             <TextField
                                                 id="full-name"
@@ -768,6 +950,8 @@ function FAQs() {
                                                         borderBottomColor: '#DDB96E', // Change focus underline color to black
                                                     },
                                                 }}
+                                                value={formData.fullName}
+                                                onChange={handleInputChange('fullName')}
                                             />
                                             <TextField
                                                 id="email"
@@ -782,6 +966,8 @@ function FAQs() {
                                                         borderBottomColor: '#DDB96E', // Change focus underline color to black
                                                     },
                                                 }}
+                                                value={formData.email}
+                                                onChange={handleInputChange('email')}
                                             />
                                             <TextField
                                                 id="phone-number"
@@ -796,6 +982,8 @@ function FAQs() {
                                                         borderBottomColor: '#DDB96E', // Change focus underline color to black
                                                     },
                                                 }}
+                                                value={formData.phoneNumber}
+                                                onChange={handleInputChange('phoneNumber')}
                                             />
                                             <div style={{ position: 'relative' }}>
                                                 <TextField
@@ -813,8 +1001,11 @@ function FAQs() {
                                                             borderBottomColor: '#DDB96E', // Change focus underline color to black
                                                         },
                                                     }}
+
+                                                    onChange={handleInputChange('preferredCallTime')}
+                                                    value={inputValue} // Bind the value of the input field to the state
                                                 />
-                                                {showModal && <Modal onClose={() => setShowModal(false)} />} {/* Render modal if showModal is true */}
+                                                {showModal && <Modal onClose={() => setShowModal(false)} onSubmit={handleSelectedDateTime} />} {/* Render modal if showModal is true */}
                                                 <img
                                                     style={{
                                                         position: 'absolute',
@@ -871,9 +1062,29 @@ function FAQs() {
 
 
 
-                                            <button className={styles.sendButton} style={{ height: `3vw`, background: '#DDB96E', borderRadius: 5 }}>Send</button>
-
-
+                                            <button
+                                                className={styles.sendButton}
+                                                style={{ height: '3vw', background: '#DDB96E', borderRadius: 5 }}
+                                                onClick={handleSendButtonClick}
+                                            >
+                                                Send
+                                            </button>
+                                            {showAlerts && emailSent && (
+                                                <div className="ValidalertMessage" style={{ height: 52, paddingLeft: 16, paddingRight: 16, background: 'rgba(0, 0, 0, 0.80)', borderRadius: 5, border: '1px #7FBE8D solid', justifyContent: 'flex-start', alignItems: 'center', gap: 23, display: 'inline-flex' }}>
+                                                    <div className="Frame427320152" style={{ justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'flex' }}>
+                                                        <img src="/valid.svg" alt="" />
+                                                        <div className="ThankYouWeWillContactYouVerySoon" style={{ color: '#7FBE8D', fontSize: '1vw', fontFamily: 'Quicksand', fontWeight: '400', wordWrap: 'break-word' }}>Thank you, We will contact you very soon.</div>
+                                                    </div>
+                                                </div>
+                                            )}
+                                            {showAlerts && !emailSent && (
+                                                <div className="WrongalertMessage" style={{ height: 52, paddingLeft: 16, paddingRight: 16, background: 'rgba(0, 0, 0, 0.80)', borderRadius: 5, border: '1px #D75353 solid', justifyContent: 'flex-start', alignItems: 'center', gap: 23, display: 'inline-flex' }}>
+                                                    <div className="Frame427320152" style={{ justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'flex' }}>
+                                                        <img src="/notvalid.svg" alt="" />
+                                                        <div className="MessageNotSentPleaseCheckYourConnectivity" style={{ color: '#D75353', fontSize: '1vw', fontFamily: 'Quicksand', fontWeight: '400', wordWrap: 'break-word' }}>{errorMessage}</div>
+                                                    </div>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>

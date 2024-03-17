@@ -288,23 +288,23 @@ const Partners = () => {
       videoThumbnail: '/Partners/Bon Alghandour/videoThumbnail.jpg',
       info: 'Info for Button 20'
     },
-    { partnerName: 'Happy Star', buttonNumber: 21, imageSrc: '/image5.png', info: 'Info for Button 21' },
-    { partnerName: 'Sanusi', buttonNumber: 22, imageSrc: '/image5.png', info: 'Info for Button 22' },
-    { partnerName: 'Mecro Market', buttonNumber: 23, imageSrc: '/image5.png', info: 'Info for Button 23' },
-    { partnerName: 'Al Ghandour', buttonNumber: 24, imageSrc: '/image5.png', info: 'Info for Button 24' },
-    { partnerName: 'Al Nozha', buttonNumber: 25, imageSrc: '/image5.png', info: 'Info for Button 25' },
-    { partnerName: 'Global Vet', buttonNumber: 26, imageSrc: '/image5.png', info: 'Info for Button 26' },
-    { partnerName: 'Dr Ashraf', buttonNumber: 27, imageSrc: '/image5.png', info: 'Info for Button 27' },
-    { partnerName: 'Ashraf gaber', buttonNumber: 28, imageSrc: '/image5.png', info: 'Info for Button 28' },
-    { partnerName: 'Metal Tech', buttonNumber: 29, imageSrc: '/image5.png', info: 'Info for Button 29' },
-    { partnerName: '2M Group', buttonNumber: 30, imageSrc: '/image5.png', info: 'Info for Button 30' },
-    { partnerName: 'Toy & Joy', buttonNumber: 31, imageSrc: '/toyjoy.svg', info: 'Info for Button 1' },
+    { partnerName: 'Al Shrouk', buttonNumber: 21, imageSrc: '/image5.png', info: 'Info for Button 21' },
+    { partnerName: 'Art Mobile', buttonNumber: 22, imageSrc: '/image5.png', info: 'Info for Button 22' },
+    { partnerName: 'MG', buttonNumber: 23, imageSrc: '/image5.png', info: 'Info for Button 23' },
+    { partnerName: 'Al kenan', buttonNumber: 24, imageSrc: '/image5.png', info: 'Info for Button 24' },
+    { partnerName: 'Afro Fix', buttonNumber: 25, imageSrc: '/image5.png', info: 'Info for Button 25' },
+    { partnerName: 'Al Ekhwa', buttonNumber: 26, imageSrc: '/image5.png', info: 'Info for Button 26' },
+    { partnerName: 'El Manahry', buttonNumber: 27, imageSrc: '/image5.png', info: 'Info for Button 27' },
+    { partnerName: 'First', buttonNumber: 28, imageSrc: '/image5.png', info: 'Info for Button 28' },
+    { partnerName: 'Ram', buttonNumber: 29, imageSrc: '/image5.png', info: 'Info for Button 29' },
+    { partnerName: 'Future', buttonNumber: 30, imageSrc: '/image5.png', info: 'Info for Button 30' },
+    { partnerName: 'Samo', buttonNumber: 31, imageSrc: '/toyjoy.svg', info: 'Info for Button 1' },
     { partnerName: 'YGB', buttonNumber: 32, imageSrc: '/YBG.svg', info: 'Info for Button 2' },
     { partnerName: 'Al Safwa', buttonNumber: 33, imageSrc: '/image3.png', info: 'Info for Button 3' },
     { partnerName: 'Al Shaboshky', buttonNumber: 34, imageSrc: '/image4.png', info: 'Info for Button 4' },
-    { partnerName: 'Hesham Tyres', buttonNumber: 35, imageSrc: '/image5.png', info: 'Info for Button 5' },
-    { partnerName: 'Bower Trading', buttonNumber: 36, imageSrc: '/image5.png', info: 'Info for Button 6' },
-    { partnerName: 'Al Mostafa', buttonNumber: 37, imageSrc: '/image5.png', info: 'Info for Button 7' },
+    { partnerName: 'Al Kanana', buttonNumber: 35, imageSrc: '/image5.png', info: 'Info for Button 5' },
+    { partnerName: 'Power Trading', buttonNumber: 36, imageSrc: '/image5.png', info: 'Info for Button 6' },
+    { partnerName: 'Tota', buttonNumber: 37, imageSrc: '/image5.png', info: 'Info for Button 7' },
     { partnerName: 'Al Shourok', buttonNumber: 38, imageSrc: '/image5.png', info: 'Info for Button 8' },
     { partnerName: 'Al Hossam', buttonNumber: 39, imageSrc: '/image5.png', info: 'Info for Button 9' },
     { partnerName: 'Tryo Market', buttonNumber: 40, imageSrc: '/image5.png', info: 'Info for Button 10' },
@@ -314,20 +314,20 @@ const Partners = () => {
     { partnerName: 'Power Trading', buttonNumber: 44, imageSrc: '/image5.png', info: 'Info for Button 14' },
     { partnerName: 'Fuchem', buttonNumber: 45, imageSrc: '/image5.png', info: 'Info for Button 15' },
     { partnerName: 'Al Fouad', buttonNumber: 46, imageSrc: '/image5.png', info: 'Info for Button 16' },
-    { partnerName: 'Al Sef', buttonNumber: 47, imageSrc: '/image5.png', info: 'Info for Button 17' },
+    { partnerName: 'Al Seif', buttonNumber: 47, imageSrc: '/image5.png', info: 'Info for Button 17' },
     { partnerName: 'Tolba Gorup', buttonNumber: 48, imageSrc: '/image5.png', info: 'Info for Button 18' },
     { partnerName: 'Mosbah', buttonNumber: 49, imageSrc: '/image5.png', info: 'Info for Button 19' },
-    { partnerName: 'Al Masa', buttonNumber: 50, imageSrc: '/image5.png', info: 'Info for Button 20' },
+    { partnerName: 'AlMasa', buttonNumber: 50, imageSrc: '/image5.png', info: 'Info for Button 20' },
     { partnerName: 'Happy Star', buttonNumber: 51, imageSrc: '/image5.png', info: 'Info for Button 21' },
     { partnerName: 'Sanusi', buttonNumber: 52, imageSrc: '/image5.png', info: 'Info for Button 22' },
     { partnerName: 'Mecro Market', buttonNumber: 53, imageSrc: '/image5.png', info: 'Info for Button 23' },
-    { partnerName: 'Al Ghandour', buttonNumber: 54, imageSrc: '/image5.png', info: 'Info for Button 24' },
+    { partnerName: 'Moldez Land', buttonNumber: 54, imageSrc: '/image5.png', info: 'Info for Button 24' },
     { partnerName: 'Al Nozha', buttonNumber: 55, imageSrc: '/image5.png', info: 'Info for Button 25' },
     { partnerName: 'Global Vet', buttonNumber: 56, imageSrc: '/image5.png', info: 'Info for Button 26' },
     { partnerName: 'Dr Ashraf', buttonNumber: 57, imageSrc: '/image5.png', info: 'Info for Button 27' },
     { partnerName: 'Ashraf gaber', buttonNumber: 58, imageSrc: '/image5.png', info: 'Info for Button 28' },
-    { partnerName: 'Metal Tech', buttonNumber: 59, imageSrc: '/image5.png', info: 'Info for Button 29' },
-    { partnerName: '2M Group', buttonNumber: 60, imageSrc: '/image5.png', info: 'Info for Button 30' },
+    { partnerName: 'Misroctober', buttonNumber: 59, imageSrc: '/image5.png', info: 'Info for Button 29' },
+    { partnerName: 'Negoum', buttonNumber: 60, imageSrc: '/image5.png', info: 'Info for Button 30' },
 
 
 
@@ -387,36 +387,45 @@ const Partners = () => {
 
   const [selectedPage, setSelectedPage] = useState(0);
   const renderCustomArrow = (direction, clickHandler, isEnabled, label) => (
-    <>
+    <div className={styles.arrowsContainer}>
       {direction === 'prev' && (
         <button
           className={styles.leftarrow}
           onClick={() => {
             clickHandler();
             setSelectedPage((prevPage) => (prevPage === 0 ? sectors.length - 1 : prevPage - 1));
-            handleReset();
           }}
           disabled={!isEnabled}
           aria-label={label}
         ></button>
       )}
-
+      {/* Numbered buttons */}
+      {direction !== 'prev' && (
+        <div className={styles.arrows}>
+          {sectors.map((_, index) => (
+            <button
+              key={index}
+              className={`${styles.pageNumber} ${index === selectedPage ? styles.selectedPage : ''}`}
+              onClick={() => setSelectedPage(index)}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
+      )}
       {direction === 'next' && (
         <button
           className={styles.rightarrow}
           onClick={() => {
             clickHandler();
             setSelectedPage((prevPage) => (prevPage === sectors.length - 1 ? 0 : prevPage + 1));
-            handleReset();
-
           }}
           disabled={!isEnabled}
           aria-label={label}
         ></button>
       )}
-    </>
+    </div>
   );
-
 
   const [animate, setAnimate] = useState(false);
 
@@ -662,34 +671,34 @@ const Partners = () => {
 
                             <button
                               className={selectedButton === 21 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(21)}
+                            // onClick={() => handleButtonClick(21)}
                             >
                               {data[20].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 22 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(22)}
+                            // onClick={() => handleButtonClick(22)}
                             >
                               {data[21].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 23 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(23)}
+                            // onClick={() => handleButtonClick(23)}
                             >
                               {data[22].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 24 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(24)}
+                            // onClick={() => handleButtonClick(24)}
                             >
                               {data[23].partnerName}
                             </button>
                             <button
                               className={selectedButton === 25 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(25)}
+                            // onClick={() => handleButtonClick(25)}
                             >
                               {data[24].partnerName}
                             </button>
@@ -700,34 +709,34 @@ const Partners = () => {
 
                             <button
                               className={selectedButton === 26 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(26)}
+                            // onClick={() => handleButtonClick(26)}
                             >
                               {data[25].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 27 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(27)}
+                            // onClick={() => handleButtonClick(27)}
                             >
                               {data[26].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 28 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(28)}
+                            // onClick={() => handleButtonClick(28)}
                             >
                               {data[27].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 29 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(29)}
+                            // onClick={() => handleButtonClick(29)}
                             >
                               {data[28].partnerName}
                             </button>
                             <button
                               className={selectedButton === 30 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(30)}
+                            // onClick={() => handleButtonClick(30)}
                             >
                               {data[29].partnerName}
                             </button>
@@ -764,34 +773,34 @@ const Partners = () => {
 
                             <button
                               className={selectedButton === 31 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(31)}
+                            // onClick={() => handleButtonClick(31)}
                             >
                               {data[30].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 32 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(32)}
+                            // onClick={() => handleButtonClick(32)}
                             >
                               {data[31].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 33 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(33)}
+                            // onClick={() => handleButtonClick(33)}
                             >
                               {data[32].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 34 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(34)}
+                            // onClick={() => handleButtonClick(34)}
                             >
                               {data[33].partnerName}
                             </button>
                             <button
                               className={selectedButton === 35 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(35)}
+                            // onClick={() => handleButtonClick(35)}
                             >
                               {data[34].partnerName}
                             </button>
@@ -800,31 +809,31 @@ const Partners = () => {
 
                             <button
                               className={selectedButton === 36 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(36)}
+                            // onClick={() => handleButtonClick(36)}
                             >
                               {data[35].partnerName}
                             </button>
                             <button
                               className={selectedButton === 37 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(37)}
+                            // onClick={() => handleButtonClick(37)}
                             >
                               {data[36].partnerName}
                             </button>
                             <button
                               className={selectedButton === 38 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(38)}
+                            // onClick={() => handleButtonClick(38)}
                             >
                               {data[37].partnerName}
                             </button>
                             <button
                               className={selectedButton === 39 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(39)}
+                            // onClick={() => handleButtonClick(39)}
                             >
                               {data[38].partnerName}
                             </button>
                             <button
                               className={selectedButton === 40 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(40)}
+                            // onClick={() => handleButtonClick(40)}
                             >
                               {data[39].partnerName}
                             </button>
@@ -833,31 +842,31 @@ const Partners = () => {
 
                             <button
                               className={selectedButton === 41 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(41)}
+                            // onClick={() => handleButtonClick(41)}
                             >
                               {data[40].partnerName}
                             </button>
                             <button
                               className={selectedButton === 42 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(42)}
+                            // onClick={() => handleButtonClick(42)}
                             >
                               {data[41].partnerName}
                             </button>
                             <button
                               className={selectedButton === 43 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(43)}
+                            // onClick={() => handleButtonClick(43)}
                             >
                               {data[42].partnerName}
                             </button>
                             <button
                               className={selectedButton === 44 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(44)}
+                            // onClick={() => handleButtonClick(44)}
                             >
                               {data[43].partnerName}
                             </button>
                             <button
                               className={selectedButton === 45 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(45)}
+                            // onClick={() => handleButtonClick(45)}
                             >
                               {data[44].partnerName}
                             </button>
@@ -874,34 +883,34 @@ const Partners = () => {
 
                             <button
                               className={selectedButton === 46 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(46)}
+                            // onClick={() => handleButtonClick(46)}
                             >
                               {data[45].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 47 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(47)}
+                            // onClick={() => handleButtonClick(47)}
                             >
                               {data[46].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 48 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(48)}
+                            // onClick={() => handleButtonClick(48)}
                             >
                               {data[47].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 49 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(49)}
+                            // onClick={() => handleButtonClick(49)}
                             >
                               {data[48].partnerName}
                             </button>
                             <button
                               className={selectedButton === 50 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(50)}
+                            // onClick={() => handleButtonClick(50)}
                             >
                               {data[49].partnerName}
                             </button>
@@ -912,34 +921,34 @@ const Partners = () => {
 
                             <button
                               className={selectedButton === 51 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(51)}
+                            // onClick={() => handleButtonClick(51)}
                             >
                               {data[50].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 52 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(52)}
+                            // onClick={() => handleButtonClick(52)}
                             >
                               {data[51].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 53 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(53)}
+                            // onClick={() => handleButtonClick(53)}
                             >
                               {data[52].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 54 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(24)}
+                            // onClick={() => handleButtonClick(54)}
                             >
                               {data[53].partnerName}
                             </button>
                             <button
                               className={selectedButton === 55 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(55)}
+                            // onClick={() => handleButtonClick(55)}
                             >
                               {data[54].partnerName}
                             </button>
@@ -950,34 +959,34 @@ const Partners = () => {
 
                             <button
                               className={selectedButton === 56 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(26)}
+                            // onClick={() => handleButtonClick(56)}
                             >
                               {data[55].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 57 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(57)}
+                            // onClick={() => handleButtonClick(57)}
                             >
                               {data[56].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 58 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(58)}
+                            // onClick={() => handleButtonClick(58)}
                             >
                               {data[57].partnerName}
                             </button>
 
                             <button
                               className={selectedButton === 59 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(59)}
+                            // onClick={() => handleButtonClick(59)}
                             >
                               {data[58].partnerName}
                             </button>
                             <button
                               className={selectedButton === 60 ? styles.SelectedPartnerbutton : styles.unSelectedPartnerbutton}
-                              onClick={() => handleButtonClick(60)}
+                            // onClick={() => handleButtonClick(60)}
                             >
                               {data[59].partnerName}
                             </button>
@@ -1039,17 +1048,7 @@ const Partners = () => {
         ))}
 
       </Carousel>
-      <div className={styles.arrows}>
-        {/* Numbered buttons */}
-        {sectors.map((_, index) => (
-          <button
-            key={index}
-            className={`${styles.pageNumber} ${index === selectedPage ? styles.selectedPage : ''}`}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+
     </div>
   );
 };

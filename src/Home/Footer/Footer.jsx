@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 
 function Footer() {
     return (
-        <>
+        <div id="footer" >
             <div className={styles.footer}>
                 <div style={{ display: 'flex', flexDirection: 'column', width: '100%', marginLeft: '3%', marginRight: '3%' }}>
                     <div className={styles.mobFooterrow} style={{ display: 'flex', flexDirection: 'row' }}>
@@ -31,13 +31,13 @@ function Footer() {
                         <h1>Careers</h1>
                     </div>
                 </div>
-            </div>
-            <div className={styles.socialicons}>
+            </div >
+            <div className={styles.socialicons} id="footericons">
                 <a className="Linkedin" href="https://eg.linkedin.com/company/banknoteeg">
 
                     <img src="/socialicons/Linkedin.svg" alt="" />
                 </a>
-                <a className="Whatsupp" href="https://api.whatsapp.com/send?phone=01154440599">
+                <a className="Whatsupp" href="https://api.whatsapp.com/send?phone=00201022290501">
 
                     <img src="/socialicons/Whatsupp.svg" alt="" />
                 </a>
@@ -47,10 +47,10 @@ function Footer() {
                 </a>
                 <a className="insta" href="https://www.instagram.com/banknoteeg/">
 
-                    <img src="/socialicons/insta.svg" alt="" />
+                    <img src="/socialicons/Insta.svg" alt="" />
                 </a>
             </div>
-        </>
+        </div>
     )
 }
 

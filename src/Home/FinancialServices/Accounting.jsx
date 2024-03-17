@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Slider from './Slider';
 import styles from './Accounting.module.css';
 import { useLocation } from 'react-router-dom';
 import '../../index.css';
 import Footer from '../Footer/Footer'
 import BottomButton from '../Footer/BottomButton'
+import debounce from 'lodash/debounce'; // Import debounce function
 const framesData = [
   {
     head1: 'Banking',
@@ -59,6 +60,9 @@ const framesData = [
 
 
 const Accounting = () => {
+  const footerIconsRef = useRef(null);
+  const [showBottomButton, setShowBottomButton] = useState(true); // State to manage button visibility
+
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const initialPageNumber = queryParams.get('pagenumb') || 1;
@@ -86,15 +90,18 @@ const Accounting = () => {
   };
 
   useEffect(() => {
-    const handleScroll = (event) => {
+    const handleScroll = debounce((event) => {
+
       if (event.deltaY > 0) {
-        // Scroll down, go to the next slide
+        // Scrolling down, go to the next page
         handleNextClick();
-      } else {
-        // Scroll up, go to the previous slide
+      } else if (event.deltaY < 0) {
+        // Scrolling up, go to the previous page (optional)
         handlePrevClick();
       }
-    };
+
+    }, 200); // Adjust the debounce delay as needed
+
 
     // Add the event listener to handle scroll events
     window.addEventListener('wheel', handleScroll);
@@ -105,10 +112,37 @@ const Accounting = () => {
     };
   }, [currentSlide, handleNextClick, handlePrevClick]);
 
+
+  useEffect(() => {
+    const footerIcons = document.getElementById('footericons');
+    const observer = new IntersectionObserver(handleIntersect, {
+      root: null,
+      threshold: 0.1,
+    });
+    if (footerIcons) {
+      observer.observe(footerIcons);
+    }
+
+    return () => {
+      if (footerIcons) {
+        observer.unobserve(footerIcons);
+      }
+    };
+  }, []);
+
+  const handleIntersect = (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        setShowBottomButton(true); // If intersecting, show the button
+      } else {
+        setShowBottomButton(false); // If not intersecting, hide the button
+      }
+    });
+  };
   return (
-    <>
+    <div>
       <div className='overlay' style={{}}></div>
-      <div className={styles.mobPageContainer} style={{ overflowY: 'auto', maxHeight: '91vh', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
+      <div className={styles.mobPageContainer} style={{ overflowY: 'auto', maxHeight: '100vh', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
         <div className={styles.submobPageContainer}>
           <div className={styles.mobTitle}>
             <h1>
@@ -143,8 +177,10 @@ const Accounting = () => {
           ))}
 
         </div>
-        <Footer></Footer>
-        <BottomButton></BottomButton>
+        <div style={{ zIndex: '99' }}>  <Footer></Footer></div>
+
+        {showBottomButton && <BottomButton ref={footerIconsRef}></BottomButton>}
+
       </div>
 
 
@@ -176,7 +212,7 @@ const Accounting = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
 
   );
 };

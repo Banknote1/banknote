@@ -16,18 +16,20 @@
 .sliderContent {
   width: 100%;
   display: flex;
-  justify-content: end;
-  align-items: end;
-  height: 60%;
+  justify-content: center;
+ margin-top: 10%;
+ 
 
 }
 
 .sliderText {
-  height: 72%;
-  padding: 20px;
-  width: 52%;
+  height: 100%;
+  /* padding-left: 17%; */
+  width: 37%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-left: 10%;
 }
 
 .sliderImage {
@@ -40,8 +42,8 @@
 }
 
 .sliderImage img {
-
-  width: 73%;
+  margin-left: 5%;
+  width: 66%;
   z-index: 2;
 
 
@@ -74,11 +76,12 @@
 .disCont {
   display: flex;
   margin-top: -35px;
+  width: 100%;
 }
 
 .disCont p {
-  color: var(--White-100, #FFF);
-
+  color: var(--White-100, rgb(216, 213, 213));
+  width: 100%;
   margin-left: 3%;
   margin-top: 3%;
   font-family: Quicksand;
@@ -101,10 +104,10 @@
 
 .framesContainer {
   display: flex;
-  margin: 20px;
+  margin: 40px;
   flex-wrap: wrap;
   justify-content: center;
-
+  gap: 20%;
 }
 
 .frame {
@@ -112,9 +115,9 @@
   z-index: 3;
   background-color: #171719;
   color: white;
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
-  width: 345px;
+  width: 365px;
   height: 60px;
 
   color: var(--White-500, #F1E3C5);
@@ -125,21 +128,22 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .frame h3 {
-
-
-
   color: var(--White-500, #F1E3C5);
   text-align: center;
-  /* Quick Sand/20/Semi Bold */
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  letter-spacing: 1px; /* Adjust this value as needed */
 }
+
 
 .separator {
   width: 100%;
@@ -163,7 +167,7 @@
 }
 
 .frameRow {
-  margin: -50px 373px 0 0;
+  /* margin: -50px 373px 0 0; */
 }
 
 .numberingshape {
@@ -209,8 +213,9 @@
 
 .slidersbuttons {
   display: flex;
-  margin-top: -50px;
-  margin-left: 90%;
+  margin-top: -28vh;
+  margin-left: 86%;
+  gap: 1%;
 
 }
 
@@ -267,7 +272,7 @@
   border: transparent;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   /* Styles for devices with a maximum width of 600px (mobile devices) */
   .mobPageContainer {
     display: flex  !important;  
@@ -277,7 +282,7 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1024px ) {
  
   .mobPageContainer {
       display: none !important  ;  
@@ -297,7 +302,7 @@
 .submobPageContainer{
   position: relative;
   z-index: 1; /* Ensure content appears above the background image */
-  margin-top: 30%;
+  margin-top: 17vh;
   display: flex;
   flex-direction: column;
   margin-left: 1.25rem;

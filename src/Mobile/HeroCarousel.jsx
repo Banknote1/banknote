@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import styles from './Landing.module.css';
 import './styles.css';
 import CompanyNumbers from './CompanyNumbers';
@@ -6,7 +8,11 @@ import CompanyNumbers from './CompanyNumbers';
 function HeroCarousel() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const navigate = useNavigate();
+    const handleOurProductClick = () => {
 
+        navigate('/Comingsoon');
+    }
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -29,13 +35,13 @@ function HeroCarousel() {
     };
 
     return (
-        <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ height: '500px' }}>
+        <div id="carouselExampleFade" className="carousel" data-bs-ride="carousel" style={{ height: '500px' }}>
             <div className="carousel-inner">
                 <div className={`carousel-item ${activeIndex === 0 ? 'active' : ''} `}>
 
                     <div className="row justify-content-center ms-2 ms-md-5 ml-2 ml-md-5">
 
-                        <div className={`col-8 `}>
+                        <div className={`col-8 `} style={{ width: '60%' }}>
                             <div className='mb-3'>
                                 <h1 className={styles.MainTitleWhite}> Your Best</h1>
                                 <h1 className={styles.MainTitleYellow}> Financial Solutions</h1>
@@ -43,20 +49,20 @@ function HeroCarousel() {
                             <div className='mb-3'>
                                 <p className={styles.subParagraph}> We are Financial Consulting Company offers essential methods for both large and small projects, aiding companies and institutions.</p>
                             </div>
-                            <div className=' ms-2 ms-md-2 ml-2 ml-md-2 '>
-                                {windowWidth > 360 && windowWidth <= 1024 && (
-                                    <div className="company-numbers-wrapper ">
-                                        <CompanyNumbers />
-                                    </div>
-                                )}
-                            </div>
+
 
                         </div>
-                        <div className="col-4">
-                            <img src="/MobileCoin.png" alt="" />
+                        <div className="col-4" style={{ width: '40%' }}>
+                            <img src="/MobileCoin.png" alt="" style={{ height: '18rem' }} />
                         </div>
                     </div>
-
+                    <div style={{ marginLeft: '1.5rem' }}>
+                        {windowWidth > 360 && windowWidth <= 1024 && (
+                            <div className="company-numbers-wrapper ">
+                                <CompanyNumbers />
+                            </div>
+                        )}
+                    </div>
                 </div>
                 <div className={`carousel-item ${activeIndex === 1 ? 'active' : ''}`}>
                     <div className="row justify-content-center ms-2 ms-md-5 ml-2 ml-md-5">
@@ -67,7 +73,7 @@ function HeroCarousel() {
                             <div className='mb-3'>
                                 <p className={styles.subParagraph}>we offer a comprehensive suite of services to streamline your importing operations in various trads. </p>
                             </div>
-                            <div className="mb-3">
+                            <div className="mb-3" onClick={handleOurProductClick}>
                                 <a href="" className='discover'> Discover our Products   </a>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 18 17" fill="none">
                                     <g clip-path="url(#clip0_1112_3956)">
@@ -127,21 +133,21 @@ function HeroCarousel() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-9 ms-2 ms-md-5 ml-2 ml-md-5'>
+                    <div style={{ marginLeft: '1.5rem' }}>
                         {windowWidth > 360 && windowWidth <= 1024 && (
-                            <div className="company-numbers-wrapper ms-2 ms-md-2">
+                            <div className="company-numbers-wrapper ">
                                 <CompanyNumbers />
                             </div>
-
                         )}
                     </div>
                 </div>
             </div>
 
-            <div className="carousel-indicators   ms-md-5  ml-md-5">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <div className="carousel-indicators ms-md-5 ml-md-5">
+                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" className={activeIndex === 0 ? "active" : ""} aria-current={activeIndex === 0 ? "true" : "false"} aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" className={activeIndex === 1 ? "active" : ""} aria-current={activeIndex === 1 ? "true" : "false"} aria-label="Slide 2"></button>
             </div>
+
 
             {windowWidth < 360 && windowWidth <= 1024 && (
                 <div>
